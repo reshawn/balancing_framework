@@ -33,7 +33,7 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
     y_train = y.drop(test_indices)
     return X_train, X_test, y_train, y_test
 
-def run_measurements(datasets, titles, dataset_name, model_name, num_runs=10, test_size=None, frac_diff=False, rocket=False):
+def run_measurements_episodic(datasets, titles, dataset_name, model_name, num_runs=10, test_size=None, frac_diff=False, rocket=False):
 
     # PREPROCESSING -------------------------------------------------------------------------------------------------
 
@@ -93,7 +93,7 @@ def run_measurements(datasets, titles, dataset_name, model_name, num_runs=10, te
 
     eval = Evaluator(dataset_name, model_name, num_runs, test_size)
 
-    # ADAPTATION MEASURE LOOP 
+    # ADAPTATION EPISODIC MEASURE LOOP 
 
     adaptation_results = pd.DataFrame()
     for i in range(1, len(episodes)):
@@ -104,7 +104,7 @@ def run_measurements(datasets, titles, dataset_name, model_name, num_runs=10, te
         trained_on2_titles = titles[:i]
         test_title = titles[i]
 
-        result = eval.adaptation_measure(
+        result = eval.adaptation_measure_episodic(
             [ep['X_train'] for ep in trained_on1], 
             [ep['y_train'] for ep in trained_on1], 
             [ep['X_train'] for ep in trained_on2],
@@ -113,6 +113,7 @@ def run_measurements(datasets, titles, dataset_name, model_name, num_runs=10, te
             )
         adaptation_results = pd.concat([adaptation_results, result], ignore_index=True)
     adaptation_results["dataset_name"] = eval.dataset_name
+
 
     # CONSOLIDATION MEASURE LOOP 
 
@@ -140,3 +141,55 @@ def run_measurements(datasets, titles, dataset_name, model_name, num_runs=10, te
 
 
     return adaptation_results, consolidation_results, consolidation_results_full, prep_info
+
+
+
+def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False):
+
+    # PREPROCESSING -------------------------------------------------------------------------------------------------
+
+    # Frac Diff
+    if frac_diff:
+        start = time.perf_counter()
+        old_len = len(X)
+        X, fd_change_pct = frac_diff_bestd(X)
+        end = time.perf_counter()
+        X.dropna(inplace=True)
+        y = y.iloc[:len(X)]
+        num_dropped = old_len - len(X)
+        time_taken_mins = (end-start)/60
+
+    # Rocket
+    if rocket:
+        input_length = X.shape[-1]
+        kernels = generate_kernels(input_length, 10_000)
+        start = time.perf_counter()
+        X = apply_kernels(X.to_numpy(), kernels)
+        end = time.perf_counter()
+        time_taken_mins = (end-start)/60
+    
+    # Pack the preprocessing info
+    prep_info = {}
+    if frac_diff:
+        prep_info['frac_diff'] = True
+        prep_info['fd_change_pct'] = fd_change_pct
+        prep_info['num_dropped'] = num_dropped
+        prep_info['fd_time_taken_mins'] = time_taken_mins
+    if rocket:
+        prep_info['rocket'] = True
+        prep_info['rocket_time_taken_mins'] = time_taken_mins
+
+    # EVALUATION -------------------------------------------------------------------------------------------------
+
+    eval = Evaluator(dataset_name, model_name, num_runs, None)
+
+    # ADAPTATION MEASURE LOOP 
+
+    # in the case of frac diff or any rolling window method, remember to subtract the dropped rows from the cold start size
+    adaptation_results = eval.adaptation_measure(X, y, chunk_size, cold_start_size)
+
+
+    # CONSOLIDATION MEASURE LOOP 
+    consolidation_results = eval.consolidation_measure(X, y, chunk_size, cold_start_size)
+
+    return adaptation_results, consolidation_results, prep_info

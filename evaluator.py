@@ -36,7 +36,75 @@ class Evaluator:
     def preprocessing(self):
         pass
 
+    
     def adaptation_measure(
+            self,
+            X: pd.DataFrame,
+            y: pd.DataFrame,
+            chunk_size: int,
+            cold_start_size: int
+            ):
+        '''
+        Given a dataset, X and its labels, y, simulate a simple online setup where new instances are processed for change in chunks of size chunk_size.
+        We define "adaptation" as the improvement in performance on new data when that new data is added to the training.
+        With a set cold_start size, we iterate through the remaining data in chunks, training on the seen data and testing on the new chunk.
+        The seen data is split for a validation set to tune hyperparameters.
+        The list of f1 scores for each chunk is returned.
+        '''
+
+        X_seen, y_seen = X[:cold_start_size], y[:cold_start_size]
+        X_unseen, y_unseen = X[cold_start_size:], y[cold_start_size:]
+
+        # iterate through the unseen data in chunks
+        f1_scores = []
+        for i in tqdm(range(0, len(X_unseen), chunk_size)):
+            X_curr, y_curr = X_seen.append(X_unseen[:i]), y_seen.append(y_unseen[:i])
+            X_train, X_val, y_train, y_val = self.data_split(X_curr, y_curr, test=False)
+            best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
+            result = train_eval(self.model_name, best_params, X_train, y_train, X_unseen[i:i+chunk_size], y_unseen[i:i+chunk_size])
+            f1_scores.append(result["f1_mean"])
+        
+        return f1_scores
+    
+    def consolidation_measure(
+            self,
+            X: pd.DataFrame,
+            y: pd.DataFrame,
+            chunk_size: int,
+            cold_start_size: int
+            ):
+        '''
+        Given a dataset, X and its labels, y, simulate a simple online setup where new instances are processed for change in chunks of size chunk_size.
+        (The same setup as the adaptation measure)
+        We define "consolidation" as the improvement or maintainence in performance on old data when new data is added to the training.
+        Using the data already seen, we generate a representative set, similar to a reply buffer, for testing.
+        With a set cold_start size, we iterate through the remaining data in chunks, training on the seen data and testing on the buffer.
+        The seen data is split for a validation set to tune hyperparameters.
+        The list of f1 scores for each chunk is returned.
+        '''
+
+        X_seen, y_seen = X[:cold_start_size], y[:cold_start_size]
+        X_unseen, y_unseen = X[cold_start_size:], y[cold_start_size:]
+
+        # iterate through the unseen data in chunks
+        f1_scores = []
+        for i in tqdm(range(0, len(X_unseen), chunk_size)):
+            X_curr, y_curr = X_seen.append(X_unseen[:i]), y_seen.append(y_unseen[:i])
+            X_train, X_val, y_train, y_val = self.data_split(X_curr, y_curr, test=False)
+            best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
+
+            # generate a representative set from the seen data
+            X_gen, y_gen = None, None
+            result = train_eval(self.model_name, best_params, X_train, y_train, X_gen, y_gen)
+            f1_scores.append(result["f1_mean"])
+        
+        return f1_scores
+
+
+
+
+
+    def adaptation_measure_episodic(
             self,
             X_trained_on1: list[pd.DataFrame], 
             y_trained_on1: list[pd.DataFrame], 
@@ -49,6 +117,7 @@ class Evaluator:
             test_titles: list[str]
             ):
         '''
+        This version works with given lists of predefined episodes of data and their titles.
         X_trained_on1 and 2 are lists of the X_train splits (inc. valid) from the various episodes/subsets of data
         similarly for y_trained_on1 and 2
         X_test_df and y_test_df instead are the X_test and y_test splits from the new data episode/subset
@@ -90,8 +159,9 @@ class Evaluator:
         adaptation["train_on2_f1"] = result2["f1_mean"]
         
         return pd.DataFrame(adaptation, index=[0])
+
     
-    def consolidation_measure(
+    def consolidation_measure_episodic(
             self,
             X_trained_on1: list[pd.DataFrame], 
             y_trained_on1: list[pd.DataFrame], 
