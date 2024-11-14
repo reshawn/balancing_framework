@@ -253,18 +253,46 @@ def set_thresh(series, diff_amt, max_rows_removed_ratio):
         thresh /= 2  # decrease thresh
     return thresh
 def frac_diff_bestd(df):
-    d_tests = np.arange(0,1,0.1)
+    d_tests = np.arange(0,1,0.05)
     changed = 0
     # for col in tqdm(df.columns): # more verbose
     for col in df.columns:
+        print(col)
         for d in d_tests:
-            thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25)
-            frac_diff_test = frac_diff_ffd(df[[col]], d, thresh)
-            adf_result = adfuller(frac_diff_test[col].dropna()) 
-            if adf_result[1] < 0.05:
+            # thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25) # using this leads to significantly different results, but test with it more if the dropped rows becomes a problem again
+            frac_diff_test = frac_diff_ffd(df[[col]], d) # , thresh)
+            # at the time of writing, series length 885k crashes the kernel
+            # 885k rows is too much for adf with current memory limits, options: 1. use just the first 100k rows,
+            # 2. changing the maxlag or autolag params, 3. using a rolling window agg of the data, 4. testing the whole dataset in chunks of 100k
+            
+            # option 1:
+            # sample_size = 100000  # Adjust based on your testing capacity
+            # data_sample = frac_diff_test[col].dropna()[:sample_size]
+            # adf_result = adfuller(data_sample) 
+            # print(f'{col} d={d} p-value={adf_result[1]}')
+            # if adf_result[1] < 0.05:
+
+            # option 4:
+            adf_chunk_size = 100_000
+            num_stat = (0,0) # number of stationary windows, total number of windows
+            p_values = []
+            for i in range(0, len(frac_diff_test[col]), adf_chunk_size):
+                data_chunk = frac_diff_test[col].dropna()[i:i+adf_chunk_size]
+                adf_result = adfuller(data_chunk) 
+                # print(f'{i} p-value={adf_result[1]}, lags={adf_result[2]}')
+                num_stat = (num_stat[0], num_stat[1]+1)
+                p_values.append(adf_result[1])
+                if adf_result[1] < 0.05:
+                    num_stat = (num_stat[0]+1, num_stat[1])
+            # if more than 50% of the p-values are above 0.05, then the data is not stationary
+            stationary = num_stat[0] >= num_stat[1]/2
+            
+            if stationary:
                 # stationary with this d value
                 df[col] = frac_diff_test[col]
                 # print(f'{col} stationary with d={d} p-value={adf_result[1]}')
+                print(f'{col} stationary with d={d} stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}')
+
                 if d != 0:
                     changed += 1
                 break

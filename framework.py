@@ -1,9 +1,15 @@
 import random
 import time
 import pandas as pd
+import numpy as np
+
 from rocket_functions import generate_kernels, apply_kernels
 from fracdiff import frac_diff_bestd
 from evaluator import Evaluator
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.signal import coherence
 
 def my_train_test_split(X,y,test_size=0.2, ignore_size=0.25, random_state=777):
     # a train test split that does not randomly pull from the first 25% of data
@@ -33,122 +39,46 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
     y_train = y.drop(test_indices)
     return X_train, X_test, y_train, y_test
 
-def run_measurements_episodic(datasets, titles, dataset_name, model_name, num_runs=10, test_size=None, frac_diff=False, rocket=False):
-
-    # PREPROCESSING -------------------------------------------------------------------------------------------------
-
-    # train test split for each episode
-
-    episodes = []
-    for X,y in datasets:
-        X_train, X_test, y_train, y_test = my_train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-        episode = {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'X': X, 'y': y}
-        episodes.append(episode)
-
-    # Frac Diff
-    if frac_diff:
-        new_episodes = []
-        for i, episode in enumerate(episodes):
-            start = time.perf_counter()
-            X, fd_change_pct = frac_diff_bestd(episode['X'])
-            end = time.perf_counter()
-            X.dropna(inplace=True)
-            y = episode['y'].iloc[:len(X)]
-            drop_pct = 1 - len(X) / len(episode['X'])
-            time_taken_mins = (end-start)/60
-            # ensure the test set is the same as without frac diff
-            X_train, X_test, y_train, y_test = train_test_split_by_indices(X, y, episode['y_test'].index, num_dropped=0) # len(episode['X'])-len(X)
-            # pack new episode, along with some frac diff info
-            new_episode = {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'X': X, 'y': y, 'fd_change_pct': fd_change_pct, 'drop_pct': drop_pct, 'fd_time_taken_mins': time_taken_mins}
-            new_episodes.append(new_episode)
-        episodes = new_episodes
-
-    # Rocket
-    if rocket:
-        for i, episode in enumerate(episodes):
-                input_length = episode['X_train'].shape[-1]
-                kernels = generate_kernels(input_length, 10_000)
-                start = time.perf_counter()
-                X_train = apply_kernels(episode['X_train'].to_numpy(), kernels)
-                X_test = apply_kernels(episode['X_test'].to_numpy(), kernels)
-                end = time.perf_counter()
-
-                time_taken_mins = (end-start)/60
-                episode['X_train'] = pd.DataFrame(X_train)
-                episode['X_test'] = pd.DataFrame(X_test)
-                episode['rocket_time_taken_mins'] = time_taken_mins
-    
-    # Pack the preprocessing info
-    prep_info = {}
-    if frac_diff:
-        prep_info['frac_diff'] = True
-        prep_info['fd_change_pct'] = [ep['fd_change_pct'] for ep in episodes]
-        prep_info['drop_pct'] = [ep['drop_pct'] for ep in episodes]
-        prep_info['fd_time_taken_mins'] = [ep['fd_time_taken_mins'] for ep in episodes]
-    if rocket:
-        prep_info['rocket'] = True
-        prep_info['rocket_time_taken_mins'] = [ep['rocket_time_taken_mins'] for ep in episodes]
-
-    # EVALUATION -------------------------------------------------------------------------------------------------
-
-    eval = Evaluator(dataset_name, model_name, num_runs, test_size)
-
-    # ADAPTATION EPISODIC MEASURE LOOP 
-
-    adaptation_results = pd.DataFrame()
-    for i in range(1, len(episodes)):
-        trained_on1 = episodes[:i+1]
-        trained_on2 = episodes[:i]
-        test = episodes[i]
-        trained_on1_titles = titles[:i+1]
-        trained_on2_titles = titles[:i]
-        test_title = titles[i]
-
-        result = eval.adaptation_measure_episodic(
-            [ep['X_train'] for ep in trained_on1], 
-            [ep['y_train'] for ep in trained_on1], 
-            [ep['X_train'] for ep in trained_on2],
-            [ep['y_train'] for ep in trained_on2],
-            test['X_test'], test['y_test'], trained_on1_titles, trained_on2_titles, test_title
-            )
-        adaptation_results = pd.concat([adaptation_results, result], ignore_index=True)
-    adaptation_results["dataset_name"] = eval.dataset_name
-
-
-    # CONSOLIDATION MEASURE LOOP 
-
-    consolidation_results = pd.DataFrame()
-    consolidation_results_full = pd.DataFrame()
-    for i in range(1, len(episodes)):
-        trained_on1 = episodes[:i+1]
-        trained_on2 = episodes[:i]
-        test = episodes[:i]
-        trained_on1_titles = titles[:i+1]
-        trained_on2_titles = titles[:i]
-        test_titles = titles[:i]
-
-        result_avg, result_full = eval.consolidation_measure(
-            [ep['X_train'] for ep in trained_on1], 
-            [ep['y_train'] for ep in trained_on1], 
-            [ep['X_train'] for ep in trained_on2],
-            [ep['y_train'] for ep in trained_on2],
-            [ep['X_test'] for ep in test], [ep['y_test'] for ep in test], trained_on1_titles, trained_on2_titles, test_titles
-            )
-        consolidation_results = pd.concat([consolidation_results, result_avg], ignore_index=True)
-        consolidation_results_full = pd.concat([consolidation_results_full, result_full], ignore_index=True)
-    consolidation_results["dataset_name"] = eval.dataset_name
-    consolidation_results_full["dataset_name"] = eval.dataset_name
-
-
-    return adaptation_results, consolidation_results, consolidation_results_full, prep_info
-
 
 
 def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False):
+    """
+    Evaluate a model's performance on a dataset in terms of adaptation and consolidation measures.
 
+    Parameters
+    ----------
+    X : pandas.DataFrame
+        The features of the dataset
+    y : pandas.Series
+        The target of the dataset
+    chunk_size : int
+        The size of each chunk to split the data into
+    cold_start_size : int
+        The size of the cold start
+    dataset_name : str
+        The name of the dataset
+    model_name : str
+        The name of the model, from supported list in models.py, e.g: ['ridge_classifier', 'random_forest', 'logistic_regression']
+    num_runs : int
+        The number of runs to perform the evaluation
+    frac_diff : bool
+        Whether to use fractional differencing as a preprocessing step
+    rocket : bool
+        Whether to use rocket as a preprocessing step
+
+    Returns
+    -------
+    adaptation_results : pandas.DataFrame
+        The results of the adaptation measure
+    consolidation_results : pandas.DataFrame
+        The results of the consolidation measure
+    prep_info : dict
+        A dictionary containing any relevant preprocessing information
+    """
     # PREPROCESSING -------------------------------------------------------------------------------------------------
 
     # Frac Diff
+    # Included in the framework for completeness but its more efficient to do this outside of the framework, storing and loading since its slow
     if frac_diff:
         start = time.perf_counter()
         old_len = len(X)
@@ -186,10 +116,94 @@ def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name
     # ADAPTATION MEASURE LOOP 
 
     # in the case of frac diff or any rolling window method, remember to subtract the dropped rows from the cold start size
+    print("RUNNING ADAPTATION MEASURE")
     adaptation_results = eval.adaptation_measure(X, y, chunk_size, cold_start_size)
 
 
     # CONSOLIDATION MEASURE LOOP 
+    print("RUNNING CONSOLIDATION MEASURE")
     consolidation_results = eval.consolidation_measure(X, y, chunk_size, cold_start_size)
 
+    # PRINT VISUALIZATIONS -------------------------------------------------------------------------------------------------
+    
+
     return adaptation_results, consolidation_results, prep_info
+
+
+
+
+def viz(a_results, c_results, metric='f1', title='Original'):
+
+    means1 = np.array([ x[f'{metric}_mean'] for x in a_results ])
+    std1 = np.array([ x[f'{metric}_std'] for x in a_results ])
+    means2 = np.array([ x[f'{metric}_mean'] for x in c_results ])
+    std2 = np.array([ x[f'{metric}_std'] for x in c_results ])
+
+    timestamps1 = np.array([ x['last_ts'] for x in a_results ])
+    timestamps2 = np.array([ x['last_ts'] for x in c_results ])
+    
+    print(f'means: {means1}, {means2}, std: {std1}, {std2}, timestamps: {timestamps1}, {timestamps2}')
+
+    _viz(means1, means2, std1, std2, timestamps1, timestamps2, metric, title)
+
+def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, title):
+    """
+    Visualize two sets of increasing numbers with standard deviation shaded areas.
+    
+    Parameters
+    ----------
+    means1 : numpy.ndarray
+        The means of the first set of numbers.
+    means2 : numpy.ndarray
+        The means of the second set of numbers.
+    std_dev1 : numpy.ndarray
+        The standard deviations of the first set of numbers.
+    std_dev2 : numpy.ndarray
+        The standard deviations of the second set of numbers.
+    timestamps1 : numpy.ndarray
+        The timestamps of the first set of numbers.
+    timestamps2 : numpy.ndarray
+        The timestamps of the second set of numbers.
+    metric : str
+        The metric being visualized.
+    title : str
+        The title of the plot.
+    Returns
+    -------
+    None
+    """
+    x1 = timestamps1 #np.arange(len(means1))
+    x2 = timestamps2 #np.arange(len(means2))
+    # Generate coherence values
+    f, coherence_values = coherence(means1, means2, fs=1)
+    
+    plt.figure(figsize=(6, 8))  
+    # Plot the sets using seaborn
+    ax1 = plt.subplot(2, 1, 1)
+    sns.lineplot(x=x1, y=means1, label='Adaptation')
+    sns.lineplot(x=x2, y=means2, label='Consolidation')
+    # Add shaded faces for standard deviation
+    plt.fill_between(x1, means1 - std_dev1, means1 + std_dev1, alpha=0.3, label='Adaptation Std Dev')
+    plt.fill_between(x2, means2 - std_dev2, means2 + std_dev2, alpha=0.3, label='Consolidation Std Dev')
+
+    plt.title(title)
+    plt.xlabel('Timestamp')
+    plt.ylabel(f'{metric}')
+    plt.legend()
+
+    # Plot the coherence values
+    ax2 = plt.subplot(2, 1, 2)
+    plt.plot(f, coherence_values, label='Coherence')
+    plt.xlabel('Frequency')
+    plt.ylabel('Coherence')
+    plt.legend()
+
+    plt.tight_layout()  # adjust the layout to fit the figure size
+    # plt.show()
+
+    # save the figure
+    plt.savefig(f'/mnt/c/Users/Joseph/Documents/Github/balancing_framework/results/viz_{title}_{metric}.png')
+
+
+
+

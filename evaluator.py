@@ -1,11 +1,16 @@
 import pandas as pd
+import numpy as np
 import time
 from tqdm import tqdm
 import warnings
 warnings.filterwarnings('ignore')
 
+
+
 from sklearn.model_selection import train_test_split
-from balancing_framework.training import tune, train_eval
+
+from training import tune, train_eval, gen_chunk
+
 RANDOM_STATE = 777
 num_kernels = 10_000
 
@@ -37,35 +42,70 @@ class Evaluator:
         pass
 
     
+    
     def adaptation_measure(
             self,
             X: pd.DataFrame,
             y: pd.DataFrame,
             chunk_size: int,
-            cold_start_size: int
+            cold_start_size: int,
+            gen: bool = False
             ):
-        '''
+
+        """
         Given a dataset, X and its labels, y, simulate a simple online setup where new instances are processed for change in chunks of size chunk_size.
+        
         We define "adaptation" as the improvement in performance on new data when that new data is added to the training.
         With a set cold_start size, we iterate through the remaining data in chunks, training on the seen data and testing on the new chunk.
         The seen data is split for a validation set to tune hyperparameters.
         The list of f1 scores for each chunk is returned.
-        '''
 
+        Parameters
+        ----------
+        X : pd.DataFrame
+            The input data
+        y : pd.DataFrame
+            The labels of the data
+        chunk_size : int
+            The size of the chunks of data to process at once
+        cold_start_size : int
+            The number of instances to use for the initial training of the model
+        gen : bool, optional
+            Whether to generate a new chunk of data, by default False
+
+        Returns
+        -------
+        f1_scores : list
+            A list of the f1 scores of the model on the new data at each iteration
+        """
         X_seen, y_seen = X[:cold_start_size], y[:cold_start_size]
         X_unseen, y_unseen = X[cold_start_size:], y[cold_start_size:]
 
         # iterate through the unseen data in chunks
-        f1_scores = []
+        all_results = []
         for i in tqdm(range(0, len(X_unseen), chunk_size)):
-            X_curr, y_curr = X_seen.append(X_unseen[:i]), y_seen.append(y_unseen[:i])
-            X_train, X_val, y_train, y_val = self.data_split(X_curr, y_curr, test=False)
+            X_chunk, y_chunk = X_unseen[i:i+chunk_size], y_unseen[i:i+chunk_size]
+            # the new chunk gets added to the seen for testing, keep aside 10% for testing the adaptation if gen is false
+            # else call gen_chunk using the new chunk
+            if gen:
+                df = X_chunk.copy()
+                df['label'] = y_chunk
+                X_chunk_test, y_chunk_test = gen_chunk(df, sample_size=chunk_size)
+            else:
+                X_chunk, X_chunk_test, y_chunk, y_chunk_test = train_test_split(X_chunk, y_chunk, test_size=0.1, random_state=RANDOM_STATE)
+
+            X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
+            X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
+            print(f'Tuning run {i/chunk_size} of {len(X_unseen)/chunk_size}')
             best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
-            result = train_eval(self.model_name, best_params, X_train, y_train, X_unseen[i:i+chunk_size], y_unseen[i:i+chunk_size])
-            f1_scores.append(result["f1_mean"])
+            print(f'Training run {i/chunk_size} of {len(X_unseen)/chunk_size}')
+            result = train_eval(self.model_name, best_params, X_train, y_train, X_chunk_test, y_chunk_test, num_runs=self.num_runs)
+            result['last_ts'] = X_unseen[i:i+chunk_size].index[-1]
+            all_results.append(result)
         
-        return f1_scores
+        return all_results
     
+
     def consolidation_measure(
             self,
             X: pd.DataFrame,
@@ -77,7 +117,7 @@ class Evaluator:
         Given a dataset, X and its labels, y, simulate a simple online setup where new instances are processed for change in chunks of size chunk_size.
         (The same setup as the adaptation measure)
         We define "consolidation" as the improvement or maintainence in performance on old data when new data is added to the training.
-        Using the data already seen, we generate a representative set, similar to a reply buffer, for testing.
+        Using the data already seen, we generate a representative set, similar to a replay buffer, for testing.
         With a set cold_start size, we iterate through the remaining data in chunks, training on the seen data and testing on the buffer.
         The seen data is split for a validation set to tune hyperparameters.
         The list of f1 scores for each chunk is returned.
@@ -87,23 +127,29 @@ class Evaluator:
         X_unseen, y_unseen = X[cold_start_size:], y[cold_start_size:]
 
         # iterate through the unseen data in chunks
-        f1_scores = []
+        all_results = []
         for i in tqdm(range(0, len(X_unseen), chunk_size)):
-            X_curr, y_curr = X_seen.append(X_unseen[:i]), y_seen.append(y_unseen[:i])
-            X_train, X_val, y_train, y_val = self.data_split(X_curr, y_curr, test=False)
+            X_chunk, y_chunk = X_unseen[i:i+chunk_size], y_unseen[i:i+chunk_size]
+            X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
+            X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
+            print(f'Tuning run {i/chunk_size} of {len(X_unseen)/chunk_size}')
             best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
 
             # generate a representative set from the seen data
-            X_gen, y_gen = None, None
-            result = train_eval(self.model_name, best_params, X_train, y_train, X_gen, y_gen)
-            f1_scores.append(result["f1_mean"])
+            print(f'Generating chunk for run {i/chunk_size} of {len(X_unseen)/chunk_size}')
+            df = X_seen.copy()
+            df['label'] = y_seen
+            X_gen, y_gen = gen_chunk(df, sample_size=chunk_size)
+
+            print(f'Training run {i/chunk_size} of {len(X_unseen)/chunk_size}')
+            result = train_eval(self.model_name, best_params, X_train, y_train, X_gen, y_gen, num_runs=self.num_runs)
+            result['last_ts'] = X_chunk.index[-1]
+            all_results.append(result)
         
-        return f1_scores
+        return all_results
 
 
-
-
-
+# NO LONGER BEING USED
     def adaptation_measure_episodic(
             self,
             X_trained_on1: list[pd.DataFrame], 
@@ -161,6 +207,7 @@ class Evaluator:
         return pd.DataFrame(adaptation, index=[0])
 
     
+# NO LONGER BEING USED
     def consolidation_measure_episodic(
             self,
             X_trained_on1: list[pd.DataFrame], 
