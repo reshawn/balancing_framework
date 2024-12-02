@@ -12,7 +12,7 @@ def load_model(model_name, params):
     if model_name == "ridge_classifier":
         clf = RidgeClassifier(alpha=params['alpha'], random_state=RANDOM_STATE)
     elif model_name == 'random_forest':
-        clf = RandomForestClassifier(n_estimators=params['n_estimators'], max_depth=params['max_depth'], random_state=RANDOM_STATE)
+        clf = RandomForestClassifier(n_estimators=params['n_estimators'], max_depth=params['max_depth']) # random_state=RANDOM_STATE
     elif model_name == 'logistic_regression':
         clf = LogisticRegression(random_state=RANDOM_STATE)
     return clf

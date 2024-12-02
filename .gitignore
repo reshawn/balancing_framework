@@ -161,3 +161,5 @@ cython_debug/
 spy5m.csv
 spy5m2.csv
 spy5m.pkl
+spy5m_bintp_labelled.pkl
+spy5m_labelled_episodes_ta.pkl

@@ -41,7 +41,7 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
 
 
 
-def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False):
+def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False):
     """
     Evaluate a model's performance on a dataset in terms of adaptation and consolidation measures.
 
@@ -111,18 +111,18 @@ def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name
 
     # EVALUATION -------------------------------------------------------------------------------------------------
 
-    eval = Evaluator(dataset_name, model_name, num_runs, None)
+    eval = Evaluator(dataset_name, model_name, X, y, num_runs=num_runs, chunk_size=chunk_size, test_size=None)
 
     # ADAPTATION MEASURE LOOP 
 
     # in the case of frac diff or any rolling window method, remember to subtract the dropped rows from the cold start size
     print("RUNNING ADAPTATION MEASURE")
-    adaptation_results = eval.adaptation_measure(X, y, chunk_size, cold_start_size)
+    adaptation_results = eval.adaptation_measure()
 
 
     # CONSOLIDATION MEASURE LOOP 
     print("RUNNING CONSOLIDATION MEASURE")
-    consolidation_results = eval.consolidation_measure(X, y, chunk_size, cold_start_size)
+    consolidation_results = eval.consolidation_measure()
 
     # PRINT VISUALIZATIONS -------------------------------------------------------------------------------------------------
     
@@ -132,7 +132,7 @@ def run_measurements(X, y, chunk_size, cold_start_size, dataset_name, model_name
 
 
 
-def viz(a_results, c_results, metric='f1', title='Original'):
+def viz(a_results, c_results, metric='f1', title='Original', dir=None):
 
     means1 = np.array([ x[f'{metric}_mean'] for x in a_results ])
     std1 = np.array([ x[f'{metric}_std'] for x in a_results ])
@@ -144,9 +144,9 @@ def viz(a_results, c_results, metric='f1', title='Original'):
     
     print(f'means: {means1}, {means2}, std: {std1}, {std2}, timestamps: {timestamps1}, {timestamps2}')
 
-    _viz(means1, means2, std1, std2, timestamps1, timestamps2, metric, title)
+    _viz(means1, means2, std1, std2, timestamps1, timestamps2, metric, title, dir)
 
-def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, title):
+def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, title, dir):
     """
     Visualize two sets of increasing numbers with standard deviation shaded areas.
     
@@ -168,6 +168,8 @@ def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, t
         The metric being visualized.
     title : str
         The title of the plot.
+    dir: str
+        Directory to save the plots in.
     Returns
     -------
     None
@@ -177,9 +179,9 @@ def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, t
     # Generate coherence values
     f, coherence_values = coherence(means1, means2, fs=1)
     
-    plt.figure(figsize=(6, 8))  
+    plt.figure(figsize=(6, 4))  
     # Plot the sets using seaborn
-    ax1 = plt.subplot(2, 1, 1)
+    # ax1 = plt.subplot(2, 1, 1)
     sns.lineplot(x=x1, y=means1, label='Adaptation')
     sns.lineplot(x=x2, y=means2, label='Consolidation')
     # Add shaded faces for standard deviation
@@ -192,17 +194,17 @@ def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, t
     plt.legend()
 
     # Plot the coherence values
-    ax2 = plt.subplot(2, 1, 2)
-    plt.plot(f, coherence_values, label='Coherence')
-    plt.xlabel('Frequency')
-    plt.ylabel('Coherence')
-    plt.legend()
+    # ax2 = plt.subplot(2, 1, 2)
+    # plt.plot(f, coherence_values, label='Coherence')
+    # plt.xlabel('Frequency')
+    # plt.ylabel('Coherence')
+    # plt.legend()
 
     plt.tight_layout()  # adjust the layout to fit the figure size
     # plt.show()
 
     # save the figure
-    plt.savefig(f'/mnt/c/Users/Joseph/Documents/Github/balancing_framework/results/viz_{title}_{metric}.png')
+    plt.savefig(f'{dir}/viz_{title}_{metric}.png')
 
 
 

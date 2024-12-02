@@ -1,0 +1,29 @@
+Running measurements with params: format=Frac_Diff,chunk_size=50000, cold_start_size=10000, num_runs=10,        dataset_name=sp500, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 0.0 of 17.449
+Optimization Time: 0.3129359982333331 minutes
+Training run 0.0 of 17.449
+Run 0 Accuracy: 0.5486
+Run 1 Accuracy: 0.5486
+Run 2 Accuracy: 0.5486
+Run 3 Accuracy: 0.5486
+Run 4 Accuracy: 0.5486
+Run 5 Accuracy: 0.5486
+Run 6 Accuracy: 0.5486
+Run 7 Accuracy: 0.5486
+Run 8 Accuracy: 0.5486
+Run 9 Accuracy: 0.5486
+Tuning run 1.0 of 17.449
+Optimization Time: 0.6607537380999996 minutes
+Training run 1.0 of 17.449
+Run 0 Accuracy: 0.5406
+Run 1 Accuracy: 0.5406
+Run 2 Accuracy: 0.5406
+Run 3 Accuracy: 0.5406
+Run 4 Accuracy: 0.5406
+Run 5 Accuracy: 0.5406
+Run 6 Accuracy: 0.5406
+Run 7 Accuracy: 0.5406
+Run 8 Accuracy: 0.5406
+Run 9 Accuracy: 0.5406
+Tuning run 2.0 of 17.449
