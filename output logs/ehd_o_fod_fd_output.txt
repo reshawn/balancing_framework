@@ -1,0 +1,849 @@
+Running measurements with params: format=['o', 'fd', 'fod'], dataset_name=electricity_hourly_dataset
+values
+values stationary with d=0.0 stat windows =1 out of 1 p-values = [1.8341545753669929e-09]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.0657028801324723e-09]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.0657028801318778e-09]
+rolling_min_2
+rolling_min_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [9.559606051362157e-10]
+rolling_max_2
+rolling_max_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.03783414223692e-09]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [6.165063767621914e-11]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.5442866063339035e-10]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.5442866063337107e-10]
+rolling_min_3
+rolling_min_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [6.786014720015628e-10]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [9.654436413623032e-10]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.7759446851281447e-11]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.5452420105271557e-10]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.545242010527014e-10]
+rolling_min_4
+rolling_min_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.2123384032378117e-10]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.359380704496349e-10]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.4629490129570872e-11]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.26798648892003e-10]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2679864889202273e-10]
+rolling_min_5
+rolling_min_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.009762595704082e-10]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.294951082766532e-10]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.198432871390124e-12]
+lag_1
+lag_1 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.8339055050933096e-09]
+lag_2
+lag_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.8015419690266978e-09]
+lag_3
+lag_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.7043375241559765e-09]
+lag_4
+lag_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.6992485529522887e-09]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [2.202797597859149e-27]
+cumulative_sum
+cumulative_mean
+cumulative_mean stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0361084193548549]
+cumulative_max
+cumulative_max stationary with d=0.0 stat windows =1 out of 1 p-values = [1.3684478631528254e-25]
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [0.01996857842854846]
+series length 26222 with 93 feats does not meet criteria of >=10*n_features and a resulting count of splits > min_splits=3.
+Running measurements with params: format=fod,chunk_size=930, num_runs=10,             dataset_name=electricity_hourly_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 29
+Optimization Time: 0.011672759233332879 minutes
+Training run 1 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 2 of 29
+Optimization Time: 0.01071827154999975 minutes
+Training run 2 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 3 of 29
+Optimization Time: 0.0110200554666676 minutes
+Training run 3 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 4 of 29
+Optimization Time: 0.014264613766666418 minutes
+Training run 4 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 5 of 29
+Optimization Time: 0.013861994033334213 minutes
+Training run 5 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 6 of 29
+Optimization Time: 0.012541764049999907 minutes
+Training run 6 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 7 of 29
+Optimization Time: 0.014580905883334102 minutes
+Training run 7 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 8 of 29
+Optimization Time: 0.012379702933333191 minutes
+Training run 8 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 9 of 29
+Optimization Time: 0.010106563066667225 minutes
+Training run 9 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 10 of 29
+Optimization Time: 0.018328001716666147 minutes
+Training run 10 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 11 of 29
+Optimization Time: 0.015620214200000267 minutes
+Training run 11 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 12 of 29
+Optimization Time: 0.014705236200001082 minutes
+Training run 12 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 13 of 29
+Optimization Time: 0.018641097500000113 minutes
+Training run 13 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 14 of 29
+Optimization Time: 0.011403531883333547 minutes
+Training run 14 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 15 of 29
+Optimization Time: 0.01999040965000063 minutes
+Training run 15 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 16 of 29
+Optimization Time: 0.020568639299998873 minutes
+Training run 16 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 17 of 29
+Optimization Time: 0.02607972236666569 minutes
+Training run 17 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 18 of 29
+Optimization Time: 0.020315667700000026 minutes
+Training run 18 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 19 of 29
+Optimization Time: 0.017235908400001183 minutes
+Training run 19 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 20 of 29
+Optimization Time: 0.019989989983334528 minutes
+Training run 20 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 21 of 29
+Optimization Time: 0.020041525916667524 minutes
+Training run 21 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 22 of 29
+Optimization Time: 0.024031016300000374 minutes
+Training run 22 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 23 of 29
+Optimization Time: 0.019387725649998324 minutes
+Training run 23 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 24 of 29
+Optimization Time: 0.02936227241666529 minutes
+Training run 24 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 25 of 29
+Optimization Time: 0.02141529514999926 minutes
+Training run 25 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 26 of 29
+Optimization Time: 0.01990156005000093 minutes
+Training run 26 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 27 of 29
+Optimization Time: 0.020566065666666116 minutes
+Training run 27 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 28 of 29
+Optimization Time: 0.032374944666666274 minutes
+Training run 28 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 29 of 29
+Optimization Time: 0.02987538901666653 minutes
+Training run 29 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 29
+Optimization Time: 0.013798704433334781 minutes
+Training run 1 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 2 of 29
+Optimization Time: 0.015739465850000064 minutes
+Training run 2 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 3 of 29
+Optimization Time: 0.015441823983333809 minutes
+Training run 3 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 4 of 29
+Optimization Time: 0.013810207383333288 minutes
+Training run 4 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 5 of 29
+Optimization Time: 0.01495517183333277 minutes
+Training run 5 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 6 of 29
+Optimization Time: 0.01782219560000158 minutes
+Training run 6 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 7 of 29
+Optimization Time: 0.014708364850001014 minutes
+Training run 7 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 8 of 29
+Optimization Time: 0.017596780766666598 minutes
+Training run 8 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 9 of 29
+Optimization Time: 0.011752799533333776 minutes
+Training run 9 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 10 of 29
+Optimization Time: 0.012827901266666686 minutes
+Training run 10 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 11 of 29
+Optimization Time: 0.02303871488333205 minutes
+Training run 11 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 12 of 29
+Optimization Time: 0.02037652598333466 minutes
+Training run 12 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 13 of 29
+Optimization Time: 0.012619023666667317 minutes
+Training run 13 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 14 of 29
+Optimization Time: 0.022646684366666628 minutes
+Training run 14 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 15 of 29
+Optimization Time: 0.014330154300000685 minutes
+Training run 15 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 16 of 29
+Optimization Time: 0.022629279616666054 minutes
+Training run 16 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 17 of 29
+Optimization Time: 0.016169282450001297 minutes
+Training run 17 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 18 of 29
+Optimization Time: 0.01494133549999977 minutes
+Training run 18 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 19 of 29
+Optimization Time: 0.018887125850000075 minutes
+Training run 19 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 20 of 29
+Optimization Time: 0.01923806714999993 minutes
+Training run 20 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 21 of 29
+Optimization Time: 0.022662480400000126 minutes
+Training run 21 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 22 of 29
+Optimization Time: 0.023916656216666374 minutes
+Training run 22 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 23 of 29
+Optimization Time: 0.02041063948333317 minutes
+Training run 23 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 24 of 29
+Optimization Time: 0.017402853700000758 minutes
+Training run 24 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 25 of 29
+Optimization Time: 0.020393052166665863 minutes
+Training run 25 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 26 of 29
+Optimization Time: 0.019235849283334498 minutes
+Training run 26 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 27 of 29
+Optimization Time: 0.030663129700000506 minutes
+Training run 27 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 28 of 29
+Optimization Time: 0.02414569364999958 minutes
+Training run 28 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Tuning run 29 of 29
+Optimization Time: 0.02316037036666785 minutes
+Training run 29 of 29
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Runtime: 7.213701554139456 minutes
+means: [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1.], [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1.], std: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], timestamps: [  103  1033  1963  2893  3823  4753  5683  6613  7543  8473  9403 10333
+ 11263 12193 13123 14054 14984 15916 16846 17776 18706 19637 20572 21508
+ 22451 23384 24316 25249 26181], [  103  1033  1963  2893  3823  4753  5683  6613  7543  8473  9403 10333
+ 11263 12193 13123 14054 14984 15916 16846 17776 18706 19637 20572 21508
+ 22451 23384 24316 25249 26181]
+means: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], std: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0.], timestamps: [  103  1033  1963  2893  3823  4753  5683  6613  7543  8473  9403 10333
+ 11263 12193 13123 14054 14984 15916 16846 17776 18706 19637 20572 21508
+ 22451 23384 24316 25249 26181], [  103  1033  1963  2893  3823  4753  5683  6613  7543  8473  9403 10333
+ 11263 12193 13123 14054 14984 15916 16846 17776 18706 19637 20572 21508
+ 22451 23384 24316 25249 26181]
+Finished measurements with params: format=['o', 'fd', 'fod'],chunk_size=930, num_runs=10,             dataset_name=electricity_hourly_dataset, model_name=random_forest
+values
+values stationary with d=0.0 stat windows =1 out of 1 p-values = [3.0413848348093337e-22]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [9.80910596194689e-23]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [9.809105961947736e-23]
+rolling_min_2
+rolling_min_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.325516466860514e-21]
+rolling_max_2

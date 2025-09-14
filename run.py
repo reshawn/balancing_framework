@@ -13,14 +13,15 @@ from framework import run_measurements, viz
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--form', type=str, required=True, help="Data form, one of: ['frac_diff' , 'first_order_diff', 'original']")
+    parser.add_argument('--forms', type=str, nargs='+', help="Data forms, one or more of: ['frac_diff' , 'first_order_diff', 'original']")
     args = parser.parse_args()
 
-    data_form = args.form.lower()
+    data_forms = [ f.lower() for f in args.forms ]
 
-    valid_forms = ['frac_diff' , 'first_order_diff', 'original', 'ta_original', 'ta_fod']
-    if data_form not in valid_forms:
-        raise ValueError(f'The data_form arg must be one of: {valid_forms}')
+    valid_forms = ['frac_diff' , 'first_order_diff', 'original', 'ta_original', 'ta_fod', 'ta_frac_diff']
+    for data_form in data_forms:
+        if data_form not in valid_forms:
+            raise ValueError(f'The data_form arg must be one of: {valid_forms}')
     
 
     start = time.time()
@@ -34,6 +35,9 @@ if __name__ == "__main__":
     with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_labelled_episodes_ta.pkl', 'rb') as f:
         df_ta = pickle.load(f)
         df_ta['label'] = df_original['tp_0.004'][df_ta.index]
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_ta_fracdiff.pkl', 'rb') as f:
+        df_fd_ta = pickle.load(f)
+        df_fd_ta['label'] = df_original['tp_0.004'][df_ta.index]
     # PZ algorithm has some look ahead so remove the episode labels, will be uesd only for some kind of analysis afterwards
     # df = df_original.drop(columns=['episode']) 
     df = df_original[["volume", "vwap", "open", "close", "high", "low", "transactions", "tp_0.004"]].rename(columns={"tp_0.004": "label"}) # 0.01 0.001
@@ -41,32 +45,49 @@ if __name__ == "__main__":
 
 
     ####################################### Run Framework ##############################################################################################
+    X = pd.DataFrame()
+    y = df['label']
 
-    if data_form == 'frac_diff':
-        X = df_fd.drop(columns=['label'])
-        y = df_fd['label'] 
-    elif data_form == 'original':
-        X = df.drop(columns=['label'])
-        y = df['label']
-    elif data_form == 'first_order_diff':
-        X = df.drop(columns=['label'])
-        X[['open', 'high', 'low', 'close']] = X[['open', 'high', 'low', 'close']].diff()
-        X.dropna(inplace=True)
-        y = df['label'][1:]
-    elif data_form == 'ta_original':
-        X = df_ta.drop(columns=['label'])
-        y = df_ta['label']
-    elif data_form == 'ta_fod':
-        X = df_ta.drop(['volume', 'transactions', 'label'], axis=1).diff()
-        X = X.join(df_ta[['volume', 'transactions']]).dropna()
-        y = df_ta['label'][1:]
+    for data_form in data_forms:
+        if data_form == 'frac_diff':
+            X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+            del df_fd
+        elif data_form == 'original':
+            X = X.join(df.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+            del df
+        elif data_form == 'first_order_diff':
+            # if wanted to omit cols from diff
+            # diff = df.drop(['volume', 'transactions', 'label'], axis=1).diff()
+            # diff = diff.join(df[['volume', 'transactions']])
+            diff = df.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+            X = X.join(diff, how='outer')
+            del df
+        elif data_form == 'ta_original':
+            X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+            # del df_ta
+        elif data_form == 'ta_fod':
+            diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+            X = X.join(diff, how='outer')
+            del df_ta
+        elif data_form == 'ta_frac_diff':
+            X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+            del df_fd_ta
+    
+            
+            
+    X.dropna(inplace=True)
+    # drop y with index not in X
+    y = y[y.index.isin(X.index)]
+
+
+
     dataset_name = 'sp500'
     model_name = 'random_forest'
     chunk_size = 10_000
     # cold_start_size = 10_000
-    num_runs = 2
+    num_runs = 10
 
-    print(f'Running measurements with params: format={data_form},chunk_size={chunk_size}, num_runs={num_runs}, \
+    print(f'Running measurements with params: format={data_forms},chunk_size={chunk_size}, num_runs={num_runs}, \
         dataset_name={dataset_name}, model_name={model_name}')
 
     a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=num_runs, frac_diff=False)
@@ -79,9 +100,9 @@ if __name__ == "__main__":
     save_dir = os.path.join(base_dir, subfolder)
     if not os.path.exists(save_dir):
         os.mkdir(save_dir)
-    with open(f'{save_dir}/adaptation_results_{data_form}.pkl', 'wb') as f:
+    with open(f'{save_dir}/adaptation_results_{data_forms}.pkl', 'wb') as f:
         pickle.dump(a, f)
-    with open(f'{save_dir}/consolidation_results_{data_form}.pkl', 'wb') as f:
+    with open(f'{save_dir}/consolidation_results_{data_forms}.pkl', 'wb') as f:
         pickle.dump(c, f)
 
     end = time.time()

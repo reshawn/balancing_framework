@@ -1,0 +1,1313 @@
+Running measurements with params: format=['auto'], dataset_name=london_smart_meters_without_missing
+Data forms: ['o', 'fd', 'fod']
+values
+values stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04417110064498994]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.4 stat windows =1 out of 1 p-values = [0.03789147736380109]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.4 stat windows =1 out of 1 p-values = [0.03789147736378599]
+rolling_min_2
+rolling_min_2 stationary with d=0.55 stat windows =1 out of 1 p-values = [0.04516646400785384]
+rolling_max_2
+rolling_max_2 stationary with d=0.2 stat windows =1 out of 1 p-values = [0.039413644204439754]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [6.515404909841359e-29]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03095949737844352]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03095949737846323]
+rolling_min_3
+rolling_min_3 stationary with d=0.65 stat windows =1 out of 1 p-values = [0.0329763988477715]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.018010797486779546]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [7.142320885305139e-30]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.027608576602326726]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.027608576602333443]
+rolling_min_4
+rolling_min_4 stationary with d=0.65 stat windows =1 out of 1 p-values = [0.04580539633124494]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0031454918533750684]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2786597829376337e-30]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.5 stat windows =1 out of 1 p-values = [0.03746882841885757]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.5 stat windows =1 out of 1 p-values = [0.037468828418873404]
+rolling_min_5
+rolling_min_5 stationary with d=0.7000000000000001 stat windows =1 out of 1 p-values = [0.035849994662876285]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0003082348254965981]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.0960008974107246e-30]
+lag_1
+lag_1 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.044180896248251667]
+lag_2
+lag_2 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04416286505265247]
+lag_3
+lag_3 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04428810199699251]
+lag_4
+lag_4 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04421660116215568]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [6.637935710437419e-27]
+cumulative_sum
+cumulative_mean
+cumulative_max
+cumulative_max stationary with d=0.0 stat windows =1 out of 1 p-values = [8.188107060409129e-06]
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [8.702211436385386e-09]
+Running measurements with params: format=fod,chunk_size=3070, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10 chunks
+Optimization Time: 0.0800661918707192 minutes
+Training run 1 of 10 chunks
+Running with tuned params: {'n_estimators': 38, 'max_depth': 19}
+Run 0 Accuracy: 0.6710
+Run 1 Accuracy: 0.7199
+Run 2 Accuracy: 0.7134
+Run 3 Accuracy: 0.6971
+Run 4 Accuracy: 0.7036
+Run 5 Accuracy: 0.7101
+Run 6 Accuracy: 0.7264
+Run 7 Accuracy: 0.7003
+Run 8 Accuracy: 0.7003
+Run 9 Accuracy: 0.7199
+Tuning run 2 of 10 chunks
+Optimization Time: 0.15595082885120065 minutes
+Training run 2 of 10 chunks
+Running with tuned params: {'n_estimators': 29, 'max_depth': 27}
+Run 0 Accuracy: 0.7459
+Run 1 Accuracy: 0.7231
+Run 2 Accuracy: 0.7459
+Run 3 Accuracy: 0.7459
+Run 4 Accuracy: 0.7524
+Run 5 Accuracy: 0.7459
+Run 6 Accuracy: 0.7687
+Run 7 Accuracy: 0.7655
+Run 8 Accuracy: 0.7459
+Run 9 Accuracy: 0.7492
+Tuning run 3 of 10 chunks
+Optimization Time: 0.24454024949421485 minutes
+Training run 3 of 10 chunks
+Running with tuned params: {'n_estimators': 29, 'max_depth': 8}
+Run 0 Accuracy: 0.6710
+Run 1 Accuracy: 0.6710
+Run 2 Accuracy: 0.6840
+Run 3 Accuracy: 0.6840
+Run 4 Accuracy: 0.6743
+Run 5 Accuracy: 0.6840
+Run 6 Accuracy: 0.6743
+Run 7 Accuracy: 0.6808
+Run 8 Accuracy: 0.6743
+Run 9 Accuracy: 0.6938
+Tuning run 4 of 10 chunks
+Optimization Time: 0.34469308643601837 minutes
+Training run 4 of 10 chunks
+Running with tuned params: {'n_estimators': 41, 'max_depth': 18}
+Run 0 Accuracy: 0.7427
+Run 1 Accuracy: 0.7101
+Run 2 Accuracy: 0.7427
+Run 3 Accuracy: 0.7264
+Run 4 Accuracy: 0.7492
+Run 5 Accuracy: 0.7296
+Run 6 Accuracy: 0.7459
+Run 7 Accuracy: 0.7394
+Run 8 Accuracy: 0.7362
+Run 9 Accuracy: 0.7329
+Tuning run 5 of 10 chunks
+Optimization Time: 0.317263701884076 minutes
+Training run 5 of 10 chunks
+Running with tuned params: {'n_estimators': 32, 'max_depth': 10}
+Run 0 Accuracy: 0.7524
+Run 1 Accuracy: 0.7329
+Run 2 Accuracy: 0.7362
+Run 3 Accuracy: 0.7362
+Run 4 Accuracy: 0.7329
+Run 5 Accuracy: 0.7687
+Run 6 Accuracy: 0.7296
+Run 7 Accuracy: 0.7622
+Run 8 Accuracy: 0.7590
+Run 9 Accuracy: 0.7427
+Tuning run 6 of 10 chunks
+Optimization Time: 0.4353184320653478 minutes
+Training run 6 of 10 chunks
+Running with tuned params: {'n_estimators': 44, 'max_depth': 31}
+Run 0 Accuracy: 0.7980
+Run 1 Accuracy: 0.7948
+Run 2 Accuracy: 0.7850
+Run 3 Accuracy: 0.7915
+Run 4 Accuracy: 0.7818
+Run 5 Accuracy: 0.7752
+Run 6 Accuracy: 0.7752
+Run 7 Accuracy: 0.7850
+Run 8 Accuracy: 0.8078
+Run 9 Accuracy: 0.7687
+Tuning run 7 of 10 chunks
+Optimization Time: 0.4727240660150225 minutes
+Training run 7 of 10 chunks
+Running with tuned params: {'n_estimators': 41, 'max_depth': 19}
+Run 0 Accuracy: 0.7883
+Run 1 Accuracy: 0.7980
+Run 2 Accuracy: 0.7980
+Run 3 Accuracy: 0.7818
+Run 4 Accuracy: 0.7883
+Run 5 Accuracy: 0.8078
+Run 6 Accuracy: 0.7785
+Run 7 Accuracy: 0.7980
+Run 8 Accuracy: 0.7883
+Run 9 Accuracy: 0.7818
+Tuning run 8 of 10 chunks
+Optimization Time: 0.5892190332136428 minutes
+Training run 8 of 10 chunks
+Running with tuned params: {'n_estimators': 36, 'max_depth': 14}
+Run 0 Accuracy: 0.8893
+Run 1 Accuracy: 0.8893
+Run 2 Accuracy: 0.8762
+Run 3 Accuracy: 0.8860
+Run 4 Accuracy: 0.8860
+Run 5 Accuracy: 0.8893
+Run 6 Accuracy: 0.8893
+Run 7 Accuracy: 0.9023
+Run 8 Accuracy: 0.9023
+Run 9 Accuracy: 0.8990
+Tuning run 9 of 10 chunks
+Optimization Time: 0.5153718653367833 minutes
+Training run 9 of 10 chunks
+Running with tuned params: {'n_estimators': 31, 'max_depth': 12}
+Run 0 Accuracy: 0.7687
+Run 1 Accuracy: 0.7655
+Run 2 Accuracy: 0.7622
+Run 3 Accuracy: 0.7394
+Run 4 Accuracy: 0.7752
+Run 5 Accuracy: 0.7557
+Run 6 Accuracy: 0.7622
+Run 7 Accuracy: 0.7687
+Run 8 Accuracy: 0.7720
+Run 9 Accuracy: 0.7427
+Tuning run 10 of 10 chunks
+Optimization Time: 0.8207084475706021 minutes
+Training run 10 of 10 chunks
+Running with tuned params: {'n_estimators': 48, 'max_depth': 31}
+Run 0 Accuracy: 0.7630
+Run 1 Accuracy: 0.7727
+Run 2 Accuracy: 0.7565
+Run 3 Accuracy: 0.7695
+Run 4 Accuracy: 0.7662
+Run 5 Accuracy: 0.7727
+Run 6 Accuracy: 0.7727
+Run 7 Accuracy: 0.7727
+Run 8 Accuracy: 0.7890
+Run 9 Accuracy: 0.7760
+RUNNING CONSOLIDATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10
+Optimization Time: 0.05762072133366018 minutes
+Training run 1 of 10
+Running with tuned params: {'n_estimators': 25, 'max_depth': 32}
+Run 0 Accuracy: 0.6906
+Run 1 Accuracy: 0.7166
+Run 2 Accuracy: 0.7003
+Run 3 Accuracy: 0.7199
+Run 4 Accuracy: 0.7394
+Run 5 Accuracy: 0.7068
+Run 6 Accuracy: 0.7101
+Run 7 Accuracy: 0.7068
+Run 8 Accuracy: 0.7199
+Run 9 Accuracy: 0.6710
+Tuning run 2 of 10
+Optimization Time: 0.15105126290582122 minutes
+Training run 2 of 10
+Running with tuned params: {'n_estimators': 49, 'max_depth': 13}
+Run 0 Accuracy: 0.7296
+Run 1 Accuracy: 0.7443
+Run 2 Accuracy: 0.7296
+Run 3 Accuracy: 0.7362
+Run 4 Accuracy: 0.7476
+Run 5 Accuracy: 0.7248
+Run 6 Accuracy: 0.7378
+Run 7 Accuracy: 0.7280
+Run 8 Accuracy: 0.7329
+Run 9 Accuracy: 0.7280
+Tuning run 3 of 10
+Optimization Time: 0.2450342600699514 minutes
+Training run 3 of 10
+Running with tuned params: {'n_estimators': 41, 'max_depth': 19}
+Run 0 Accuracy: 0.7155
+Run 1 Accuracy: 0.7220
+Run 2 Accuracy: 0.7275
+Run 3 Accuracy: 0.7199
+Run 4 Accuracy: 0.7134
+Run 5 Accuracy: 0.7188
+Run 6 Accuracy: 0.7286
+Run 7 Accuracy: 0.7090
+Run 8 Accuracy: 0.7362
+Run 9 Accuracy: 0.7123
+Tuning run 4 of 10
+Optimization Time: 0.3886314007531231 minutes
+Training run 4 of 10
+Running with tuned params: {'n_estimators': 26, 'max_depth': 10}
+Run 0 Accuracy: 0.7223
+Run 1 Accuracy: 0.7150
+Run 2 Accuracy: 0.7077
+Run 3 Accuracy: 0.7125
+Run 4 Accuracy: 0.7052
+Run 5 Accuracy: 0.7150
+Run 6 Accuracy: 0.7264
+Run 7 Accuracy: 0.7182
+Run 8 Accuracy: 0.7060
+Run 9 Accuracy: 0.7174
+Tuning run 5 of 10
+Optimization Time: 0.37043679095028587 minutes
+Training run 5 of 10
+Running with tuned params: {'n_estimators': 42, 'max_depth': 32}
+Run 0 Accuracy: 0.7277
+Run 1 Accuracy: 0.7186
+Run 2 Accuracy: 0.7277
+Run 3 Accuracy: 0.7264
+Run 4 Accuracy: 0.7231
+Run 5 Accuracy: 0.7166
+Run 6 Accuracy: 0.7375
+Run 7 Accuracy: 0.7160
+Run 8 Accuracy: 0.7264
+Run 9 Accuracy: 0.7329
+Tuning run 6 of 10
+Optimization Time: 0.3834818669827655 minutes
+Training run 6 of 10
+Running with tuned params: {'n_estimators': 33, 'max_depth': 14}
+Run 0 Accuracy: 0.7378
+Run 1 Accuracy: 0.7356
+Run 2 Accuracy: 0.7313
+Run 3 Accuracy: 0.7400
+Run 4 Accuracy: 0.7329
+Run 5 Accuracy: 0.7378
+Run 6 Accuracy: 0.7389
+Run 7 Accuracy: 0.7318
+Run 8 Accuracy: 0.7345
+Run 9 Accuracy: 0.7302
+Tuning run 7 of 10
+Optimization Time: 0.44157305150292814 minutes
+Training run 7 of 10
+Running with tuned params: {'n_estimators': 38, 'max_depth': 15}
+Run 0 Accuracy: 0.7417
+Run 1 Accuracy: 0.7431
+Run 2 Accuracy: 0.7413
+Run 3 Accuracy: 0.7483
+Run 4 Accuracy: 0.7399
+Run 5 Accuracy: 0.7450
+Run 6 Accuracy: 0.7492
+Run 7 Accuracy: 0.7464
+Run 8 Accuracy: 0.7469
+Run 9 Accuracy: 0.7469
+Tuning run 8 of 10
+Optimization Time: 0.6389097073891511 minutes
+Training run 8 of 10
+Running with tuned params: {'n_estimators': 48, 'max_depth': 32}
+Run 0 Accuracy: 0.7602
+Run 1 Accuracy: 0.7614
+Run 2 Accuracy: 0.7679
+Run 3 Accuracy: 0.7663
+Run 4 Accuracy: 0.7687
+Run 5 Accuracy: 0.7712
+Run 6 Accuracy: 0.7643
+Run 7 Accuracy: 0.7630
+Run 8 Accuracy: 0.7598
+Run 9 Accuracy: 0.7614
+Tuning run 9 of 10
+Optimization Time: 0.48112429132840284 minutes
+Training run 9 of 10
+Running with tuned params: {'n_estimators': 32, 'max_depth': 19}
+Run 0 Accuracy: 0.7532
+Run 1 Accuracy: 0.7571
+Run 2 Accuracy: 0.7629
+Run 3 Accuracy: 0.7619
+Run 4 Accuracy: 0.7611
+Run 5 Accuracy: 0.7586
+Run 6 Accuracy: 0.7539
+Run 7 Accuracy: 0.7622
+Run 8 Accuracy: 0.7673
+Run 9 Accuracy: 0.7590
+Tuning run 10 of 10
+Optimization Time: 0.9752831149225434 minutes
+Training run 10 of 10
+Running with tuned params: {'n_estimators': 40, 'max_depth': 31}
+Run 0 Accuracy: 0.7672
+Run 1 Accuracy: 0.7708
+Run 2 Accuracy: 0.7636
+Run 3 Accuracy: 0.7633
+Run 4 Accuracy: 0.7682
+Run 5 Accuracy: 0.7620
+Run 6 Accuracy: 0.7678
+Run 7 Accuracy: 0.7594
+Run 8 Accuracy: 0.7672
+Run 9 Accuracy: 0.7685
+Runtime: 54.38560807307561 minutes
+means: [0.70618893 0.74885993 0.67915309 0.73550489 0.74527687 0.78631922
+ 0.79087948 0.89087948 0.76123779 0.7711039 ], [0.70814332 0.73387622 0.72030402 0.71457655 0.72527687 0.73507058
+ 0.74485807 0.76441368 0.7597177  0.76577662], std: [0.01498371 0.01178505 0.00702406 0.01088162 0.0134145  0.01130251
+ 0.00883691 0.00774258 0.01138202 0.00811688], [0.01755335 0.00710665 0.0079965  0.00658804 0.00657335 0.00327538
+ 0.00301606 0.00373707 0.00407049 0.00335585], timestamps: [  861  3931  7001 10071 13141 16211 19281 22351 25421 28491], [  861  3931  7001 10071 13141 16211 19281 22351 25421 28491]
+means: [0.68519134 0.76399405 0.68126813 0.73392126 0.74033904 0.77986414
+ 0.80881931 0.88378539 0.76407741 0.77541303], [0.68958718 0.73702226 0.72570904 0.72163221 0.72616848 0.73869654
+ 0.75043302 0.76377584 0.76303968 0.76540313], std: [0.01681358 0.01101566 0.00872923 0.0110824  0.01392291 0.01132069
+ 0.0077614  0.00843565 0.01116071 0.00751258], [0.02060136 0.00747457 0.00805165 0.0075609  0.0070807  0.00352881
+ 0.00363047 0.00384131 0.00374533 0.00314706], timestamps: [  861  3931  7001 10071 13141 16211 19281 22351 25421 28491], [  861  3931  7001 10071 13141 16211 19281 22351 25421 28491]
+Finished measurements with params: format=['o', 'fd', 'fod'],chunk_size=3070, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+Data forms: ['o', 'fd']
+values
+values stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04417110064498994]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.4 stat windows =1 out of 1 p-values = [0.03789147736380109]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.4 stat windows =1 out of 1 p-values = [0.03789147736378599]
+rolling_min_2
+rolling_min_2 stationary with d=0.55 stat windows =1 out of 1 p-values = [0.04516646400785384]
+rolling_max_2
+rolling_max_2 stationary with d=0.2 stat windows =1 out of 1 p-values = [0.039413644204439754]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [6.515404909841359e-29]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03095949737844352]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03095949737846323]
+rolling_min_3
+rolling_min_3 stationary with d=0.65 stat windows =1 out of 1 p-values = [0.0329763988477715]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.018010797486779546]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [7.142320885305139e-30]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.027608576602326726]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.027608576602333443]
+rolling_min_4
+rolling_min_4 stationary with d=0.65 stat windows =1 out of 1 p-values = [0.04580539633124494]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0031454918533750684]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2786597829376337e-30]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.5 stat windows =1 out of 1 p-values = [0.03746882841885757]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.5 stat windows =1 out of 1 p-values = [0.037468828418873404]
+rolling_min_5
+rolling_min_5 stationary with d=0.7000000000000001 stat windows =1 out of 1 p-values = [0.035849994662876285]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0003082348254965981]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.0960008974107246e-30]
+lag_1
+lag_1 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.044180896248251667]
+lag_2
+lag_2 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04416286505265247]
+lag_3
+lag_3 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04428810199699251]
+lag_4
+lag_4 stationary with d=0.35000000000000003 stat windows =1 out of 1 p-values = [0.04421660116215568]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [6.637935710437419e-27]
+cumulative_sum
+cumulative_mean
+cumulative_max
+cumulative_max stationary with d=0.0 stat windows =1 out of 1 p-values = [8.188107060409129e-06]
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [8.702211436385386e-09]
+Running measurements with params: format=fd,chunk_size=3070, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10 chunks
+Optimization Time: 0.04874883665082355 minutes
+Training run 1 of 10 chunks
+Running with tuned params: {'n_estimators': 30, 'max_depth': 19}
+Run 0 Accuracy: 0.6873
+Run 1 Accuracy: 0.7003
+Run 2 Accuracy: 0.7134
+Run 3 Accuracy: 0.6645
+Run 4 Accuracy: 0.6808
+Run 5 Accuracy: 0.6906
+Run 6 Accuracy: 0.7036
+Run 7 Accuracy: 0.6971
+Run 8 Accuracy: 0.7003
+Run 9 Accuracy: 0.7101
+Tuning run 2 of 10 chunks
+Optimization Time: 0.10079955213392774 minutes
+Training run 2 of 10 chunks
+Running with tuned params: {'n_estimators': 47, 'max_depth': 30}
+Run 0 Accuracy: 0.7296
+Run 1 Accuracy: 0.7459
+Run 2 Accuracy: 0.7264
+Run 3 Accuracy: 0.7329
+Run 4 Accuracy: 0.7394
+Run 5 Accuracy: 0.7231
+Run 6 Accuracy: 0.7427
+Run 7 Accuracy: 0.7524
+Run 8 Accuracy: 0.7329
+Run 9 Accuracy: 0.7296
+Tuning run 3 of 10 chunks
+Optimization Time: 0.2246071133296937 minutes
+Training run 3 of 10 chunks
+Running with tuned params: {'n_estimators': 38, 'max_depth': 29}
+Run 0 Accuracy: 0.6873
+Run 1 Accuracy: 0.6906
+Run 2 Accuracy: 0.7003
+Run 3 Accuracy: 0.6645
+Run 4 Accuracy: 0.6645
+Run 5 Accuracy: 0.7166
+Run 6 Accuracy: 0.6352
+Run 7 Accuracy: 0.6678
+Run 8 Accuracy: 0.6840
+Run 9 Accuracy: 0.6645
+Tuning run 4 of 10 chunks
+Optimization Time: 0.1804275239041696 minutes
+Training run 4 of 10 chunks
+Running with tuned params: {'n_estimators': 47, 'max_depth': 12}
+Run 0 Accuracy: 0.6743
+Run 1 Accuracy: 0.6645
+Run 2 Accuracy: 0.6873
+Run 3 Accuracy: 0.6678
+Run 4 Accuracy: 0.6710
+Run 5 Accuracy: 0.6645
+Run 6 Accuracy: 0.6580
+Run 7 Accuracy: 0.6873
+Run 8 Accuracy: 0.6971
+Run 9 Accuracy: 0.6645
+Tuning run 5 of 10 chunks
+Optimization Time: 0.412873050935256 minutes
+Training run 5 of 10 chunks
+Running with tuned params: {'n_estimators': 50, 'max_depth': 13}
+Run 0 Accuracy: 0.7003
+Run 1 Accuracy: 0.7003
+Run 2 Accuracy: 0.6938
+Run 3 Accuracy: 0.6938
+Run 4 Accuracy: 0.7101
+Run 5 Accuracy: 0.7166
+Run 6 Accuracy: 0.7036
+Run 7 Accuracy: 0.6743
+Run 8 Accuracy: 0.7231
+Run 9 Accuracy: 0.7296
+Tuning run 6 of 10 chunks
+Optimization Time: 0.42146373212647936 minutes
+Training run 6 of 10 chunks
+Running with tuned params: {'n_estimators': 49, 'max_depth': 11}
+Run 0 Accuracy: 0.7785
+Run 1 Accuracy: 0.7655
+Run 2 Accuracy: 0.7785
+Run 3 Accuracy: 0.7785
+Run 4 Accuracy: 0.7720
+Run 5 Accuracy: 0.7785
+Run 6 Accuracy: 0.7948
+Run 7 Accuracy: 0.7590
+Run 8 Accuracy: 0.7915
+Run 9 Accuracy: 0.8013
+Tuning run 7 of 10 chunks
+Optimization Time: 0.5120191967347637 minutes
+Training run 7 of 10 chunks
+Running with tuned params: {'n_estimators': 47, 'max_depth': 16}
+Run 0 Accuracy: 0.8436
+Run 1 Accuracy: 0.8306
+Run 2 Accuracy: 0.8339
+Run 3 Accuracy: 0.8306
+Run 4 Accuracy: 0.8371
+Run 5 Accuracy: 0.8404
+Run 6 Accuracy: 0.8436
+Run 7 Accuracy: 0.8274
+Run 8 Accuracy: 0.8013
+Run 9 Accuracy: 0.8404
+Tuning run 8 of 10 chunks
+Optimization Time: 0.37841163846508913 minutes
+Training run 8 of 10 chunks
+Running with tuned params: {'n_estimators': 40, 'max_depth': 24}
+Run 0 Accuracy: 0.8306
+Run 1 Accuracy: 0.8241
+Run 2 Accuracy: 0.8371
+Run 3 Accuracy: 0.8176
+Run 4 Accuracy: 0.8274
+Run 5 Accuracy: 0.8339
+Run 6 Accuracy: 0.8339
+Run 7 Accuracy: 0.8436
+Run 8 Accuracy: 0.8306
+Run 9 Accuracy: 0.8436
+Tuning run 9 of 10 chunks
+Optimization Time: 0.5648913388994212 minutes
+Training run 9 of 10 chunks
+Running with tuned params: {'n_estimators': 29, 'max_depth': 29}
+Run 0 Accuracy: 0.8046
+Run 1 Accuracy: 0.7752
+Run 2 Accuracy: 0.8078
+Run 3 Accuracy: 0.7883
+Run 4 Accuracy: 0.8111
+Run 5 Accuracy: 0.7785
+Run 6 Accuracy: 0.7818
+Run 7 Accuracy: 0.8111
+Run 8 Accuracy: 0.7915
+Run 9 Accuracy: 0.7883
+Tuning run 10 of 10 chunks
+Optimization Time: 0.7655132893007248 minutes
+Training run 10 of 10 chunks
+Running with tuned params: {'n_estimators': 44, 'max_depth': 26}
+Run 0 Accuracy: 0.7662
+Run 1 Accuracy: 0.7695
+Run 2 Accuracy: 0.7825
+Run 3 Accuracy: 0.7760
+Run 4 Accuracy: 0.7630
+Run 5 Accuracy: 0.7857
+Run 6 Accuracy: 0.7857
+Run 7 Accuracy: 0.7630
+Run 8 Accuracy: 0.7597
+Run 9 Accuracy: 0.7403
+RUNNING CONSOLIDATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10
+Optimization Time: 0.06533760851404319 minutes
+Training run 1 of 10
+Running with tuned params: {'n_estimators': 43, 'max_depth': 14}
+Run 0 Accuracy: 0.7003
+Run 1 Accuracy: 0.6840
+Run 2 Accuracy: 0.6808
+Run 3 Accuracy: 0.6873
+Run 4 Accuracy: 0.7036
+Run 5 Accuracy: 0.6906
+Run 6 Accuracy: 0.6938
+Run 7 Accuracy: 0.6775
+Run 8 Accuracy: 0.7036
+Run 9 Accuracy: 0.7036
+Tuning run 2 of 10
+Optimization Time: 0.11006070231863609 minutes
+Training run 2 of 10
+Running with tuned params: {'n_estimators': 42, 'max_depth': 29}
+Run 0 Accuracy: 0.7248
+Run 1 Accuracy: 0.7166
+Run 2 Accuracy: 0.7264
+Run 3 Accuracy: 0.7134
+Run 4 Accuracy: 0.7362
+Run 5 Accuracy: 0.7394
+Run 6 Accuracy: 0.7280
+Run 7 Accuracy: 0.7248
+Run 8 Accuracy: 0.7231
+Run 9 Accuracy: 0.7264
+Tuning run 3 of 10
+Optimization Time: 0.19898594906553627 minutes
+Training run 3 of 10
+Running with tuned params: {'n_estimators': 47, 'max_depth': 31}
+Run 0 Accuracy: 0.7025
+Run 1 Accuracy: 0.7296
+Run 2 Accuracy: 0.7188
+Run 3 Accuracy: 0.7112
+Run 4 Accuracy: 0.7112
+Run 5 Accuracy: 0.7068
+Run 6 Accuracy: 0.7220
+Run 7 Accuracy: 0.7177
+Run 8 Accuracy: 0.7166
+Run 9 Accuracy: 0.7014
+Tuning run 4 of 10
+Optimization Time: 0.25710410030248265 minutes
+Training run 4 of 10
+Running with tuned params: {'n_estimators': 42, 'max_depth': 20}
+Run 0 Accuracy: 0.6881
+Run 1 Accuracy: 0.6946
+Run 2 Accuracy: 0.6954
+Run 3 Accuracy: 0.7060
+Run 4 Accuracy: 0.6808
+Run 5 Accuracy: 0.7101
+Run 6 Accuracy: 0.6971
+Run 7 Accuracy: 0.7093
+Run 8 Accuracy: 0.7028
+Run 9 Accuracy: 0.7158
+Tuning run 5 of 10
+Optimization Time: 0.35174277873399357 minutes
+Training run 5 of 10
+Running with tuned params: {'n_estimators': 50, 'max_depth': 32}
+Run 0 Accuracy: 0.7049
+Run 1 Accuracy: 0.7160
+Run 2 Accuracy: 0.7127
+Run 3 Accuracy: 0.7068
+Run 4 Accuracy: 0.7107
+Run 5 Accuracy: 0.7088
+Run 6 Accuracy: 0.7127
+Run 7 Accuracy: 0.7218
+Run 8 Accuracy: 0.7153
+Run 9 Accuracy: 0.7101
+Tuning run 6 of 10
+Optimization Time: 0.36066957293854407 minutes
+Training run 6 of 10
+Running with tuned params: {'n_estimators': 29, 'max_depth': 26}
+Run 0 Accuracy: 0.7161
+Run 1 Accuracy: 0.7340
+Run 2 Accuracy: 0.7128
+Run 3 Accuracy: 0.7182
+Run 4 Accuracy: 0.7134
+Run 5 Accuracy: 0.7150
+Run 6 Accuracy: 0.7074
+Run 7 Accuracy: 0.7096
+Run 8 Accuracy: 0.7215
+Run 9 Accuracy: 0.7237
+Tuning run 7 of 10
+Optimization Time: 0.5096544718835503 minutes
+Training run 7 of 10
+Running with tuned params: {'n_estimators': 40, 'max_depth': 16}
+Run 0 Accuracy: 0.7273
+Run 1 Accuracy: 0.7255
+Run 2 Accuracy: 0.7315
+Run 3 Accuracy: 0.7376
+Run 4 Accuracy: 0.7399
+Run 5 Accuracy: 0.7343
+Run 6 Accuracy: 0.7385
+Run 7 Accuracy: 0.7408
+Run 8 Accuracy: 0.7348
+Run 9 Accuracy: 0.7357
+Tuning run 8 of 10
+Optimization Time: 0.5583157393848523 minutes
+Training run 8 of 10
+Running with tuned params: {'n_estimators': 46, 'max_depth': 30}
+Run 0 Accuracy: 0.7447
+Run 1 Accuracy: 0.7516
+Run 2 Accuracy: 0.7492
+Run 3 Accuracy: 0.7402
+Run 4 Accuracy: 0.7471
+Run 5 Accuracy: 0.7529
+Run 6 Accuracy: 0.7553
+Run 7 Accuracy: 0.7508
+Run 8 Accuracy: 0.7496
+Run 9 Accuracy: 0.7565
+Tuning run 9 of 10
+Optimization Time: 0.5372377988494311 minutes
+Training run 9 of 10
+Running with tuned params: {'n_estimators': 48, 'max_depth': 31}
+Run 0 Accuracy: 0.7593
+Run 1 Accuracy: 0.7535
+Run 2 Accuracy: 0.7521
+Run 3 Accuracy: 0.7662
+Run 4 Accuracy: 0.7528
+Run 5 Accuracy: 0.7528
+Run 6 Accuracy: 0.7539
+Run 7 Accuracy: 0.7564
+Run 8 Accuracy: 0.7568
+Run 9 Accuracy: 0.7492
+Tuning run 10 of 10
+Optimization Time: 1.0232162015202144 minutes
+Training run 10 of 10
+Running with tuned params: {'n_estimators': 49, 'max_depth': 20}
+Run 0 Accuracy: 0.7538
+Run 1 Accuracy: 0.7568
+Run 2 Accuracy: 0.7659
+Run 3 Accuracy: 0.7558
+Run 4 Accuracy: 0.7603
+Run 5 Accuracy: 0.7577
+Run 6 Accuracy: 0.7502
+Run 7 Accuracy: 0.7564
+Run 8 Accuracy: 0.7551
+Run 9 Accuracy: 0.7646
+Runtime: 105.58312674363454 minutes
+means: [0.69478827 0.73550489 0.67752443 0.67361564 0.70456026 0.77980456
+ 0.83289902 0.83224756 0.79381107 0.76915584], [0.69250814 0.72589577 0.71378936 0.7        0.71198697 0.71715527
+ 0.73457422 0.74979642 0.75530221 0.75766851], std: [0.01382351 0.00883691 0.02180222 0.01208289 0.0152817  0.01237785
+ 0.01183895 0.00774258 0.01303339 0.01334333], [0.00946309 0.00739385 0.00842719 0.01025024 0.0046565  0.00733602
+ 0.0048769  0.00462541 0.00451305 0.00452094], timestamps: [  860  3930  7000 10070 13140 16210 19280 22350 25420 28490], [  860  3930  7000 10070 13140 16210 19280 22350 25420 28490]
+means: [0.68132553 0.75344528 0.66843311 0.67799918 0.68301138 0.78827816
+ 0.81301023 0.83355626 0.7880809  0.77615081], [0.68655579 0.72979134 0.71850105 0.7075051  0.70764133 0.72134102
+ 0.733572   0.74339242 0.74860333 0.75556583], std: [0.01579749 0.00852362 0.02262224 0.01174166 0.01563317 0.01045896
+ 0.01259088 0.00843415 0.01333466 0.01366213], [0.00995862 0.00765981 0.00779788 0.01038166 0.00541609 0.00749731
+ 0.00524972 0.00457384 0.00415483 0.00448938], timestamps: [  860  3930  7000 10070 13140 16210 19280 22350 25420 28490], [  860  3930  7000 10070 13140 16210 19280 22350 25420 28490]
+Finished measurements with params: format=['o', 'fd'],chunk_size=3070, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+Data forms: ['o', 'fod']
+Running measurements with params: format=fod,chunk_size=3071, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10 chunks
+Optimization Time: 0.038724652018087606 minutes
+Training run 1 of 10 chunks
+Running with tuned params: {'n_estimators': 40, 'max_depth': 11}
+Run 0 Accuracy: 0.7370
+Run 1 Accuracy: 0.6883
+Run 2 Accuracy: 0.7045
+Run 3 Accuracy: 0.7110
+Run 4 Accuracy: 0.7208
+Run 5 Accuracy: 0.7305
+Run 6 Accuracy: 0.7013
+Run 7 Accuracy: 0.6948
+Run 8 Accuracy: 0.7143
+Run 9 Accuracy: 0.7208
+Tuning run 2 of 10 chunks
+Optimization Time: 0.0739351751205201 minutes
+Training run 2 of 10 chunks
+Running with tuned params: {'n_estimators': 36, 'max_depth': 13}
+Run 0 Accuracy: 0.7890
+Run 1 Accuracy: 0.7922
+Run 2 Accuracy: 0.7825
+Run 3 Accuracy: 0.8019
+Run 4 Accuracy: 0.7727
+Run 5 Accuracy: 0.7760
+Run 6 Accuracy: 0.7760
+Run 7 Accuracy: 0.7825
+Run 8 Accuracy: 0.7857
+Run 9 Accuracy: 0.7857
+Tuning run 3 of 10 chunks
+Optimization Time: 0.15032692545404036 minutes
+Training run 3 of 10 chunks
+Running with tuned params: {'n_estimators': 20, 'max_depth': 13}
+Run 0 Accuracy: 0.6883
+Run 1 Accuracy: 0.6623
+Run 2 Accuracy: 0.6818
+Run 3 Accuracy: 0.6591
+Run 4 Accuracy: 0.6883
+Run 5 Accuracy: 0.6526
+Run 6 Accuracy: 0.6558
+Run 7 Accuracy: 0.6396
+Run 8 Accuracy: 0.6461
+Run 9 Accuracy: 0.6526
+Tuning run 4 of 10 chunks
+Optimization Time: 0.1897912607062608 minutes
+Training run 4 of 10 chunks
+Running with tuned params: {'n_estimators': 47, 'max_depth': 27}
+Run 0 Accuracy: 0.6916
+Run 1 Accuracy: 0.7175
+Run 2 Accuracy: 0.7305
+Run 3 Accuracy: 0.7305
+Run 4 Accuracy: 0.7435
+Run 5 Accuracy: 0.7305
+Run 6 Accuracy: 0.7240
+Run 7 Accuracy: 0.7305
+Run 8 Accuracy: 0.7500
+Run 9 Accuracy: 0.7370
+Tuning run 5 of 10 chunks
+Optimization Time: 0.39901404426588366 minutes
+Training run 5 of 10 chunks
+Running with tuned params: {'n_estimators': 49, 'max_depth': 25}
+Run 0 Accuracy: 0.6721
+Run 1 Accuracy: 0.6753
+Run 2 Accuracy: 0.6851
+Run 3 Accuracy: 0.6429
+Run 4 Accuracy: 0.6818
+Run 5 Accuracy: 0.6753
+Run 6 Accuracy: 0.6558
+Run 7 Accuracy: 0.6591
+Run 8 Accuracy: 0.6591
+Run 9 Accuracy: 0.6721
+Tuning run 6 of 10 chunks
+Optimization Time: 0.4358855923016866 minutes
+Training run 6 of 10 chunks
+Running with tuned params: {'n_estimators': 41, 'max_depth': 16}
+Run 0 Accuracy: 0.7435
+Run 1 Accuracy: 0.7435
+Run 2 Accuracy: 0.7338
+Run 3 Accuracy: 0.7370
+Run 4 Accuracy: 0.7468
+Run 5 Accuracy: 0.7435
+Run 6 Accuracy: 0.7597
+Run 7 Accuracy: 0.7597
+Run 8 Accuracy: 0.7435
+Run 9 Accuracy: 0.7175
+Tuning run 7 of 10 chunks
+Optimization Time: 0.233838362316601 minutes
+Training run 7 of 10 chunks
+Running with tuned params: {'n_estimators': 35, 'max_depth': 32}
+Run 0 Accuracy: 0.8214
+Run 1 Accuracy: 0.8474
+Run 2 Accuracy: 0.8506
+Run 3 Accuracy: 0.8214
+Run 4 Accuracy: 0.8442
+Run 5 Accuracy: 0.8409
+Run 6 Accuracy: 0.8409
+Run 7 Accuracy: 0.8312
+Run 8 Accuracy: 0.8214
+Run 9 Accuracy: 0.8312
+Tuning run 8 of 10 chunks
+Optimization Time: 0.4386018523480743 minutes
+Training run 8 of 10 chunks
+Running with tuned params: {'n_estimators': 46, 'max_depth': 28}
+Run 0 Accuracy: 0.8604
+Run 1 Accuracy: 0.8604
+Run 2 Accuracy: 0.8506
+Run 3 Accuracy: 0.8442
+Run 4 Accuracy: 0.8571
+Run 5 Accuracy: 0.8571
+Run 6 Accuracy: 0.8636
+Run 7 Accuracy: 0.8734
+Run 8 Accuracy: 0.8506
+Run 9 Accuracy: 0.8604
+Tuning run 9 of 10 chunks
+Optimization Time: 0.510556701819102 minutes
+Training run 9 of 10 chunks
+Running with tuned params: {'n_estimators': 39, 'max_depth': 12}
+Run 0 Accuracy: 0.7857
+Run 1 Accuracy: 0.7695
+Run 2 Accuracy: 0.7857
+Run 3 Accuracy: 0.7727
+Run 4 Accuracy: 0.7890
+Run 5 Accuracy: 0.7727
+Run 6 Accuracy: 0.7760
+Run 7 Accuracy: 0.7630
+Run 8 Accuracy: 0.7825
+Run 9 Accuracy: 0.7922
+Tuning run 10 of 10 chunks
+Optimization Time: 0.6791540524689481 minutes
+Training run 10 of 10 chunks
+Running with tuned params: {'n_estimators': 44, 'max_depth': 30}
+Run 0 Accuracy: 0.7435
+Run 1 Accuracy: 0.7630
+Run 2 Accuracy: 0.7597
+Run 3 Accuracy: 0.7792
+Run 4 Accuracy: 0.7565
+Run 5 Accuracy: 0.7727
+Run 6 Accuracy: 0.7695
+Run 7 Accuracy: 0.7792
+Run 8 Accuracy: 0.7403
+Run 9 Accuracy: 0.7500
+RUNNING CONSOLIDATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10
+Optimization Time: 0.042668799450621006 minutes
+Training run 1 of 10
+Running with tuned params: {'n_estimators': 33, 'max_depth': 10}
+Run 0 Accuracy: 0.7013
+Run 1 Accuracy: 0.7240
+Run 2 Accuracy: 0.7045
+Run 3 Accuracy: 0.7013
+Run 4 Accuracy: 0.7013
+Run 5 Accuracy: 0.7078
+Run 6 Accuracy: 0.7338
+Run 7 Accuracy: 0.7208
+Run 8 Accuracy: 0.7013
+Run 9 Accuracy: 0.7403
+Tuning run 2 of 10
+Optimization Time: 0.09844528947335979 minutes
+Training run 2 of 10
+Running with tuned params: {'n_estimators': 43, 'max_depth': 17}
+Run 0 Accuracy: 0.7435
+Run 1 Accuracy: 0.7451
+Run 2 Accuracy: 0.7614
+Run 3 Accuracy: 0.7549
+Run 4 Accuracy: 0.7516
+Run 5 Accuracy: 0.7549
+Run 6 Accuracy: 0.7500
+Run 7 Accuracy: 0.7662
+Run 8 Accuracy: 0.7451
+Run 9 Accuracy: 0.7435
+Tuning run 3 of 10
+Optimization Time: 0.1556748568157976 minutes
+Training run 3 of 10
+Running with tuned params: {'n_estimators': 42, 'max_depth': 30}
+Run 0 Accuracy: 0.7067
+Run 1 Accuracy: 0.7240
+Run 2 Accuracy: 0.7413
+Run 3 Accuracy: 0.7132
+Run 4 Accuracy: 0.7110
+Run 5 Accuracy: 0.7143
+Run 6 Accuracy: 0.7002
+Run 7 Accuracy: 0.7143
+Run 8 Accuracy: 0.7175
+Run 9 Accuracy: 0.7219
+Tuning run 4 of 10
+Optimization Time: 0.17449628631584346 minutes
+Training run 4 of 10
+Running with tuned params: {'n_estimators': 50, 'max_depth': 10}
+Run 0 Accuracy: 0.7192
+Run 1 Accuracy: 0.7159
+Run 2 Accuracy: 0.7232
+Run 3 Accuracy: 0.7183
+Run 4 Accuracy: 0.7281
+Run 5 Accuracy: 0.7313
+Run 6 Accuracy: 0.7248
+Run 7 Accuracy: 0.7208
+Run 8 Accuracy: 0.7192
+Run 9 Accuracy: 0.7240
+Tuning run 5 of 10
+Optimization Time: 0.3448088231651733 minutes
+Training run 5 of 10
+Running with tuned params: {'n_estimators': 46, 'max_depth': 18}
+Run 0 Accuracy: 0.7071
+Run 1 Accuracy: 0.7117
+Run 2 Accuracy: 0.7071
+Run 3 Accuracy: 0.7110
+Run 4 Accuracy: 0.7162
+Run 5 Accuracy: 0.7084
+Run 6 Accuracy: 0.7058
+Run 7 Accuracy: 0.7149
+Run 8 Accuracy: 0.7026
+Run 9 Accuracy: 0.7006
+Tuning run 6 of 10
+Optimization Time: 0.36472641044917203 minutes
+Training run 6 of 10
+Running with tuned params: {'n_estimators': 47, 'max_depth': 26}
+Run 0 Accuracy: 0.7175
+Run 1 Accuracy: 0.7251
+Run 2 Accuracy: 0.7127
+Run 3 Accuracy: 0.7067
+Run 4 Accuracy: 0.7208
+Run 5 Accuracy: 0.7110
+Run 6 Accuracy: 0.7256
+Run 7 Accuracy: 0.7062
+Run 8 Accuracy: 0.7127
+Run 9 Accuracy: 0.7165
+Tuning run 7 of 10
+Optimization Time: 0.36797769158923377 minutes
+Training run 7 of 10
+Running with tuned params: {'n_estimators': 38, 'max_depth': 22}
+Run 0 Accuracy: 0.7412
+Run 1 Accuracy: 0.7356
+Run 2 Accuracy: 0.7370
+Run 3 Accuracy: 0.7268
+Run 4 Accuracy: 0.7291
+Run 5 Accuracy: 0.7333
+Run 6 Accuracy: 0.7287
+Run 7 Accuracy: 0.7282
+Run 8 Accuracy: 0.7273
+Run 9 Accuracy: 0.7398
+Tuning run 8 of 10
+Optimization Time: 0.4798101238983994 minutes
+Training run 8 of 10
+Running with tuned params: {'n_estimators': 31, 'max_depth': 30}
+Run 0 Accuracy: 0.7399
+Run 1 Accuracy: 0.7496
+Run 2 Accuracy: 0.7463
+Run 3 Accuracy: 0.7399
+Run 4 Accuracy: 0.7427
+Run 5 Accuracy: 0.7411
+Run 6 Accuracy: 0.7354
+Run 7 Accuracy: 0.7476
+Run 8 Accuracy: 0.7431
+Run 9 Accuracy: 0.7431
+Tuning run 9 of 10
+Optimization Time: 0.6116690620857601 minutes
+Training run 9 of 10
+Running with tuned params: {'n_estimators': 26, 'max_depth': 15}
+Run 0 Accuracy: 0.7569
+Run 1 Accuracy: 0.7529
+Run 2 Accuracy: 0.7439
+Run 3 Accuracy: 0.7482
+Run 4 Accuracy: 0.7532
+Run 5 Accuracy: 0.7507
+Run 6 Accuracy: 0.7439
+Run 7 Accuracy: 0.7460
+Run 8 Accuracy: 0.7522
+Run 9 Accuracy: 0.7449
+Tuning run 10 of 10
+Optimization Time: 0.3529029093682766 minutes
+Training run 10 of 10
+Running with tuned params: {'n_estimators': 25, 'max_depth': 30}
+Run 0 Accuracy: 0.7497
+Run 1 Accuracy: 0.7338
+Run 2 Accuracy: 0.7471
+Run 3 Accuracy: 0.7357
+Run 4 Accuracy: 0.7425
+Run 5 Accuracy: 0.7370
+Run 6 Accuracy: 0.7451
+Run 7 Accuracy: 0.7494
+Run 8 Accuracy: 0.7477
+Run 9 Accuracy: 0.7445
+Runtime: 122.96914841334025 minutes
+means: [0.71233766 0.78441558 0.66266234 0.72857143 0.66785714 0.74285714
+ 0.83506494 0.85779221 0.7788961  0.76136364], [0.71363636 0.75162338 0.71645022 0.72248377 0.70857143 0.71547619
+ 0.73269944 0.74285714 0.7492785  0.74324675], std: [0.01467877 0.00823934 0.01658389 0.01510351 0.01249473 0.01159777
+ 0.01065014 0.00765573 0.00900352 0.01324819], [0.01413736 0.00740374 0.01055958 0.00451126 0.00474337 0.0065465
+ 0.00513168 0.00396067 0.00430791 0.00551719], timestamps: [  861  3932  7003 10074 13145 16216 19287 22358 25429 28500], [  861  3932  7003 10074 13145 16216 19287 22358 25429 28500]
+means: [0.72350573 0.78860094 0.63085565 0.70106174 0.67103236 0.75016459
+ 0.82353343 0.85618867 0.75563496 0.76488709], [0.72203348 0.75485281 0.70824158 0.71713099 0.70450543 0.71149483
+ 0.72555501 0.73748319 0.74408424 0.73707976], std: [0.01319963 0.00920529 0.01836922 0.01504212 0.01495065 0.01098136
+ 0.01043804 0.00788322 0.01014093 0.01397345], [0.014727   0.0097973  0.01064207 0.00464403 0.00405659 0.00583214
+ 0.00517723 0.0041305  0.00450464 0.00571854], timestamps: [  861  3932  7003 10074 13145 16216 19287 22358 25429 28500], [  861  3932  7003 10074 13145 16216 19287 22358 25429 28500]
+Finished measurements with params: format=['o', 'fod'],chunk_size=3071, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+Data forms: ['o']
+Running measurements with params: format=o,chunk_size=3071, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10 chunks
+Optimization Time: 0.03663382232965281 minutes
+Training run 1 of 10 chunks
+Running with tuned params: {'n_estimators': 8, 'max_depth': 13}
+Run 0 Accuracy: 0.6883
+Run 1 Accuracy: 0.6916
+Run 2 Accuracy: 0.7338
+Run 3 Accuracy: 0.7078
+Run 4 Accuracy: 0.7175
+Run 5 Accuracy: 0.6981
+Run 6 Accuracy: 0.7110
+Run 7 Accuracy: 0.7208
+Run 8 Accuracy: 0.7143
+Run 9 Accuracy: 0.7143
+Tuning run 2 of 10 chunks
+Optimization Time: 0.05475355746069302 minutes
+Training run 2 of 10 chunks
+Running with tuned params: {'n_estimators': 24, 'max_depth': 9}
+Run 0 Accuracy: 0.7338
+Run 1 Accuracy: 0.7435
+Run 2 Accuracy: 0.7273
+Run 3 Accuracy: 0.7240
+Run 4 Accuracy: 0.7468
+Run 5 Accuracy: 0.7403
+Run 6 Accuracy: 0.7565
+Run 7 Accuracy: 0.7662
+Run 8 Accuracy: 0.7208
+Run 9 Accuracy: 0.7305
+Tuning run 3 of 10 chunks
+Optimization Time: 0.08337077479809522 minutes
+Training run 3 of 10 chunks
+Running with tuned params: {'n_estimators': 25, 'max_depth': 15}
+Run 0 Accuracy: 0.6981
+Run 1 Accuracy: 0.7045
+Run 2 Accuracy: 0.7013
+Run 3 Accuracy: 0.6851
+Run 4 Accuracy: 0.7143
+Run 5 Accuracy: 0.7045
+Run 6 Accuracy: 0.6851
+Run 7 Accuracy: 0.7143
+Run 8 Accuracy: 0.7143
+Run 9 Accuracy: 0.6851
+Tuning run 4 of 10 chunks
+Optimization Time: 0.18459301809780299 minutes
+Training run 4 of 10 chunks
+Running with tuned params: {'n_estimators': 49, 'max_depth': 28}
+Run 0 Accuracy: 0.7013
+Run 1 Accuracy: 0.7013
+Run 2 Accuracy: 0.7338
+Run 3 Accuracy: 0.6916
+Run 4 Accuracy: 0.7338
+Run 5 Accuracy: 0.7045
+Run 6 Accuracy: 0.7370
+Run 7 Accuracy: 0.7110
+Run 8 Accuracy: 0.6851
+Run 9 Accuracy: 0.7338
+Tuning run 5 of 10 chunks
+Optimization Time: 0.17514432846413305 minutes
+Training run 5 of 10 chunks
+Running with tuned params: {'n_estimators': 27, 'max_depth': 12}
+Run 0 Accuracy: 0.6558
+Run 1 Accuracy: 0.6494
+Run 2 Accuracy: 0.6786
+Run 3 Accuracy: 0.6818
+Run 4 Accuracy: 0.6656
+Run 5 Accuracy: 0.6656
+Run 6 Accuracy: 0.6721
+Run 7 Accuracy: 0.6753
+Run 8 Accuracy: 0.6981
+Run 9 Accuracy: 0.6688
+Tuning run 6 of 10 chunks
+Optimization Time: 0.23268319123890252 minutes
+Training run 6 of 10 chunks
+Running with tuned params: {'n_estimators': 31, 'max_depth': 31}
+Run 0 Accuracy: 0.7500
+Run 1 Accuracy: 0.7370
+Run 2 Accuracy: 0.7695
+Run 3 Accuracy: 0.7532
+Run 4 Accuracy: 0.7273
+Run 5 Accuracy: 0.7403
+Run 6 Accuracy: 0.7532
+Run 7 Accuracy: 0.7597
+Run 8 Accuracy: 0.7435
+Run 9 Accuracy: 0.7370
+Tuning run 7 of 10 chunks
+Optimization Time: 0.24375688184518368 minutes
+Training run 7 of 10 chunks
+Running with tuned params: {'n_estimators': 19, 'max_depth': 13}
+Run 0 Accuracy: 0.8312
+Run 1 Accuracy: 0.8214
+Run 2 Accuracy: 0.8279
+Run 3 Accuracy: 0.8442
+Run 4 Accuracy: 0.8344
+Run 5 Accuracy: 0.8377
+Run 6 Accuracy: 0.8214
+Run 7 Accuracy: 0.8377
+Run 8 Accuracy: 0.8442
+Run 9 Accuracy: 0.8344
+Tuning run 8 of 10 chunks
+Optimization Time: 0.3413112000018979 minutes
+Training run 8 of 10 chunks
+Running with tuned params: {'n_estimators': 45, 'max_depth': 24}
+Run 0 Accuracy: 0.8214
+Run 1 Accuracy: 0.8214
+Run 2 Accuracy: 0.8052
+Run 3 Accuracy: 0.8052
+Run 4 Accuracy: 0.8279
+Run 5 Accuracy: 0.8117
+Run 6 Accuracy: 0.8019
+Run 7 Accuracy: 0.8084
+Run 8 Accuracy: 0.8442
+Run 9 Accuracy: 0.8019
+Tuning run 9 of 10 chunks
+Optimization Time: 0.45122444434867554 minutes
+Training run 9 of 10 chunks
+Running with tuned params: {'n_estimators': 31, 'max_depth': 15}
+Run 0 Accuracy: 0.7890
+Run 1 Accuracy: 0.8052
+Run 2 Accuracy: 0.7890
+Run 3 Accuracy: 0.7890
+Run 4 Accuracy: 0.7760
+Run 5 Accuracy: 0.7825
+Run 6 Accuracy: 0.8117
+Run 7 Accuracy: 0.8019
+Run 8 Accuracy: 0.8052
+Run 9 Accuracy: 0.8084
+Tuning run 10 of 10 chunks
+Optimization Time: 0.42587084216065707 minutes
+Training run 10 of 10 chunks
+Running with tuned params: {'n_estimators': 15, 'max_depth': 14}
+Run 0 Accuracy: 0.7695
+Run 1 Accuracy: 0.7792
+Run 2 Accuracy: 0.7792
+Run 3 Accuracy: 0.7987
+Run 4 Accuracy: 0.7760
+Run 5 Accuracy: 0.7727
+Run 6 Accuracy: 0.7760
+Run 7 Accuracy: 0.7597
+Run 8 Accuracy: 0.7857
+Run 9 Accuracy: 0.7857
+RUNNING CONSOLIDATION MEASURE
+'london_smart_meters_without_missing'
+Tuning run 1 of 10
+Optimization Time: 0.028660606352301936 minutes
+Training run 1 of 10
+Running with tuned params: {'n_estimators': 29, 'max_depth': 5}
+Run 0 Accuracy: 0.6818
+Run 1 Accuracy: 0.6851
+Run 2 Accuracy: 0.7078
+Run 3 Accuracy: 0.7175
+Run 4 Accuracy: 0.7143
+Run 5 Accuracy: 0.6786
+Run 6 Accuracy: 0.6948
+Run 7 Accuracy: 0.7013
+Run 8 Accuracy: 0.6981
+Run 9 Accuracy: 0.6981
+Tuning run 2 of 10
+Optimization Time: 0.08422951037840297 minutes
+Training run 2 of 10
+Running with tuned params: {'n_estimators': 22, 'max_depth': 15}
+Run 0 Accuracy: 0.7305
+Run 1 Accuracy: 0.7256
+Run 2 Accuracy: 0.7192
+Run 3 Accuracy: 0.7110
+Run 4 Accuracy: 0.7370
+Run 5 Accuracy: 0.7192
+Run 6 Accuracy: 0.7289
+Run 7 Accuracy: 0.7273
+Run 8 Accuracy: 0.7338
+Run 9 Accuracy: 0.7127
+Tuning run 3 of 10
+Optimization Time: 0.13980455250324061 minutes
+Training run 3 of 10
+Running with tuned params: {'n_estimators': 30, 'max_depth': 13}
+Run 0 Accuracy: 0.7240
+Run 1 Accuracy: 0.7110
+Run 2 Accuracy: 0.7229
+Run 3 Accuracy: 0.7348
+Run 4 Accuracy: 0.7348
+Run 5 Accuracy: 0.7229
+Run 6 Accuracy: 0.7262
+Run 7 Accuracy: 0.7197
+Run 8 Accuracy: 0.7240
+Run 9 Accuracy: 0.7262
+Tuning run 4 of 10
+Optimization Time: 0.1601132082209612 minutes
+Training run 4 of 10
+Running with tuned params: {'n_estimators': 44, 'max_depth': 10}
+Run 0 Accuracy: 0.7362
+Run 1 Accuracy: 0.7159
+Run 2 Accuracy: 0.7297
+Run 3 Accuracy: 0.7240
+Run 4 Accuracy: 0.7232
+Run 5 Accuracy: 0.7265
+Run 6 Accuracy: 0.7289
+Run 7 Accuracy: 0.7256
+Run 8 Accuracy: 0.7224
+Run 9 Accuracy: 0.7240
+Tuning run 5 of 10
+Optimization Time: 0.22943080541832994 minutes
+Training run 5 of 10
+Running with tuned params: {'n_estimators': 45, 'max_depth': 30}
+Run 0 Accuracy: 0.7104
+Run 1 Accuracy: 0.7104
+Run 2 Accuracy: 0.6974
+Run 3 Accuracy: 0.7091
+Run 4 Accuracy: 0.7058
+Run 5 Accuracy: 0.7117
+Run 6 Accuracy: 0.7130
+Run 7 Accuracy: 0.7097
+Run 8 Accuracy: 0.7188
+Run 9 Accuracy: 0.7039
+Tuning run 6 of 10
+Optimization Time: 0.3218462056635569 minutes
+Training run 6 of 10
+Running with tuned params: {'n_estimators': 46, 'max_depth': 20}
+Run 0 Accuracy: 0.7224
+Run 1 Accuracy: 0.7224
+Run 2 Accuracy: 0.7137
+Run 3 Accuracy: 0.7208
+Run 4 Accuracy: 0.7343
+Run 5 Accuracy: 0.7175
+Run 6 Accuracy: 0.7116
+Run 7 Accuracy: 0.7300
+Run 8 Accuracy: 0.7127
+Run 9 Accuracy: 0.7240
+Tuning run 7 of 10
+Optimization Time: 0.281289113778621 minutes
+Training run 7 of 10
+Running with tuned params: {'n_estimators': 19, 'max_depth': 27}
+Run 0 Accuracy: 0.7240
+Run 1 Accuracy: 0.7338
+Run 2 Accuracy: 0.7166
+Run 3 Accuracy: 0.7273
+Run 4 Accuracy: 0.7254
+Run 5 Accuracy: 0.7217
+Run 6 Accuracy: 0.7171
+Run 7 Accuracy: 0.7273
+Run 8 Accuracy: 0.7319
+Run 9 Accuracy: 0.7236
+Tuning run 8 of 10
+Optimization Time: 0.41423921364669997 minutes
+Training run 8 of 10
+Running with tuned params: {'n_estimators': 38, 'max_depth': 18}
+Run 0 Accuracy: 0.7463
+Run 1 Accuracy: 0.7447
+Run 2 Accuracy: 0.7480
+Run 3 Accuracy: 0.7455
+Run 4 Accuracy: 0.7423
+Run 5 Accuracy: 0.7459
+Run 6 Accuracy: 0.7443
+Run 7 Accuracy: 0.7399
+Run 8 Accuracy: 0.7468
+Run 9 Accuracy: 0.7411
+Tuning run 9 of 10
+Optimization Time: 0.43279678096684315 minutes
+Training run 9 of 10
+Running with tuned params: {'n_estimators': 49, 'max_depth': 16}
+Run 0 Accuracy: 0.7551
+Run 1 Accuracy: 0.7590
+Run 2 Accuracy: 0.7612
+Run 3 Accuracy: 0.7594
+Run 4 Accuracy: 0.7529
+Run 5 Accuracy: 0.7489
+Run 6 Accuracy: 0.7525
+Run 7 Accuracy: 0.7525
+Run 8 Accuracy: 0.7514
+Run 9 Accuracy: 0.7514
+Tuning run 10 of 10
+Optimization Time: 0.3776162625523284 minutes
+Training run 10 of 10
+Running with tuned params: {'n_estimators': 38, 'max_depth': 30}
+Run 0 Accuracy: 0.7614
+Run 1 Accuracy: 0.7558
+Run 2 Accuracy: 0.7506
+Run 3 Accuracy: 0.7558
+Run 4 Accuracy: 0.7552
+Run 5 Accuracy: 0.7578
+Run 6 Accuracy: 0.7562
+Run 7 Accuracy: 0.7506
+Run 8 Accuracy: 0.7575
+Run 9 Accuracy: 0.7503
+Runtime: 134.86080974737803 minutes
+means: [0.70974026 0.73896104 0.70064935 0.71331169 0.6711039  0.74707792
+ 0.83344156 0.81493506 0.79577922 0.77824675], [0.69772727 0.72451299 0.72467532 0.72564935 0.70902597 0.72094156
+ 0.72486085 0.74448052 0.75443723 0.75512987], std: [0.01316437 0.01386634 0.01150652 0.01859741 0.01299107 0.01183619
+ 0.00769008 0.01298701 0.01156592 0.00995965], [0.01252843 0.00827922 0.00655097 0.00505598 0.00542859 0.00702651
+ 0.00531193 0.00248991 0.00386542 0.00341697], timestamps: [  860  3931  7002 10073 13144 16215 19286 22357 25428 28499], [  860  3931  7002 10073 13144 16215 19286 22357 25428 28499]
+means: [0.70827384 0.74423181 0.69501345 0.71297546 0.66131476 0.7345234
+ 0.8302528  0.80486976 0.80116623 0.78393323], [0.69175624 0.72681943 0.72565926 0.73059227 0.70815915 0.71645117
+ 0.72105221 0.73967864 0.75094917 0.75027455], std: [0.01497899 0.01394664 0.01309881 0.01936046 0.01705323 0.01332943
+ 0.00855474 0.01437159 0.01069796 0.00939254], [0.01690008 0.00906364 0.00710365 0.00480446 0.00599724 0.00673596
+ 0.00532864 0.00292788 0.00446448 0.00375578], timestamps: [  860  3931  7002 10073 13144 16215 19286 22357 25428 28499], [  860  3931  7002 10073 13144 16215 19286 22357 25428 28499]
+Finished measurements with params: format=['o'],chunk_size=3071, num_runs=10,                 dataset_name=london_smart_meters_without_missing, model_name=random_forest

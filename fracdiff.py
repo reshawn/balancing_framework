@@ -246,7 +246,7 @@ from statsmodels.tsa.stattools import adfuller
 def set_thresh(series, diff_amt, max_rows_removed_ratio):
     thresh = 0.01  # start with a relatively large thresh value
     while True:
-        weights = get_weights_ffd(diff_amt, thresh, len(series))
+        weights =  get_weights(diff_amt, len(series)) # get_weights_ffd(diff_amt, thresh, len(series))
         rows_removed = len(weights) - 1
         if rows_removed / len(series) <= max_rows_removed_ratio:
             break
@@ -258,9 +258,12 @@ def frac_diff_bestd(df):
     # for col in tqdm(df.columns): # more verbose
     for col in df.columns:
         print(col)
+        if df[col].nunique()==1:
+            print(f'{col} has only one unique value: {df[col].iloc[0]}')
+            continue
         for d in d_tests:
-            # thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25) # using this leads to significantly different results, but test with it more if the dropped rows becomes a problem again
-            frac_diff_test = frac_diff_ffd(df[[col]], d) # , thresh)
+            thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25) # using this leads to significantly different results, but test with it more if the dropped rows becomes a problem again
+            frac_diff_test = frac_diff(df[[col]], d  , thresh)
             # at the time of writing, series length 885k crashes the kernel
             # 885k rows is too much for adf with current memory limits, options: 1. use just the first 100k rows,
             # 2. changing the maxlag or autolag params, 3. using a rolling window agg of the data, 4. testing the whole dataset in chunks of 100k
@@ -278,6 +281,9 @@ def frac_diff_bestd(df):
             p_values = []
             for i in range(0, len(frac_diff_test[col]), adf_chunk_size):
                 data_chunk = frac_diff_test[col].dropna()[i:i+adf_chunk_size]
+                if data_chunk.nunique()==1:
+                    print(f'{col} has only one unique value: {df[col].iloc[0]}')
+                    continue
                 adf_result = adfuller(data_chunk) 
                 # print(f'{i} p-value={adf_result[1]}, lags={adf_result[2]}')
                 num_stat = (num_stat[0], num_stat[1]+1)
@@ -291,9 +297,10 @@ def frac_diff_bestd(df):
                 # stationary with this d value
                 df[col] = frac_diff_test[col]
                 # print(f'{col} stationary with d={d} p-value={adf_result[1]}')
-                print(f'{col} stationary with d={d} stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}')
+                print(f'{col} stationary with d={d} thresh={thresh} stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}')
 
                 if d != 0:
                     changed += 1
                 break
+    print(f'changed {changed} out of {len(df.columns)} columns; {changed/len(df.columns)*100}%')
     return df, (changed/len(df.columns))*100

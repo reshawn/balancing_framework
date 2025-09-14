@@ -9,7 +9,8 @@ warnings.filterwarnings('ignore')
 
 from sklearn.model_selection import train_test_split
 
-from training import tune, train_eval, gen_chunk
+from training import Trainer
+from gluonts_utils import load_params
 
 RANDOM_STATE = 777
 num_kernels = 10_000
@@ -24,15 +25,40 @@ class Evaluator:
         self.results = pd.DataFrame()
         self.best_params = None
 
+        self.split_at_ends = False
+        self.data_params = None
+        self.model_params = None
+
+        
+        gluonts_models = ['transformer']
+        if self.model_name in gluonts_models:
+            self.split_at_ends = True
+            self.data_params = load_params('gluonts_params.txt', self.dataset_name)
+            self.model_params = load_params('gluonts_model_params.txt', self.model_name)
+            self.prediction_length = self.data_params['prediction_length']
+            self.context_length = self.data_params['context_length']
+        
+
         self.chunk_size = chunk_size
         # split df into chunks of size chunk_size and add 10% of each chunk into a list of test sets
         # NOTE: splitting it this way breaks the sequence. For 1 step predictions its okay but if treating X as a sequence:
             # would need to split by taking the ends of the chunks or something, maybe back to the GMMs since consol would need the ends
         self.chunks = []
         self.test_sets = []
+        fin = False
         for i in range(0, len(X), chunk_size):
-            X_tmp, y_tmp = X.iloc[i:i+chunk_size], y.iloc[i:i+chunk_size]
-            X_chunk, X_test, y_chunk, y_test = train_test_split(X_tmp, y_tmp, test_size=0.1, random_state=42)
+            if len(X)-i < chunk_size:
+                break
+            if len(X.iloc[i+chunk_size:i+chunk_size*2]) < chunk_size:
+                X_tmp, y_tmp = X.iloc[i:], y.iloc[i:] 
+            else:
+                X_tmp, y_tmp = X.iloc[i:i+chunk_size], y.iloc[i:i+chunk_size]
+
+            if self.split_at_ends:
+                X_chunk, X_test = X_tmp.iloc[:-self.prediction_length], X_tmp.iloc[-self.prediction_length:]
+                y_chunk, y_test = y_tmp.iloc[:-self.prediction_length], y_tmp.iloc[-self.prediction_length:]
+            else:
+                X_chunk, X_test, y_chunk, y_test = train_test_split(X_tmp, y_tmp, test_size=0.1, random_state=42)
             self.chunks.append((X_chunk, y_chunk))
             self.test_sets.append((X_test, y_test))
         self.num_chunks = len(self.chunks)
@@ -40,18 +66,33 @@ class Evaluator:
 
 
     def data_split(self, X, y, test=True):
-        if test:
-            if self.test_size is not None:
-                X_test, y_test = (X[-self.test_size:], y[-self.test_size:])
-                X, y = (X[:-self.test_size], y[:-self.test_size])
-                X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+        if not self.split_at_ends:
+            if test:
+                if self.test_size is not None:
+                    X_test, y_test = (X[-self.test_size:], y[-self.test_size:])
+                    X, y = (X[:-self.test_size], y[:-self.test_size])
+                    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+                else:
+                    X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+                    X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.2, random_state=RANDOM_STATE)
+                return X_train, X_val, y_train, y_val, X_test, y_test
             else:
-                X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-                X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.2, random_state=RANDOM_STATE)
-            return X_train, X_val, y_train, y_val, X_test, y_test
+                X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+                return X_train, X_val, y_train, y_val
         else:
-            X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-            return X_train, X_val, y_train, y_val
+            
+            if test:
+                if self.test_size is not None:
+                    X_test, y_test = (X[-self.test_size:], y[-self.test_size:])
+                    X, y = (X[:-self.test_size], y[:-self.test_size])
+                    X_train, X_val, y_train, y_val = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
+                else:
+                    X_temp, X_test, y_temp, y_test = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
+                    X_train, X_val, y_train, y_val = X_temp[:-self.prediction_length], X_temp[-self.prediction_length:], y_temp[:-self.prediction_length], y_temp[-self.prediction_length:]
+                return X_train, X_val, y_train, y_val, X_test, y_test
+            else:
+                X_train, X_val, y_train, y_val = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
+                return X_train, X_val, y_train, y_val
         
     def preprocessing(self):
         pass
@@ -80,19 +121,24 @@ class Evaluator:
 
         all_results = []
         X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
+        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs)
 
         for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
             
-            X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
-            print(f'Tuning run {i+1} of {self.num_chunks}')
-            best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
+            if self.model_params is None:
+                X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
+                print(f'Tuning run {i+1} of {self.num_chunks} chunks')
+                trainer.tune(X_train, y_train, X_val, y_val)
+            else:
+                X_train, y_train = X_seen, y_seen
+                trainer.tuned_params = self.model_params
 
-            print(f'Training run {i+1} of {self.num_chunks}')
+            print(f'Training run {i+1} of {self.num_chunks} chunks')
             X_chunk_test = self.test_sets[i][0]
             y_chunk_test = self.test_sets[i][1]
-            result = train_eval(self.model_name, best_params, X_train, y_train, X_chunk_test, y_chunk_test, num_runs=self.num_runs)
+            result = trainer.train_eval(X_train, y_train, X_chunk_test, y_chunk_test)
             result['last_ts'] = X_seen.index[-1]
             all_results.append(result)
         
@@ -124,20 +170,25 @@ class Evaluator:
 
         all_results = []
         X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
+        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs)
 
         for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
             
-            X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
-            print(f'Tuning run {i+1} of {self.num_chunks}')
-            best_params = tune(self.model_name, X_train, y_train, X_val, y_val, num_runs=self.num_runs)
+            if self.model_params is None:
+                X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
+                print(f'Tuning run {i+1} of {self.num_chunks} chunks')
+                trainer.tune(X_train, y_train, X_val, y_val)
+            else:
+                X_train, y_train = X_seen, y_seen
+                trainer.tuned_params = self.model_params
 
             print(f'Training run {i+1} of {self.num_chunks}')
             X_test = pd.concat([ temp[0] for temp in self.test_sets[:i+1] ])
             y_test = pd.concat([ temp[1] for temp in self.test_sets[:i+1] ])
 
-            result = train_eval(self.model_name, best_params, X_train, y_train, X_test, y_test, num_runs=self.num_runs)
+            result = trainer.train_eval(X_train, y_train, X_test, y_test)
             result['last_ts'] = X_seen.index[-1]
             all_results.append(result)
         

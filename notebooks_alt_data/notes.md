@@ -1,0 +1,93 @@
+Goal: To test the method on a wider variety of datasets outside of the described and intended use-case using simple tasks
+
+Towards that variety, monash repository for a breadth of time-series datasets that are consistently formatted and available. 
+For a simple task, the datasets are tailored into a binary classification problem per time-series. It is done in a way that ensures a balanced split of classes where possible and windowed rolling, cumulative, and comparative features are derived to support the values in the application of a traditional model.
+The simple task formatting may not reflect the difficulty of the datasets' use-cases in practice, but allows for a scalable exploration and comparison at this stage.
+Applied to more datasets, it can possibly allow for establishing a clearer definition of the attributes required in a dataset for the method to be applicable.
+
+TODO:
+x connect single instance done above to framework and eval
+- loop and average to the rest in dataset, wrapping it (load and store fracdiff res in h5 file or pkl dict of dfs for whole dataset)
+- debug and run on whole dataset
+- repeat, cant rem how scalable eval is, number of repeats also depends on runtime for the big ones on this laptop
+
+
+
+NOTE**********************
+Frac diff function has the option of a threshold on the maximum number of dropped rows. For the sp500 (intended use-case example) it was not necessary, but a lot of these monash datasets have shorter series so its needed here. Don't want to break old code, so the change was made manually instead of moving thresh to the params.
+ENDNOTE*******************
+
+
+Looping:
+- For each series in the dataset, run [o, o+fd, o+fod, o+fd+fod], store raw pickle results and individual run plots
+Result processing:
+- For each series in the dataset, comparison of 4 plot, mean min max per form
+- At end of dataset, final means of [mean min max] sets
+
+Next task:
+x flatten file structure for storing raw results
+X test and debug script
+x run on m4, [ o, o+fd, o+fod, o+fd+fod ]
+x run on single picked series
+x add gluonts models to framework
+- run again on single picked series
+- finalize target for presentation of results i.e fields of the table
+- results processing script to extract that from raw results
+
+
+result table fields:
+- for the same main questions around measuring consolidation of old knowledge, adaptation to new changes, and what the method does to those measures and their stabilityl; just at a different scale
+per dataset, per set of forms, per consol and adapt
+mean (mean min max), num of splits, mean min max series lengths, domain of dataset 
+ 
+
+quick note:
+look into stuff on the relationship between seasonality and stationarity
+and complete the dataset info table with the domains
+but so far it looks like the 'city' domain ones show more non stat series than the env ones like weather solar etc
+still to check the above, but with market regimes seeming like seasons too, the nonstat seems to be about the regularity and timing of the seasons
+price domains have a lot of that uncertainty, city domain would have more of it than env datasets, could maybe be a plausible reason
+if it is, could allow for making up for the lack of env data fit at least in this monash collection's picture 
+because then maybe the method and challenge doesnt fit so well with raw climate predictions, but the more human elements involved in the dataset task
+the more that uncertainty to the seasonality might increase and therefore become a better fit
+could also be entirely wrong because weather does still have some non stat series within it, but its a discussion point that could show the tie more than this subset collection alone
+
+
+on gluonts model inclusion
+- conditon change for splits in evaluator to split at the end instead of sklearn default
+- also remembering to include the val in train for when passing train and test
+
+
+quick aside on mxnet-cu112
+- latest version it supports
+- install driver to windows directly
+- install cuda toolkit 11.2 on wsl
+- it misses licudnn.8.so in cuda/lib64 so follow https://gist.github.com/sayef/8fc3791149876edc449052c3d6823d40 and download the tar from https://developer.nvidia.com/rdp/cudnn-archive
+- then sudo apt install libnccl2
+
+
+on gluonts model runs:
+- too consuming to run full version with tuning runs at each step, running 1 fully tuned go, comparing only original vs fd/original+fd
+- if that still fails, a toy example with a larger synthetic set, or the price data
+- in either case, would be relying on the previous runs to make the point of the benefit to over time stability
+
+new to do:
+- rapids frac diff?
+- run on m4 picked series with tuned transformer code
+- inversion of fd function to use in place of original target
+- programmatic tests for the other 2 conditions of using fd, verify with london and m4, then apply to rest on table for new pcts
+
+frac diff notes:
+- effective models need stationarity 
+- first order differencing achieves this by subtracting the previous value from the current value. going from a series of values to a series of changes faced by those values steadies out the mean and variance over time for a cleaner and more predictable series, but it removes the historical information within how the original series values were subtly changing in each step. Trends like that of in the figure of the original series, step-changes, a shift in variance, that can lend greater predictability to the next value are seen in the original series, but because of the conflicting attributes to a model can leverage, this is lost with a first order difference for the sake of stationarity. 
+- frac diff aims for a middle ground. Integer differencing where the previous value is subtracted from the last gives an operation where the options are (stationarity + loss of hist. info) or (non-stationarity + hist. info), the order of differencing, d, is 1. If the same operation were repeated on the result, d would be 2. Frac diff makes the differencing amount a continous parameter instead of an integer choice, and allows for subtracting the minimum amount that achieves stationarity, therefore retaining as much of the historical information as possible.
+- 
+- regular first order differencing, X_t = X_t - X_t-1, is adjusted to use a backshift operator, L or B, to define X_t more generally. Its effectively a cleaner, recursive way that allows for the parameter d to be in the general equation and for different orders of differencing to be expressed using the same equation. For example, [see screenshot fd1]. the result is an expression for the differenced series of X as (1-L)^d X_t
+- adjusting that general equation to allow for d to be a real number instead of an integer is what makes the difference described above possible. Which is done by using the binomial expansion. As in, [show the generalized theorem, and where L plugs in]. Expanding with the results of L, leads to a form where a real number d can be used. Keeping in mind L^k means applying the backshift k times, so L = X_t-1, L^k = X_t-k, means the end result is our original series with decaying weights applied. In other words, the fractionally differenced series is one where each value is calculated using a decaying weighted sum of all previous values instead of only the previous value.
+- In terms of using that expression for a practical implementation, of the final expansion we already have the original series and only need the weights, the binomial coefficients, to apply. Due to the recursive relationship in those coefficients, the expression can be reduced to the iterative formula used in the implementation, w_k = -w_k-1 ((d-k+1)/k) // weights_ = -weights[-1] * (diff_amt - k + 1) / k
+- conditions: nonstationarity, memory or hist info (measured with: autocorr,partial autocorr,hurst?)
+- cite https://link.springer.com/article/10.1007/s12572-021-00299-5 for full explanation with equations, high level desc for here))
+
+other fd implementation notes:
+- the function includes a skip step that calculates the cumulative percentage contribution of the weights and cuts off the rows below a threshold
+- the second version function takes this a bit further and uses a fixed window for calculating the weights instead of a full expanding window, (something like that), is faster at the cost of some info, and supposedly isnt reversible

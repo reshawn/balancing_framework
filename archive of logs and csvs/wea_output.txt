@@ -1,0 +1,738 @@
+Running measurements with params: format=['auto'], dataset_name=weather_dataset
+Data forms: ['fd', 'fod', 'o']
+values
+values stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.04052179475980194]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.04891014263033534]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.04891014263033556]
+rolling_min_2
+rolling_min_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.033665865448657455]
+rolling_max_2
+rolling_max_2 stationary with d=0.1 stat windows =1 out of 1 p-values = [0.04591599232485297]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2474362261267515e-07]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.034415766348815276]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.03441576634881787]
+rolling_min_3
+rolling_min_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0307165604904909]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.03278724371266764]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2910050651679048e-05]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03687663222161941]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03687663222161946]
+rolling_min_4
+rolling_min_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.032441125644517586]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.02188526929709732]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.1660324098804113e-05]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.022154178403530574]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.022154178403526018]
+rolling_min_5
+rolling_min_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.027398463337189354]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.023660529539665805]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.2432531956394762e-05]
+lag_1
+lag_1 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.035422926259042864]
+lag_2
+lag_2 stationary with d=0.05 stat windows =1 out of 1 p-values = [0.049311961285783794]
+lag_3
+lag_3 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.03789606360879808]
+lag_4
+lag_4 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.03835307071887245]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [2.1804434299899603e-30]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [1.053810917737463e-27]
+cumulative_sum
+cumulative_mean
+cumulative_mean stationary with d=0.0 stat windows =1 out of 1 p-values = [2.8941931184291355e-11]
+cumulative_max
+cumulative_max stationary with d=0.0 stat windows =1 out of 1 p-values = [0.01695952163467293]
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [0.031080586883929524]
+Running measurements with params: format=o,chunk_size=930, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 3
+Optimization Time: 0.019858404316861804 minutes
+Training run 1 of 3
+Run 0 Accuracy: 0.6774
+Run 1 Accuracy: 0.6452
+Run 2 Accuracy: 0.6237
+Run 3 Accuracy: 0.6559
+Run 4 Accuracy: 0.6344
+Run 5 Accuracy: 0.6237
+Run 6 Accuracy: 0.6774
+Run 7 Accuracy: 0.6129
+Run 8 Accuracy: 0.6559
+Run 9 Accuracy: 0.6667
+Tuning run 2 of 3
+Optimization Time: 0.03552907553385012 minutes
+Training run 2 of 3
+Run 0 Accuracy: 0.6774
+Run 1 Accuracy: 0.6237
+Run 2 Accuracy: 0.6129
+Run 3 Accuracy: 0.6129
+Run 4 Accuracy: 0.6022
+Run 5 Accuracy: 0.5914
+Run 6 Accuracy: 0.6022
+Run 7 Accuracy: 0.5591
+Run 8 Accuracy: 0.5914
+Run 9 Accuracy: 0.5591
+Tuning run 3 of 3
+Optimization Time: 0.061007012783860164 minutes
+Training run 3 of 3
+Run 0 Accuracy: 0.5652
+Run 1 Accuracy: 0.5543
+Run 2 Accuracy: 0.5326
+Run 3 Accuracy: 0.5978
+Run 4 Accuracy: 0.5217
+Run 5 Accuracy: 0.6087
+Run 6 Accuracy: 0.5978
+Run 7 Accuracy: 0.5652
+Run 8 Accuracy: 0.5652
+Run 9 Accuracy: 0.5652
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 3
+Optimization Time: 0.0177407114165059 minutes
+Training run 1 of 3
+Run 0 Accuracy: 0.6559
+Run 1 Accuracy: 0.6344
+Run 2 Accuracy: 0.6129
+Run 3 Accuracy: 0.6989
+Run 4 Accuracy: 0.6774
+Run 5 Accuracy: 0.6022
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.6667
+Run 8 Accuracy: 0.6667
+Run 9 Accuracy: 0.6882
+Tuning run 2 of 3
+Optimization Time: 0.020967963316555444 minutes
+Training run 2 of 3
+Run 0 Accuracy: 0.6505
+Run 1 Accuracy: 0.6344
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.6344
+Run 4 Accuracy: 0.6344
+Run 5 Accuracy: 0.6452
+Run 6 Accuracy: 0.6022
+Run 7 Accuracy: 0.6452
+Run 8 Accuracy: 0.6774
+Run 9 Accuracy: 0.6290
+Tuning run 3 of 3
+Optimization Time: 0.06660230435081757 minutes
+Training run 3 of 3
+Run 0 Accuracy: 0.6583
+Run 1 Accuracy: 0.6403
+Run 2 Accuracy: 0.6331
+Run 3 Accuracy: 0.6511
+Run 4 Accuracy: 0.6547
+Run 5 Accuracy: 0.6367
+Run 6 Accuracy: 0.6439
+Run 7 Accuracy: 0.6619
+Run 8 Accuracy: 0.6295
+Run 9 Accuracy: 0.6439
+Runtime: 2.0689649542172748 minutes
+means: [0.64731183 0.60322581 0.5673913 ], [0.65483871 0.63978495 0.64532374], std: [0.02193127 0.03206033 0.02653599], [0.02981812 0.01799269 0.01032568], timestamps: [ 103 1033 1963], [ 103 1033 1963]
+means: [0.53222851 0.59310068 0.529137  ], [0.54066069 0.57032642 0.61272263], std: [0.03372528 0.03300081 0.03246436], [0.05035196 0.02335365 0.01629177], timestamps: [ 103 1033 1963], [ 103 1033 1963]
+Finished measurements with params: format=['fd', 'fod', 'o'],chunk_size=930, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+Data forms: ['fd', 'o']
+values
+values stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.04052179475980194]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.04891014263033534]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.04891014263033556]
+rolling_min_2
+rolling_min_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.033665865448657455]
+rolling_max_2
+rolling_max_2 stationary with d=0.1 stat windows =1 out of 1 p-values = [0.04591599232485297]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2474362261267515e-07]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.034415766348815276]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.03441576634881787]
+rolling_min_3
+rolling_min_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0307165604904909]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.03278724371266764]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2910050651679048e-05]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03687663222161941]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.45 stat windows =1 out of 1 p-values = [0.03687663222161946]
+rolling_min_4
+rolling_min_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.032441125644517586]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.02188526929709732]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.1660324098804113e-05]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.022154178403530574]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.022154178403526018]
+rolling_min_5
+rolling_min_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.027398463337189354]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [0.023660529539665805]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.2432531956394762e-05]
+lag_1
+lag_1 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.035422926259042864]
+lag_2
+lag_2 stationary with d=0.05 stat windows =1 out of 1 p-values = [0.049311961285783794]
+lag_3
+lag_3 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.03789606360879808]
+lag_4
+lag_4 stationary with d=0.15000000000000002 stat windows =1 out of 1 p-values = [0.03835307071887245]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [2.1804434299899603e-30]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [1.053810917737463e-27]
+cumulative_sum
+cumulative_mean
+cumulative_mean stationary with d=0.0 stat windows =1 out of 1 p-values = [2.8941931184291355e-11]
+cumulative_max
+cumulative_max stationary with d=0.0 stat windows =1 out of 1 p-values = [0.01695952163467293]
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [0.031080586883929524]
+series length 2779 with 62 feats does not meet criteria of >=10*n_features and a resulting count of splits > min_splits=3.
+Running measurements with params: format=o,chunk_size=620, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 5
+Optimization Time: 0.011524958149918045 minutes
+Training run 1 of 5
+Run 0 Accuracy: 0.7419
+Run 1 Accuracy: 0.7581
+Run 2 Accuracy: 0.7581
+Run 3 Accuracy: 0.7097
+Run 4 Accuracy: 0.7419
+Run 5 Accuracy: 0.6935
+Run 6 Accuracy: 0.7258
+Run 7 Accuracy: 0.7258
+Run 8 Accuracy: 0.7581
+Run 9 Accuracy: 0.7742
+Tuning run 2 of 5
+Optimization Time: 0.025074961732995386 minutes
+Training run 2 of 5
+Run 0 Accuracy: 0.6290
+Run 1 Accuracy: 0.6290
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.6774
+Run 4 Accuracy: 0.6290
+Run 5 Accuracy: 0.6129
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.6613
+Run 8 Accuracy: 0.6452
+Run 9 Accuracy: 0.7258
+Tuning run 3 of 5
+Optimization Time: 0.031045536165280888 minutes
+Training run 3 of 5
+Run 0 Accuracy: 0.5806
+Run 1 Accuracy: 0.5645
+Run 2 Accuracy: 0.6613
+Run 3 Accuracy: 0.5645
+Run 4 Accuracy: 0.5323
+Run 5 Accuracy: 0.5645
+Run 6 Accuracy: 0.6129
+Run 7 Accuracy: 0.5806
+Run 8 Accuracy: 0.6290
+Run 9 Accuracy: 0.6452
+Tuning run 4 of 5
+Optimization Time: 0.03169997434985514 minutes
+Training run 4 of 5
+Run 0 Accuracy: 0.6774
+Run 1 Accuracy: 0.6774
+Run 2 Accuracy: 0.6129
+Run 3 Accuracy: 0.6129
+Run 4 Accuracy: 0.6613
+Run 5 Accuracy: 0.6613
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.6129
+Run 8 Accuracy: 0.6452
+Run 9 Accuracy: 0.6613
+Tuning run 5 of 5
+Optimization Time: 0.05343564256715278 minutes
+Training run 5 of 5
+Run 0 Accuracy: 0.5667
+Run 1 Accuracy: 0.5333
+Run 2 Accuracy: 0.6667
+Run 3 Accuracy: 0.4333
+Run 4 Accuracy: 0.6333
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4667
+Run 8 Accuracy: 0.6667
+Run 9 Accuracy: 0.7000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 5
+Optimization Time: 0.015412123349960893 minutes
+Training run 1 of 5
+Run 0 Accuracy: 0.6935
+Run 1 Accuracy: 0.7097
+Run 2 Accuracy: 0.7419
+Run 3 Accuracy: 0.8065
+Run 4 Accuracy: 0.8065
+Run 5 Accuracy: 0.7097
+Run 6 Accuracy: 0.7903
+Run 7 Accuracy: 0.6613
+Run 8 Accuracy: 0.7742
+Run 9 Accuracy: 0.7903
+Tuning run 2 of 5
+Optimization Time: 0.026933689933503046 minutes
+Training run 2 of 5
+Run 0 Accuracy: 0.6694
+Run 1 Accuracy: 0.6855
+Run 2 Accuracy: 0.7016
+Run 3 Accuracy: 0.6774
+Run 4 Accuracy: 0.6935
+Run 5 Accuracy: 0.6935
+Run 6 Accuracy: 0.7581
+Run 7 Accuracy: 0.6935
+Run 8 Accuracy: 0.7258
+Run 9 Accuracy: 0.7097
+Tuning run 3 of 5
+Optimization Time: 0.03971164673372793 minutes
+Training run 3 of 5
+Run 0 Accuracy: 0.6505
+Run 1 Accuracy: 0.6667
+Run 2 Accuracy: 0.6613
+Run 3 Accuracy: 0.6505
+Run 4 Accuracy: 0.6290
+Run 5 Accuracy: 0.6667
+Run 6 Accuracy: 0.6774
+Run 7 Accuracy: 0.6452
+Run 8 Accuracy: 0.6559
+Run 9 Accuracy: 0.6667
+Tuning run 4 of 5
+Optimization Time: 0.04191435851583568 minutes
+Training run 4 of 5
+Run 0 Accuracy: 0.6734
+Run 1 Accuracy: 0.6492
+Run 2 Accuracy: 0.6411
+Run 3 Accuracy: 0.6492
+Run 4 Accuracy: 0.6694
+Run 5 Accuracy: 0.6895
+Run 6 Accuracy: 0.6653
+Run 7 Accuracy: 0.6613
+Run 8 Accuracy: 0.6895
+Run 9 Accuracy: 0.6815
+Tuning run 5 of 5
+Optimization Time: 0.07153753211605363 minutes
+Training run 5 of 5
+Run 0 Accuracy: 0.6799
+Run 1 Accuracy: 0.6906
+Run 2 Accuracy: 0.6978
+Run 3 Accuracy: 0.6978
+Run 4 Accuracy: 0.6511
+Run 5 Accuracy: 0.6799
+Run 6 Accuracy: 0.6942
+Run 7 Accuracy: 0.6835
+Run 8 Accuracy: 0.6727
+Run 9 Accuracy: 0.6942
+Runtime: 3.2421184221903485 minutes
+means: [0.73870968 0.65       0.59354839 0.64677419 0.58666667], [0.7483871  0.70080645 0.65698925 0.66693548 0.68417266], std: [0.02370474 0.03064516 0.03937599 0.02440765 0.08326664], [0.04955578 0.02431422 0.01312533 0.01614918 0.01372574], timestamps: [ 102  722 1342 1962 2582], [ 102  722 1342 1962 2582]
+means: [0.54942043 0.63144931 0.58271072 0.59068172 0.44613624], [0.5693286  0.61889351 0.59271237 0.60860855 0.61461629], std: [0.0616946  0.03024741 0.03699711 0.02212743 0.12654779], [0.08613992 0.02827511 0.02138503 0.02109576 0.01433028], timestamps: [ 102  722 1342 1962 2582], [ 102  722 1342 1962 2582]
+Finished measurements with params: format=['fd', 'o'],chunk_size=620, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+Data forms: ['fod', 'o']
+series length 2788 with 62 feats does not meet criteria of >=10*n_features and a resulting count of splits > min_splits=3.
+Running measurements with params: format=o,chunk_size=620, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 5
+Optimization Time: 0.01367284741718322 minutes
+Training run 1 of 5
+Run 0 Accuracy: 0.7419
+Run 1 Accuracy: 0.7581
+Run 2 Accuracy: 0.7742
+Run 3 Accuracy: 0.7581
+Run 4 Accuracy: 0.7903
+Run 5 Accuracy: 0.7258
+Run 6 Accuracy: 0.7258
+Run 7 Accuracy: 0.7258
+Run 8 Accuracy: 0.7581
+Run 9 Accuracy: 0.7903
+Tuning run 2 of 5
+Optimization Time: 0.023158712283475325 minutes
+Training run 2 of 5
+Run 0 Accuracy: 0.5645
+Run 1 Accuracy: 0.5484
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.5645
+Run 4 Accuracy: 0.5968
+Run 5 Accuracy: 0.6290
+Run 6 Accuracy: 0.5968
+Run 7 Accuracy: 0.6452
+Run 8 Accuracy: 0.6129
+Run 9 Accuracy: 0.5806
+Tuning run 3 of 5
+Optimization Time: 0.03487002999948648 minutes
+Training run 3 of 5
+Run 0 Accuracy: 0.6290
+Run 1 Accuracy: 0.6290
+Run 2 Accuracy: 0.5968
+Run 3 Accuracy: 0.6129
+Run 4 Accuracy: 0.5968
+Run 5 Accuracy: 0.6613
+Run 6 Accuracy: 0.5968
+Run 7 Accuracy: 0.6613
+Run 8 Accuracy: 0.6452
+Run 9 Accuracy: 0.6935
+Tuning run 4 of 5
+Optimization Time: 0.049401928016838306 minutes
+Training run 4 of 5
+Run 0 Accuracy: 0.6935
+Run 1 Accuracy: 0.6613
+Run 2 Accuracy: 0.6613
+Run 3 Accuracy: 0.6774
+Run 4 Accuracy: 0.6613
+Run 5 Accuracy: 0.6774
+Run 6 Accuracy: 0.6613
+Run 7 Accuracy: 0.6774
+Run 8 Accuracy: 0.6774
+Run 9 Accuracy: 0.6935
+Tuning run 5 of 5
+Optimization Time: 0.05500643903311963 minutes
+Training run 5 of 5
+Run 0 Accuracy: 0.6452
+Run 1 Accuracy: 0.5806
+Run 2 Accuracy: 0.6774
+Run 3 Accuracy: 0.6452
+Run 4 Accuracy: 0.6452
+Run 5 Accuracy: 0.5484
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.5806
+Run 8 Accuracy: 0.6129
+Run 9 Accuracy: 0.5806
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 5
+Optimization Time: 0.014970981133713698 minutes
+Training run 1 of 5
+Run 0 Accuracy: 0.7903
+Run 1 Accuracy: 0.7581
+Run 2 Accuracy: 0.7903
+Run 3 Accuracy: 0.7581
+Run 4 Accuracy: 0.8226
+Run 5 Accuracy: 0.8065
+Run 6 Accuracy: 0.8065
+Run 7 Accuracy: 0.7742
+Run 8 Accuracy: 0.7581
+Run 9 Accuracy: 0.7742
+Tuning run 2 of 5
+Optimization Time: 0.024604816866728167 minutes
+Training run 2 of 5
+Run 0 Accuracy: 0.6855
+Run 1 Accuracy: 0.6532
+Run 2 Accuracy: 0.7016
+Run 3 Accuracy: 0.6935
+Run 4 Accuracy: 0.7097
+Run 5 Accuracy: 0.6452
+Run 6 Accuracy: 0.6532
+Run 7 Accuracy: 0.7097
+Run 8 Accuracy: 0.6774
+Run 9 Accuracy: 0.6855
+Tuning run 3 of 5
+Optimization Time: 0.037279873164758705 minutes
+Training run 3 of 5
+Run 0 Accuracy: 0.6452
+Run 1 Accuracy: 0.6882
+Run 2 Accuracy: 0.6720
+Run 3 Accuracy: 0.6828
+Run 4 Accuracy: 0.6559
+Run 5 Accuracy: 0.6720
+Run 6 Accuracy: 0.6828
+Run 7 Accuracy: 0.6935
+Run 8 Accuracy: 0.6452
+Run 9 Accuracy: 0.6828
+Tuning run 4 of 5
+Optimization Time: 0.051803255449825274 minutes
+Training run 4 of 5
+Run 0 Accuracy: 0.6694
+Run 1 Accuracy: 0.6532
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.6210
+Run 4 Accuracy: 0.6895
+Run 5 Accuracy: 0.6371
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.6371
+Run 8 Accuracy: 0.6532
+Run 9 Accuracy: 0.6734
+Tuning run 5 of 5
+Optimization Time: 0.045093292083280785 minutes
+Training run 5 of 5
+Run 0 Accuracy: 0.6667
+Run 1 Accuracy: 0.6918
+Run 2 Accuracy: 0.6559
+Run 3 Accuracy: 0.6595
+Run 4 Accuracy: 0.6703
+Run 5 Accuracy: 0.6738
+Run 6 Accuracy: 0.6774
+Run 7 Accuracy: 0.6846
+Run 8 Accuracy: 0.6631
+Run 9 Accuracy: 0.6738
+Runtime: 4.000436139106751 minutes
+means: [0.75483871 0.5983871  0.63225806 0.67419355 0.61612903], [0.78387097 0.68145161 0.67204301 0.65241935 0.67168459], std: [0.02370474 0.03261895 0.03127535 0.01206986 0.03937599], [0.02187848 0.02259504 0.01665799 0.01915216 0.01053544], timestamps: [ 103  723 1343 1963 2583], [ 103  723 1343 1963 2583]
+means: [0.63474921 0.60380439 0.63326795 0.70780592 0.63838469], [0.69434071 0.59478817 0.62506893 0.63203332 0.65606687], std: [0.04505119 0.03459127 0.03094691 0.01432003 0.0279188 ], [0.03893819 0.02534229 0.02176559 0.02335449 0.0168597 ], timestamps: [ 103  723 1343 1963 2583], [ 103  723 1343 1963 2583]
+Finished measurements with params: format=['fod', 'o'],chunk_size=620, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+Data forms: ['o']
+series length 2789 with 31 feats does not meet criteria of >=10*n_features and a resulting count of splits > min_splits=3.
+Running measurements with params: format=o,chunk_size=310, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 9
+Optimization Time: 0.007783594417075316 minutes
+Training run 1 of 9
+Run 0 Accuracy: 0.9355
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.9355
+Run 3 Accuracy: 0.9355
+Run 4 Accuracy: 0.9355
+Run 5 Accuracy: 0.9355
+Run 6 Accuracy: 0.9355
+Run 7 Accuracy: 0.9677
+Run 8 Accuracy: 0.9677
+Run 9 Accuracy: 0.9677
+Tuning run 2 of 9
+Optimization Time: 0.009925509634194895 minutes
+Training run 2 of 9
+Run 0 Accuracy: 0.7097
+Run 1 Accuracy: 0.7742
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.7097
+Run 4 Accuracy: 0.7097
+Run 5 Accuracy: 0.6774
+Run 6 Accuracy: 0.7097
+Run 7 Accuracy: 0.7742
+Run 8 Accuracy: 0.7419
+Run 9 Accuracy: 0.8065
+Tuning run 3 of 9
+Optimization Time: 0.015629535232437774 minutes
+Training run 3 of 9
+Run 0 Accuracy: 0.5484
+Run 1 Accuracy: 0.5161
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.6129
+Run 4 Accuracy: 0.6774
+Run 5 Accuracy: 0.6129
+Run 6 Accuracy: 0.5484
+Run 7 Accuracy: 0.6452
+Run 8 Accuracy: 0.6774
+Run 9 Accuracy: 0.6129
+Tuning run 4 of 9
+Optimization Time: 0.016908513149246573 minutes
+Training run 4 of 9
+Run 0 Accuracy: 0.5806
+Run 1 Accuracy: 0.7419
+Run 2 Accuracy: 0.6774
+Run 3 Accuracy: 0.5806
+Run 4 Accuracy: 0.6774
+Run 5 Accuracy: 0.6774
+Run 6 Accuracy: 0.6129
+Run 7 Accuracy: 0.5806
+Run 8 Accuracy: 0.5806
+Run 9 Accuracy: 0.5806
+Tuning run 5 of 9
+Optimization Time: 0.0294749114002722 minutes
+Training run 5 of 9
+Run 0 Accuracy: 0.8387
+Run 1 Accuracy: 0.7097
+Run 2 Accuracy: 0.7742
+Run 3 Accuracy: 0.7419
+Run 4 Accuracy: 0.7097
+Run 5 Accuracy: 0.7419
+Run 6 Accuracy: 0.6774
+Run 7 Accuracy: 0.6774
+Run 8 Accuracy: 0.8065
+Run 9 Accuracy: 0.7097
+Tuning run 6 of 9
+Optimization Time: 0.025168800534447654 minutes
+Training run 6 of 9
+Run 0 Accuracy: 0.7419
+Run 1 Accuracy: 0.6774
+Run 2 Accuracy: 0.6452
+Run 3 Accuracy: 0.6452
+Run 4 Accuracy: 0.7419
+Run 5 Accuracy: 0.6129
+Run 6 Accuracy: 0.6452
+Run 7 Accuracy: 0.6452
+Run 8 Accuracy: 0.7419
+Run 9 Accuracy: 0.6774
+Tuning run 7 of 9
+Optimization Time: 0.03475802940083668 minutes
+Training run 7 of 9
+Run 0 Accuracy: 0.4839
+Run 1 Accuracy: 0.4516
+Run 2 Accuracy: 0.5806
+Run 3 Accuracy: 0.6452
+Run 4 Accuracy: 0.5806
+Run 5 Accuracy: 0.4839
+Run 6 Accuracy: 0.5484
+Run 7 Accuracy: 0.5806
+Run 8 Accuracy: 0.5806
+Run 9 Accuracy: 0.5484
+Tuning run 8 of 9
+Optimization Time: 0.03771305123421674 minutes
+Training run 8 of 9
+Run 0 Accuracy: 0.5484
+Run 1 Accuracy: 0.6452
+Run 2 Accuracy: 0.6774
+Run 3 Accuracy: 0.5806
+Run 4 Accuracy: 0.6129
+Run 5 Accuracy: 0.6129
+Run 6 Accuracy: 0.6774
+Run 7 Accuracy: 0.5161
+Run 8 Accuracy: 0.7419
+Run 9 Accuracy: 0.6452
+Tuning run 9 of 9
+Optimization Time: 0.048972893950607006 minutes
+Training run 9 of 9
+Run 0 Accuracy: 0.5806
+Run 1 Accuracy: 0.5161
+Run 2 Accuracy: 0.5161
+Run 3 Accuracy: 0.5161
+Run 4 Accuracy: 0.5806
+Run 5 Accuracy: 0.5806
+Run 6 Accuracy: 0.6129
+Run 7 Accuracy: 0.6129
+Run 8 Accuracy: 0.6129
+Run 9 Accuracy: 0.5806
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 9
+Optimization Time: 0.006570041216521835 minutes
+Training run 1 of 9
+Run 0 Accuracy: 0.9677
+Run 1 Accuracy: 0.9032
+Run 2 Accuracy: 0.9355
+Run 3 Accuracy: 0.9355
+Run 4 Accuracy: 0.8710
+Run 5 Accuracy: 0.9355
+Run 6 Accuracy: 0.9355
+Run 7 Accuracy: 0.9677
+Run 8 Accuracy: 0.9677
+Run 9 Accuracy: 0.9677
+Tuning run 2 of 9
+Optimization Time: 0.014718502866647517 minutes
+Training run 2 of 9
+Run 0 Accuracy: 0.8065
+Run 1 Accuracy: 0.8226
+Run 2 Accuracy: 0.8065
+Run 3 Accuracy: 0.8065
+Run 4 Accuracy: 0.8710
+Run 5 Accuracy: 0.8548
+Run 6 Accuracy: 0.8065
+Run 7 Accuracy: 0.7742
+Run 8 Accuracy: 0.8226
+Run 9 Accuracy: 0.7742
+Tuning run 3 of 9
+Optimization Time: 0.012050594884203746 minutes
+Training run 3 of 9
+Run 0 Accuracy: 0.7204
+Run 1 Accuracy: 0.7204
+Run 2 Accuracy: 0.7527
+Run 3 Accuracy: 0.7742
+Run 4 Accuracy: 0.7634
+Run 5 Accuracy: 0.7419
+Run 6 Accuracy: 0.7419
+Run 7 Accuracy: 0.7634
+Run 8 Accuracy: 0.7634
+Run 9 Accuracy: 0.7204
+Tuning run 4 of 9
+Optimization Time: 0.012787383348525812 minutes
+Training run 4 of 9
+Run 0 Accuracy: 0.6532
+Run 1 Accuracy: 0.6452
+Run 2 Accuracy: 0.6613
+Run 3 Accuracy: 0.6855
+Run 4 Accuracy: 0.7097
+Run 5 Accuracy: 0.6532
+Run 6 Accuracy: 0.6855
+Run 7 Accuracy: 0.6935
+Run 8 Accuracy: 0.6290
+Run 9 Accuracy: 0.6694
+Tuning run 5 of 9
+Optimization Time: 0.019723904365673662 minutes
+Training run 5 of 9
+Run 0 Accuracy: 0.6387
+Run 1 Accuracy: 0.6774
+Run 2 Accuracy: 0.6645
+Run 3 Accuracy: 0.6645
+Run 4 Accuracy: 0.6581
+Run 5 Accuracy: 0.6710
+Run 6 Accuracy: 0.6903
+Run 7 Accuracy: 0.6710
+Run 8 Accuracy: 0.6581
+Run 9 Accuracy: 0.6903
+Tuning run 6 of 9
+Optimization Time: 0.02721893070071625 minutes
+Training run 6 of 9
+Run 0 Accuracy: 0.6398
+Run 1 Accuracy: 0.6720
+Run 2 Accuracy: 0.6720
+Run 3 Accuracy: 0.6720
+Run 4 Accuracy: 0.6613
+Run 5 Accuracy: 0.6720
+Run 6 Accuracy: 0.6935
+Run 7 Accuracy: 0.6398
+Run 8 Accuracy: 0.6613
+Run 9 Accuracy: 0.6667
+Tuning run 7 of 9
+Optimization Time: 0.03394011831648337 minutes
+Training run 7 of 9
+Run 0 Accuracy: 0.6728
+Run 1 Accuracy: 0.6452
+Run 2 Accuracy: 0.6313
+Run 3 Accuracy: 0.6313
+Run 4 Accuracy: 0.6636
+Run 5 Accuracy: 0.6267
+Run 6 Accuracy: 0.6498
+Run 7 Accuracy: 0.6406
+Run 8 Accuracy: 0.6359
+Run 9 Accuracy: 0.6406
+Tuning run 8 of 9
+Optimization Time: 0.044696296316881975 minutes
+Training run 8 of 9
+Run 0 Accuracy: 0.6935
+Run 1 Accuracy: 0.6935
+Run 2 Accuracy: 0.6371
+Run 3 Accuracy: 0.6734
+Run 4 Accuracy: 0.6452
+Run 5 Accuracy: 0.6774
+Run 6 Accuracy: 0.7097
+Run 7 Accuracy: 0.6895
+Run 8 Accuracy: 0.6653
+Run 9 Accuracy: 0.6734
+Tuning run 9 of 9
+Optimization Time: 0.03791633635022056 minutes
+Training run 9 of 9
+Run 0 Accuracy: 0.6810
+Run 1 Accuracy: 0.6631
+Run 2 Accuracy: 0.6703
+Run 3 Accuracy: 0.6452
+Run 4 Accuracy: 0.6344
+Run 5 Accuracy: 0.6272
+Run 6 Accuracy: 0.6846
+Run 7 Accuracy: 0.6523
+Run 8 Accuracy: 0.6810
+Run 9 Accuracy: 0.6703
+Runtime: 4.928347206115722 minutes
+means: [0.9516129  0.72580645 0.60967742 0.62903226 0.73870968 0.67741935
+ 0.5483871  0.62580645 0.57096774], [0.93870968 0.81451613 0.74623656 0.66854839 0.6683871  0.66505376
+ 0.6437788  0.67580645 0.6609319 ], std: [0.02163937 0.04618652 0.05290716 0.05633629 0.05090237 0.04561979
+ 0.05587261 0.06321264 0.03830433], [0.0304322  0.02907703 0.01935484 0.02349807 0.01476842 0.0152161
+ 0.01398525 0.02127565 0.01924835], timestamps: [ 102  412  722 1032 1342 1652 1962 2272 2582], [ 102  412  722 1032 1342 1652 1962 2272 2582]
+means: [0.75714286 0.72473089 0.5940201  0.56086857 0.71270852 0.62739253
+ 0.50264053 0.67147082 0.47684086], [0.7031746  0.69361859 0.65950956 0.57149912 0.5736849  0.59632914
+ 0.58957081 0.63658713 0.6044106 ], std: [0.11751393 0.0477452  0.07636124 0.08876639 0.05117317 0.04517216
+ 0.0554504  0.05946723 0.05723706], [0.16281258 0.04257685 0.0298865  0.02696188 0.02762851 0.02334335
+ 0.02097735 0.02267848 0.0207446 ], timestamps: [ 102  412  722 1032 1342 1652 1962 2272 2582], [ 102  412  722 1032 1342 1652 1962 2272 2582]
+Finished measurements with params: format=['o'],chunk_size=310, num_runs=10,                 dataset_name=weather_dataset, model_name=random_forest

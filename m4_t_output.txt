@@ -1,0 +1,236 @@
+Running measurements with params: format=['auto'], dataset_name=m4_daily_dataset
+Data forms: ['o', 'fd', 'fod']
+values
+values stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006836874340552679]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010578862138611766]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01057886213861139]
+rolling_min_2
+rolling_min_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.012896285656205871]
+rolling_max_2
+rolling_max_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010024932156305422]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.579937826952615e-14]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015443554899239906]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015443554899240418]
+rolling_min_3
+rolling_min_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.016926046261358713]
+rolling_max_3
+rolling_max_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01029285913195565]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2292667247827784e-16]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015937857408189305]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01593785740818743]
+rolling_min_4
+rolling_min_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.018508529882112535]
+rolling_max_4
+rolling_max_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.008524224804165804]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.8123216501152076e-16]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013684272475304958]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013684272475307327]
+rolling_min_5
+rolling_min_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.022017992544344455]
+rolling_max_5
+rolling_max_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006593834719106872]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.885669951815026e-14]
+lag_1
+lag_1 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006848465021174836]
+lag_2
+lag_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.00680834805863792]
+lag_3
+lag_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006768932174674364]
+lag_4
+lag_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006824729568851271]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [4.202116195586569e-27]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [1.947892746802595e-26]
+cumulative_sum
+cumulative_mean
+cumulative_max
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [2.7091463773237054e-09]
+changed 21 out of 31 columns; 67.74193548387096%
+Running measurements with params: format=fod,chunk_size=930, num_runs=1,                 dataset_name=m4_daily_dataset, model_name=transformer
+Index(['values_o', 'rolling_mean_2_o', 'rolling_sum_2_o', 'rolling_min_2_o',
+       'rolling_max_2_o', 'rolling_std_2_o', 'rolling_mean_3_o',
+       'rolling_sum_3_o', 'rolling_min_3_o', 'rolling_max_3_o',
+       'rolling_std_3_o', 'rolling_mean_4_o', 'rolling_sum_4_o',
+       'rolling_min_4_o', 'rolling_max_4_o', 'rolling_std_4_o',
+       'rolling_mean_5_o', 'rolling_sum_5_o', 'rolling_min_5_o',
+       'rolling_max_5_o', 'rolling_std_5_o', 'lag_1_o', 'lag_2_o', 'lag_3_o',
+       'lag_4_o', 'difference_o', 'percentage_change_o', 'cumulative_sum_o',
+       'cumulative_mean_o', 'cumulative_max_o', 'cumulative_min_o',
+       'values_fd', 'rolling_mean_2_fd', 'rolling_sum_2_fd',
+       'rolling_min_2_fd', 'rolling_max_2_fd', 'rolling_std_2_fd',
+       'rolling_mean_3_fd', 'rolling_sum_3_fd', 'rolling_min_3_fd',
+       'rolling_max_3_fd', 'rolling_std_3_fd', 'rolling_mean_4_fd',
+       'rolling_sum_4_fd', 'rolling_min_4_fd', 'rolling_max_4_fd',
+       'rolling_std_4_fd', 'rolling_mean_5_fd', 'rolling_sum_5_fd',
+       'rolling_min_5_fd', 'rolling_max_5_fd', 'rolling_std_5_fd', 'lag_1_fd',
+       'lag_2_fd', 'lag_3_fd', 'lag_4_fd', 'difference_fd',
+       'percentage_change_fd', 'cumulative_sum_fd', 'cumulative_mean_fd',
+       'cumulative_max_fd', 'cumulative_min_fd', 'values_fod',
+       'rolling_mean_2_fod', 'rolling_sum_2_fod', 'rolling_min_2_fod',
+       'rolling_max_2_fod', 'rolling_std_2_fod', 'rolling_mean_3_fod',
+       'rolling_sum_3_fod', 'rolling_min_3_fod', 'rolling_max_3_fod',
+       'rolling_std_3_fod', 'rolling_mean_4_fod', 'rolling_sum_4_fod',
+       'rolling_min_4_fod', 'rolling_max_4_fod', 'rolling_std_4_fod',
+       'rolling_mean_5_fod', 'rolling_sum_5_fod', 'rolling_min_5_fod',
+       'rolling_max_5_fod', 'rolling_std_5_fod', 'lag_1_fod', 'lag_2_fod',
+       'lag_3_fod', 'lag_4_fod', 'difference_fod', 'percentage_change_fod',
+       'cumulative_sum_fod', 'cumulative_mean_fod', 'cumulative_max_fod',
+       'cumulative_min_fod'],
+      dtype='object')
+RUNNING ADAPTATION MEASURE
+Training run 1 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 2 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 3 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 4 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 5 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 6 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 7 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 8 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 9 of 9 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+RUNNING CONSOLIDATION MEASURE
+Training run 1 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 2 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 3 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 4 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 5 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 6 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 7 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 8 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 9 of 9
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Runtime: 150.42218532562256 minutes
+means: [22.88033008 69.14127196 61.26935223 57.52361084 77.84426    73.75211253
+ 69.37549024 65.1591137  68.92750044], [ 61.30645128  57.61829804  44.99406541  32.77404694 127.30758138
+  15.33939871  19.48664012  45.55784196  93.09976508], std: [0. 0. 0. 0. 0. 0. 0. 0. 0.], [0. 0. 0. 0. 0. 0. 0. 0. 0.], timestamps: [ 916 1846 2776 3706 4636 5566 6496 7426 8512], [ 916 1846 2776 3706 4636 5566 6496 7426 8512]
+means: [ 852.90746442 2093.70266684 1427.33562977 2256.62541989 2891.12484288
+ 2803.54092431 2746.08562971 2805.12663325 3424.52249017], [2128.77697953 2683.88896939 1543.23977398 1590.67110725 4970.88069231
+  861.56705236  760.40679902 2778.76066928 3791.91998107], std: [0. 0. 0. 0. 0. 0. 0. 0. 0.], [0. 0. 0. 0. 0. 0. 0. 0. 0.], timestamps: [ 916 1846 2776 3706 4636 5566 6496 7426 8512], [ 916 1846 2776 3706 4636 5566 6496 7426 8512]
+Finished measurements with params: format=['o', 'fd', 'fod'],chunk_size=930, num_runs=1,                 dataset_name=m4_daily_dataset, model_name=transformer
+Data forms: ['o', 'fd']
+values
+values stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006836874340552679]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010578862138611766]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01057886213861139]
+rolling_min_2
+rolling_min_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.012896285656205871]
+rolling_max_2
+rolling_max_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010024932156305422]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.579937826952615e-14]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015443554899239906]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015443554899240418]
+rolling_min_3
+rolling_min_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.016926046261358713]
+rolling_max_3
+rolling_max_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01029285913195565]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2292667247827784e-16]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015937857408189305]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01593785740818743]
+rolling_min_4
+rolling_min_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.018508529882112535]
+rolling_max_4
+rolling_max_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.008524224804165804]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.8123216501152076e-16]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013684272475304958]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013684272475307327]
+rolling_min_5
+rolling_min_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.022017992544344455]
+rolling_max_5
+rolling_max_5 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006593834719106872]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.885669951815026e-14]
+lag_1
+lag_1 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006848465021174836]
+lag_2
+lag_2 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.00680834805863792]
+lag_3
+lag_3 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006768932174674364]
+lag_4
+lag_4 stationary with d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006824729568851271]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [4.202116195586569e-27]
+percentage_change
+percentage_change stationary with d=0.0 stat windows =1 out of 1 p-values = [1.947892746802595e-26]
+cumulative_sum
+cumulative_mean
+cumulative_max
+cumulative_min
+cumulative_min stationary with d=0.0 stat windows =1 out of 1 p-values = [2.7091463773237054e-09]
+changed 21 out of 31 columns; 67.74193548387096%
+Running measurements with params: format=fd,chunk_size=852, num_runs=1,                 dataset_name=m4_daily_dataset, model_name=transformer
+Index(['values_o', 'rolling_mean_2_o', 'rolling_sum_2_o', 'rolling_min_2_o',
+       'rolling_max_2_o', 'rolling_std_2_o', 'rolling_mean_3_o',
+       'rolling_sum_3_o', 'rolling_min_3_o', 'rolling_max_3_o',
+       'rolling_std_3_o', 'rolling_mean_4_o', 'rolling_sum_4_o',
+       'rolling_min_4_o', 'rolling_max_4_o', 'rolling_std_4_o',
+       'rolling_mean_5_o', 'rolling_sum_5_o', 'rolling_min_5_o',
+       'rolling_max_5_o', 'rolling_std_5_o', 'lag_1_o', 'lag_2_o', 'lag_3_o',
+       'lag_4_o', 'difference_o', 'percentage_change_o', 'cumulative_sum_o',
+       'cumulative_mean_o', 'cumulative_max_o', 'cumulative_min_o',
+       'values_fd', 'rolling_mean_2_fd', 'rolling_sum_2_fd',
+       'rolling_min_2_fd', 'rolling_max_2_fd', 'rolling_std_2_fd',
+       'rolling_mean_3_fd', 'rolling_sum_3_fd', 'rolling_min_3_fd',
+       'rolling_max_3_fd', 'rolling_std_3_fd', 'rolling_mean_4_fd',
+       'rolling_sum_4_fd', 'rolling_min_4_fd', 'rolling_max_4_fd',
+       'rolling_std_4_fd', 'rolling_mean_5_fd', 'rolling_sum_5_fd',
+       'rolling_min_5_fd', 'rolling_max_5_fd', 'rolling_std_5_fd', 'lag_1_fd',
+       'lag_2_fd', 'lag_3_fd', 'lag_4_fd', 'difference_fd',
+       'percentage_change_fd', 'cumulative_sum_fd', 'cumulative_mean_fd',
+       'cumulative_max_fd', 'cumulative_min_fd'],
+      dtype='object')
+RUNNING ADAPTATION MEASURE
+Training run 1 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 2 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 3 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 4 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 5 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 6 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}
+Training run 7 of 10 chunks
+Running with tuned params: {'model_dim_num_heads_pair': (96, 2), 'inner_ff_dim_scale': 3, 'embedding_dimension': 3, 'dropout_rate': 0.3733903176629327, 'trainer:learning_rate': 1.1662591700164291e-06, 'trainer:epochs': 50, 'freq': 'D', 'prediction_length': 14, 'context_length': 9, 'ctx': 'gpu(0)', 'model_dim': 96, 'num_heads': 2}

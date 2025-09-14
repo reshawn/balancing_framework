@@ -1,0 +1,1 @@
+Running measurements with params: format=['o', 'fod', 'fd'], dataset_name=saugeenday

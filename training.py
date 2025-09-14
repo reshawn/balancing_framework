@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
 import time
+import os
 from statsmodels.tsa.stattools import adfuller
 from tqdm import tqdm
 import warnings
+import json
 warnings.filterwarnings('ignore')
 
 import optuna
@@ -15,112 +17,211 @@ from sklearn.metrics import accuracy_score, matthews_corrcoef, f1_score
 
 from sklearn.mixture import GaussianMixture
 
+
+from gluonts_utils import series_to_gluonts_dataset, load_params
+from gluonts.evaluation import Evaluator
+from gluonts.evaluation import make_evaluation_predictions
+
 RANDOM_STATE = 777
 num_kernels = 10_000
 
 from models import load_model, load_model_params
 
+class Trainer:
+    def __init__(self, model_name, dataset_name, num_runs=10):
+        self.model_name = model_name
+        self.tuned_params = None
+        self.dataset_name = dataset_name
+        self.num_runs = num_runs
+        self.ctx = 'gpu(0)'
+        self.gluonts_metric_type = 'mean_wQuantileLoss'
 
-def run(X, y, dataset_name, model_name, num_runs=10, mode='normal', results=pd.DataFrame(), test_size=None):
-    # Split the data
-    # Because we are trying methods that drop rows, we need to make sure the test set is the same
-    # Since its time series also better to preserve order
-    if test_size is not None:
-        X_test, y_test = (X[-test_size:], y[-test_size:])
-        X, y = (X[:-test_size], y[:-test_size])
-        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-    else:
-        X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-        X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.2, random_state=RANDOM_STATE)
-
-    best_params = tune(model_name, X_train, y_train, X_val, y_val, num_runs=num_runs)
-    print(f'best_params: {best_params}')
-
-    result = train_eval(model_name, best_params, X_train, y_train, X_test, y_test, num_runs=num_runs)
-
-    result["mode"] = mode
-    result["dataset_name"] = dataset_name
-    # add result to results dataframe
-    results = pd.concat([results,pd.DataFrame(result, index=[0])], ignore_index=True)
-    
-    return best_params, results
-
-
-def tune(model_name, X_train, y_train, X_val, y_val, num_runs=10):
-    # tune hyper params
-    def objective(trial):
         sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
+        gluonts_models = ['transformer']
         pytorch_models = []
+        try:
+            self.data_params = load_params('gluonts_params.txt', self.dataset_name)
+        except Exception as e:
+            print(e)
+            if model_name in gluonts_models:
+                print('Gluonts model selected, but no params for the dataset in gluonts_params.txt')
+            self.data_params = None
+
         if model_name in sklearn_models:
-            params = load_model_params(model_name, trial)
-            clf = load_model(model_name, params)
-            clf.fit(X_train, y_train)
+            self.model_type = 'sklearn'
         elif model_name in pytorch_models:
-            pass
+            self.model_type = 'pytorch'
+        elif model_name in gluonts_models:
+            self.model_type = 'gluonts'
         else:
             raise ValueError(f"Model {model_name} not supported")
-        return accuracy_score(y_val, clf.predict(X_val))
 
-    time_a = time.perf_counter()
-    study = optuna.create_study(direction='maximize')
-    study.optimize(objective, n_trials=num_runs)
-    time_b = time.perf_counter()
-    # print the optimization time in minutes
-    print(f"Optimization Time: {(time_b - time_a) / 60} minutes")
+    def tune(self, X_train, y_train, X_val, y_val):
+        # tune hyper params
+        def objective(trial):
+            if self.model_type == 'sklearn':
+                params = load_model_params(self.model_name, trial)
+                model, _ = load_model(self.model_name, params)
+                model.fit(X_train, y_train)
+                
+                return accuracy_score(y_val, model.predict(X_val))
+            elif self.model_type == 'pytorch':
+                pass
+            elif self.model_type == 'gluonts':
+                params = load_model_params(self.model_name, trial)
+                gluonts_dataset = series_to_gluonts_dataset(X_train, X_val,  self.data_params)
+                for key in  self.data_params.keys():
+                    params[key] =  self.data_params[key]
+                params['ctx'] = self.ctx
+                model, _ = load_model(self.model_name, params)
+                predictor = model.train(gluonts_dataset.train, gluonts_dataset.test)
+                forecast_it, ts_it = make_evaluation_predictions(
+                    dataset=gluonts_dataset.test,
+                    predictor=predictor,
+                )
+                forecasts = list(forecast_it)
+                tss = list(ts_it)
+                evaluator = Evaluator(quantiles=[0.1, 0.5, 0.9])
+                agg_metrics, item_metrics = evaluator(tss, forecasts)
+                print(agg_metrics)
+                return agg_metrics[self.gluonts_metric_type]
+            else:
+                raise ValueError(f"Model {self.model_name} not supported")
 
-    # load best params
-    best_params = study.best_params
-
-    return best_params
-
-def train_eval(model_name, best_params, X_train, y_train, X_test, y_test, num_runs=10):
-    
-    # train the model with the best params 10 times and store the mean and std accuracy, along with training and test times
-    accs = []
-    mccs = []
-    f1s = []
-    train_times = []
-    test_times = []
-    for i in range(num_runs):
-        # -- training ----------------------------------------------------------
         time_a = time.perf_counter()
-        clf = load_model(model_name, best_params)
-        sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
-        pytorch_models = []
-        if model_name in sklearn_models:
-            clf.fit(X_train, y_train)
-        elif model_name in pytorch_models:
-            pass
+        if self.model_type == 'sklearn':
+            study = optuna.create_study(direction='maximize')
+        elif self.model_type == 'pytorch':
+            study = optuna.create_study(direction='maximize')
+        elif self.model_type == 'gluonts':
+            study = optuna.create_study(direction='minimize')
         else:
-            raise ValueError(f"Model {model_name} not supported")
+            raise ValueError(f"Model {self.model_name} not supported")
+        study.optimize(objective, n_trials=self.num_runs)
         time_b = time.perf_counter()
-        train_times.append(time_b - time_a)
-        # -- test --------------------------------------------------------------
-        time_a = time.perf_counter()
-        acc = accuracy_score(y_test, clf.predict(X_test))
-        mcc = matthews_corrcoef(y_test, clf.predict(X_test))
-        f1 = f1_score(y_test, clf.predict(X_test)) # , average='weighted' ; consider if setup changes to the more realistic multi-class imbalanced labels
-        time_b = time.perf_counter()
-        test_times.append(time_b - time_a)
-        print(f"Run {i} Accuracy: {acc:.4f}")
-        accs.append(acc)
-        # mccs.append(mcc)
-        f1s.append(f1)
+        # print the optimization time in minutes
+        print(f"Optimization Time: {(time_b - time_a) / 60} minutes")
 
-    result = {
-        "accuracy_mean": np.mean(accs),
-        # "mcc_mean": np.mean(mccs),
-        "f1_mean": np.mean(f1s),
-        "accuracy_std": np.std(accs),
-        # "mcc_std": np.std(mccs),
-        "f1_std": np.std(f1s),
-        "time_training_seconds": np.mean(train_times),
-        "time_test_seconds": np.mean(test_times),
-        "model_name": model_name,
-    }
-    return result
+        # load best params
+        best_params = study.best_params
+        # add data params to params obj
+        if self.model_type == 'gluonts':
+            for key in  self.data_params.keys():
+                best_params[key] =  self.data_params[key]
+            best_params['ctx'] = self.ctx
+            if self.model_name == 'transformer':
+                best_params['model_dim'] = best_params['model_dim_num_heads_pair'][0]
+                best_params['num_heads'] = best_params['model_dim_num_heads_pair'][1]
+
+        self.tuned_params = best_params
+        return best_params
+
+    def train_eval(self, X_train, y_train, X_test, y_test):
+        
+        # train the model with the best params 10 times and store the mean and std accuracy, along with training and test times
+        accs = []
+        mccs = []
+        f1s = []
+        mapes, mases, smapes, maes, rmses = [], [], [], [], []
+        train_times = []
+        test_times = []
+        print('Running with tuned params:',self.tuned_params)
+        for i in range(self.num_runs):
+            # -- training ----------------------------------------------------------
+            time_a = time.perf_counter()
+            model, history = load_model(self.model_name, self.tuned_params)
+            sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
+            pytorch_models = []
+            gluonts_models = ['transformer']
+            if self.model_name in sklearn_models:
+                model.fit(X_train, y_train)
+            elif self.model_name in pytorch_models:
+                pass
+            elif self.model_name in gluonts_models:
+                gluonts_dataset = series_to_gluonts_dataset(X_train, X_test,  self.data_params)
+                model = model.train(gluonts_dataset.train, gluonts_dataset.test)
+                os.makedirs(f'results/gluonts_training_history/{self.dataset_name}', exist_ok=True)
+                with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_loss_history_{i}.json', "w") as f:
+                    json.dump(history.loss_history, f)
+                with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_val_loss_history_{i}.json', "w") as f:
+                    json.dump(history.validation_loss_history, f)
+            else:
+                raise ValueError(f"Model {self.model_name} not supported")
+            time_b = time.perf_counter()
+            train_times.append(time_b - time_a)
+            # -- test --------------------------------------------------------------
+            time_a = time.perf_counter()
+
+            if self.model_name in sklearn_models:
+                acc = accuracy_score(y_test, model.predict(X_test))
+                mcc = matthews_corrcoef(y_test, model.predict(X_test))
+                f1 = f1_score(y_test, model.predict(X_test)) # , average='weighted' ; consider if setup changes to the more realistic multi-class imbalanced labels
+                time_b = time.perf_counter()
+                test_times.append(time_b - time_a)
+                print(f"Run {i} Accuracy: {acc:.4f}")
+                accs.append(acc)
+                # mccs.append(mcc)
+                f1s.append(f1)
+            elif self.model_name in pytorch_models:
+                pass
+            elif self.model_name in gluonts_models:
+                forecast_it, ts_it = make_evaluation_predictions(
+                    dataset=gluonts_dataset.test,
+                    predictor=model,
+                )
+                forecasts = list(forecast_it)
+                tss = list(ts_it)
+                evaluator = Evaluator(quantiles=[0.1, 0.5, 0.9])
+                agg_metrics, item_metrics = evaluator(tss, forecasts)
+                mapes.append(agg_metrics['MAPE'])
+                mases.append(agg_metrics['MASE'])
+                smapes.append(agg_metrics['sMAPE'])
+                rmses.append(agg_metrics['RMSE'])
+
+        result = {
+            "accuracy_mean": np.mean(accs),
+            # "mcc_mean": np.mean(mccs),
+            "f1_mean": np.mean(f1s),
+            "accuracy_std": np.std(accs),
+            # "mcc_std": np.std(mccs),
+            "f1_std": np.std(f1s),
+            "mape_mean": np.mean(mapes),
+            "mape_std": np.std(mapes),
+            "rmse_mean": np.mean(rmses),
+            "rmse_std": np.std(rmses),
+            "mase_mean": np.mean(mases),
+            "mase_std": np.std(mases),
+            "smape_mean": np.mean(smapes),
+            "smape_std": np.std(smapes),
+            "time_training_seconds": np.mean(train_times),
+            "time_test_seconds": np.mean(test_times),
+            "model_name": self.model_name,
+        }
+        return result
 
 
+    def run(self, X, y, mode='normal', results=pd.DataFrame(), test_size=None):
+        # Split the data
+        # Because we are trying methods that drop rows, we need to make sure the test set is the same
+        # Since its time series also better to preserve order
+        if test_size is not None:
+            X_test, y_test = (X[-test_size:], y[-test_size:])
+            X, y = (X[:-test_size], y[:-test_size])
+            X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+        else:
+            X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+            X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.2, random_state=RANDOM_STATE)
+
+        self.tune(X_train, y_train, X_val, y_val)
+
+        result = self.train_eval(X_train, y_train, X_test, y_test)
+
+        result["mode"] = mode
+        result["dataset_name"] = self.dataset_name
+        # add result to results dataframe
+        results = pd.concat([results,pd.DataFrame(result, index=[0])], ignore_index=True)
+        
+        return self.tuned_params, results
 
 import numpy as np
 import pandas as pd

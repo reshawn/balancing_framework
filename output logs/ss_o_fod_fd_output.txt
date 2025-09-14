@@ -1,0 +1,54 @@
+Running measurements with params: format=['o', 'fod', 'fd'], dataset_name=sunspot_without_missing
+values
+values stationary with d=0.0 stat windows =1 out of 1 p-values = [2.235382343430406e-13]
+rolling_mean_2
+rolling_mean_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.1790604163957946e-12]
+rolling_sum_2
+rolling_sum_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.1790604163944708e-12]
+rolling_min_2
+rolling_min_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [4.373561422080751e-13]
+rolling_max_2
+rolling_max_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [8.445011755677335e-13]
+rolling_std_2
+rolling_std_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.3163301973666776e-22]
+rolling_mean_3
+rolling_mean_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.92957295152154e-12]
+rolling_sum_3
+rolling_sum_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.9295729515235107e-12]
+rolling_min_3
+rolling_min_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [6.458949661022151e-13]
+rolling_max_3
+rolling_max_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.899685683196566e-13]
+rolling_std_3
+rolling_std_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.789811094789533e-22]
+rolling_mean_4
+rolling_mean_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.786358874022546e-12]
+rolling_sum_4
+rolling_sum_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.786358874024808e-12]
+rolling_min_4
+rolling_min_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.423611739470051e-13]
+rolling_max_4
+rolling_max_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.2153781487992334e-12]
+rolling_std_4
+rolling_std_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [5.51134017259093e-23]
+rolling_mean_5
+rolling_mean_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [4.310633333229776e-12]
+rolling_sum_5
+rolling_sum_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [4.310633333230668e-12]
+rolling_min_5
+rolling_min_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.926030942794592e-13]
+rolling_max_5
+rolling_max_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.6032875521775105e-13]
+rolling_std_5
+rolling_std_5 stationary with d=0.0 stat windows =1 out of 1 p-values = [1.0550178477346301e-23]
+lag_1
+lag_1 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.2088241219434752e-13]
+lag_2
+lag_2 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.3025267457761987e-13]
+lag_3
+lag_3 stationary with d=0.0 stat windows =1 out of 1 p-values = [2.574253035725582e-13]
+lag_4
+lag_4 stationary with d=0.0 stat windows =1 out of 1 p-values = [3.1101748522337927e-13]
+difference
+difference stationary with d=0.0 stat windows =1 out of 1 p-values = [0.0]
+percentage_change

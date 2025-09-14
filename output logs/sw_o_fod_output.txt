@@ -1,0 +1,4522 @@
+Running measurements with params: format=['o', 'fod'], dataset_name=solar_weekly
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008741655466534819 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008905394416554675 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 0.049211311340332034 minutes
+means: [0.42], [0.36], std: [0.06], [0.08], timestamps: [39], [39]
+means: [0.46095238], [0.38666667], std: [0.09629885], [0.02666667], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009054668749740813 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.0000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007635187816534502 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 0.09537403583526612 minutes
+means: [0.4], [0.6], std: [0.23664319], [0.08944272], timestamps: [39], [39]
+means: [0.48285714], [0.72936508], std: [0.23587729], [0.07797998], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009056527999928222 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009099202866491397 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 0.14802387952804566 minutes
+means: [0.4], [0.4], std: [0.], [0.], timestamps: [39], [39]
+means: [0.4], [0.4], std: [0.], [0.], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010885563366658364 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00829270503357596 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 0.2035293181737264 minutes
+means: [0.64], [0.56], std: [0.1496663], [0.12], timestamps: [39], [39]
+means: [0.63714286], [0.61714286], std: [0.13429585], [0.12022654], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007457740899796287 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.0000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.0000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006245923666574527 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.0000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.0000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.0000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 0.23602507511774698 minutes
+means: [0.24], [0.24], std: [0.17435596], [0.21540659], timestamps: [39], [39]
+means: [0.33047619], [0.11666667], std: [0.19859141], [0.18333333], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01155328270009098 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00941048770037014 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 0.29867302576700844 minutes
+means: [0.8], [0.8], std: [0.], [0.], timestamps: [39], [39]
+means: [0.66666667], [0.66666667], std: [1.11022302e-16], [1.11022302e-16], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009528752333426382 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008388840683134427 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 0.35757378339767454 minutes
+means: [0.28], [0.36], std: [0.09797959], [0.12], timestamps: [39], [39]
+means: [0.36], [0.39], std: [0.03265986], [0.04725816], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008423019466863479 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008211330533473908 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 0.39645326137542725 minutes
+means: [0.64], [0.7], std: [0.19595918], [0.18439089], timestamps: [39], [39]
+means: [0.58], [0.62333333], std: [0.21354157], [0.20333333], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008609179316651231 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009447822533062814 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 0.44789657592773435 minutes
+means: [0.74], [0.7], std: [0.18], [0.1], timestamps: [39], [39]
+means: [0.51666667], [0.58333333], std: [0.36855574], [0.08333333], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01013738933300677 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009509787133235173 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 0.5008090058962504 minutes
+means: [0.74], [0.78], std: [0.09165151], [0.06], timestamps: [39], [39]
+means: [0.76], [0.78666667], std: [0.06110101], [0.04], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007553079849943364 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00821679813331381 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 0.5473280191421509 minutes
+means: [0.82], [0.82], std: [0.1077033], [0.06], timestamps: [39], [39]
+means: [0.81], [0.82], std: [0.13], [0.06], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.005398557249767085 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007970193166693207 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 0.5866540114084879 minutes
+means: [0.52], [0.48], std: [0.13266499], [0.09797959], timestamps: [39], [39]
+means: [0.58190476], [0.60952381], std: [0.10434549], [0.04665695], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008698438633776581 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006929754232987762 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 0.6312151948610941 minutes
+means: [0.86], [0.84], std: [0.15620499], [0.1496663], timestamps: [39], [39]
+means: [0.8], [0.76666667], std: [0.2081666], [0.2], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009026604216584626 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00919679961662041 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 0.6701247016588847 minutes
+means: [0.6], [0.64], std: [0.15491933], [0.17435596], timestamps: [39], [39]
+means: [0.47], [0.56333333], std: [0.18823744], [0.16895101], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008483487033421019 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007749091682975025 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 0.7085845788319906 minutes
+means: [0.76], [0.64], std: [0.19595918], [0.12], timestamps: [39], [39]
+means: [0.69], [0.54], std: [0.21962089], [0.08793937], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008210901066680284 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008929058233237204 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 0.7484490394592285 minutes
+means: [0.38], [0.54], std: [0.14], [0.25377155], timestamps: [39], [39]
+means: [0.4], [0.36666667], std: [0.05773503], [0.33993463], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010656822400051169 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008696240483550355 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 0.8072430054346721 minutes
+means: [0.72], [0.7], std: [0.09797959], [0.13416408], timestamps: [39], [39]
+means: [0.6], [0.59], std: [0.08164966], [0.09780934], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007988107250033257 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.005762058650240457 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 0.8452213803927103 minutes
+means: [0.54], [0.54], std: [0.22], [0.22], timestamps: [39], [39]
+means: [0.51], [0.37333333], std: [0.18562208], [0.26658332], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009428530616666346 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00925529626692878 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 0.9065739870071411 minutes
+means: [0.66], [0.74], std: [0.09165151], [0.12806248], timestamps: [39], [39]
+means: [0.55], [0.63333333], std: [0.07637626], [0.14529663], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007931137500175585 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008958986433572135 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 0.9520704984664917 minutes
+means: [0.72], [0.72], std: [0.18330303], [0.13266499], timestamps: [39], [39]
+means: [0.64], [0.61666667], std: [0.19933222], [0.15], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008952855349828799 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008867092016832128 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 0.9967708905537923 minutes
+means: [0.52], [0.46], std: [0.16], [0.20099751], timestamps: [39], [39]
+means: [0.39], [0.45], std: [0.21084486], [0.11666667], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008688565433355203 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009525923499798713 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 1.051087772846222 minutes
+means: [0.76], [0.72], std: [0.1496663], [0.18330303], timestamps: [39], [39]
+means: [0.71], [0.66666667], std: [0.16196707], [0.20976177], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008690182016289327 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.0000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.0000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008151476733231296 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.0000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.0000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.0000
+Runtime: 1.1006700277328492 minutes
+means: [0.22], [0.18], std: [0.14], [0.14], timestamps: [39], [39]
+means: [0.], [0.], std: [0.], [0.], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00932113126667294 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007942120283648062 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 1.153332563241323 minutes
+means: [0.6], [0.66], std: [0.12649111], [0.12806248], timestamps: [39], [39]
+means: [0.64], [0.67666667], std: [0.13063945], [0.13], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006693468883653016 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006433320216698727 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+Runtime: 1.1866023778915404 minutes
+means: [0.58], [0.52], std: [0.16613248], [0.22271057], timestamps: [39], [39]
+means: [0.47666667], [0.48333333], std: [0.26751947], [0.24551533], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008314915883238428 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007625844683207106 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 1.2229265292485556 minutes
+means: [0.68], [0.74], std: [0.09797959], [0.09165151], timestamps: [39], [39]
+means: [0.60333333], [0.76], std: [0.23638481], [0.06110101], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006387462482962292 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006964153266744688 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+Runtime: 1.2636932174364726 minutes
+means: [0.8], [0.88], std: [0.15491933], [0.16], timestamps: [39], [39]
+means: [0.78666667], [0.89333333], std: [0.17776389], [0.13727507], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008863891666502846 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006763236000066778 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 1.305174430211385 minutes
+means: [0.66], [0.62], std: [0.12806248], [0.16613248], timestamps: [39], [39]
+means: [0.78452381], [0.71984127], std: [0.09450861], [0.12815925], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008734455549953661 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008953466116508935 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 1.358847427368164 minutes
+means: [0.66], [0.64], std: [0.09165151], [0.08], timestamps: [39], [39]
+means: [0.78214286], [0.77142857], std: [0.04909903], [0.04285714], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01173857578348058 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008726986966697345 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 1.0000
+Runtime: 1.4208701809247335 minutes
+means: [0.8], [0.84], std: [0.], [0.08], timestamps: [39], [39]
+means: [0.66666667], [0.73333333], std: [1.11022302e-16], [0.13333333], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009585615099543551 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010210541049794604 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 1.477965537707011 minutes
+means: [0.62], [0.6], std: [0.06], [0.08944272], timestamps: [39], [39]
+means: [0.54666667], [0.52], std: [0.09797959], [0.09797959], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010748184333109142 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00876133111693586 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 1.5374898632367453 minutes
+means: [0.6], [0.54], std: [0.17888544], [0.12806248], timestamps: [39], [39]
+means: [0.71547619], [0.67261905], std: [0.13100107], [0.09645796], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007363717033391974 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008165140549923915 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 1.589061478773753 minutes
+means: [0.68], [0.7], std: [0.18330303], [0.16124515], timestamps: [39], [39]
+means: [0.59666667], [0.60666667], std: [0.16960739], [0.16041613], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006509652966633439 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009266448216415786 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.6000
+Runtime: 1.6416823228200277 minutes
+means: [0.98], [0.88], std: [0.06], [0.13266499], timestamps: [39], [39]
+means: [0.96666667], [0.81666667], std: [0.1], [0.18929694], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00810408839994731 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007697401599822721 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 1.0000
+Runtime: 1.6774580200513205 minutes
+means: [0.82], [0.72], std: [0.14], [0.16], timestamps: [39], [39]
+means: [0.80333333], [0.67666667], std: [0.15666667], [0.27], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007213093633375441 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010402069533301982 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 1.7344207286834716 minutes
+means: [0.4], [0.44], std: [0.], [0.08], timestamps: [39], [39]
+means: [0.4], [0.45333333], std: [0.], [0.10666667], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0071370749501511455 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006652805366320536 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 1.7661848346392313 minutes
+means: [0.54], [0.52], std: [0.20099751], [0.24], timestamps: [39], [39]
+means: [0.29666667], [0.36], std: [0.33679865], [0.37735925], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010457402999842694 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009613461900153197 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 1.824124006430308 minutes
+means: [0.6], [0.54], std: [0.08944272], [0.09165151], timestamps: [39], [39]
+means: [0.50666667], [0.47], std: [0.06110101], [0.04582576], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0064000656668213194 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007677895816838524 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 1.8608486731847127 minutes
+means: [0.64], [0.58], std: [0.17435596], [0.20880613], timestamps: [39], [39]
+means: [0.51333333], [0.53333333], std: [0.23953659], [0.18559215], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006387184283327466 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008231428100164825 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+Runtime: 1.8995356718699137 minutes
+means: [0.78], [0.76], std: [0.18867962], [0.23323808], timestamps: [39], [39]
+means: [0.70666667], [0.71333333], std: [0.21071308], [0.24908722], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007970098350294089 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007809924833418335 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 1.9507360299428305 minutes
+means: [0.7], [0.62], std: [0.13416408], [0.18867962], timestamps: [39], [39]
+means: [0.59], [0.54], std: [0.09780934], [0.11527744], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00819930971629219 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008229844449670055 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+Runtime: 1.9938875198364259 minutes
+means: [0.38], [0.32], std: [0.18867962], [0.09797959], timestamps: [39], [39]
+means: [0.27], [0.37333333], std: [0.18284784], [0.03265986], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010012915833794978 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007887668166464816 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+Runtime: 2.035967107613881 minutes
+means: [0.52], [0.46], std: [0.16], [0.15620499], timestamps: [39], [39]
+means: [0.56714286], [0.45333333], std: [0.14453695], [0.19218047], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008882128216403848 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01006728516658768 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 2.087957000732422 minutes
+means: [0.72], [0.6], std: [0.13266499], [0.08944272], timestamps: [39], [39]
+means: [0.61666667], [0.50666667], std: [0.15], [0.06110101], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00800989258326202 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.005732628699721924 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 2.1314236919085183 minutes
+means: [0.38], [0.38], std: [0.06], [0.06], timestamps: [39], [39]
+means: [0.39333333], [0.39333333], std: [0.02], [0.02], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007448049683686501 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007913644750078674 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 2.1879280765851337 minutes
+means: [0.4], [0.36], std: [0.12649111], [0.1496663], timestamps: [39], [39]
+means: [0.42333333], [0.44380952], std: [0.09195409], [0.13045881], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007547738450133086 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007057747166739622 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+Runtime: 2.2200860818227133 minutes
+means: [0.76], [0.68], std: [0.21540659], [0.16], timestamps: [39], [39]
+means: [0.65666667], [0.38333333], std: [0.29591665], [0.34197141], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009560756416855535 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006371438933031944 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 2.2664167920748395 minutes
+means: [0.62], [0.6], std: [0.06], [0.15491933], timestamps: [39], [39]
+means: [0.51666667], [0.32333333], std: [0.05], [0.27448943], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011205264183323986 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008203768183496626 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 2.3126558899879455 minutes
+means: [0.5], [0.54], std: [0.1], [0.12806248], timestamps: [39], [39]
+means: [0.66071429], [0.68928571], std: [0.08928571], [0.10107837], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008999597450019792 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0093778929663434 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 2.364595325787862 minutes
+means: [0.46], [0.54], std: [0.09165151], [0.09165151], timestamps: [39], [39]
+means: [0.43], [0.43], std: [0.04582576], [0.14866069], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00843215038330527 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009396034450037404 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 2.4142518202463785 minutes
+means: [0.76], [0.72], std: [0.08], [0.09797959], timestamps: [39], [39]
+means: [0.53333333], [0.5], std: [0.26666667], [0.25819889], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011497365383062667 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007005309600208421 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 1.0000
+Runtime: 2.456627921263377 minutes
+means: [0.64], [0.74], std: [0.08], [0.15620499], timestamps: [39], [39]
+means: [0.69333333], [0.77333333], std: [0.05333333], [0.12719189], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009464473899667307 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007922274966646606 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 2.508453412850698 minutes
+means: [0.5], [0.52], std: [0.1], [0.13266499], timestamps: [39], [39]
+means: [0.61904762], [0.63238095], std: [0.04761905], [0.07167576], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006929070299762922 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009639305316765483 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 2.5571941177050275 minutes
+means: [0.5], [0.48], std: [0.13416408], [0.22271057], timestamps: [39], [39]
+means: [0.33666667], [0.36333333], std: [0.23259407], [0.25274053], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009179885216872208 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008869030349887907 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+Runtime: 2.610062758127848 minutes
+means: [0.26], [0.26], std: [0.09165151], [0.09165151], timestamps: [39], [39]
+means: [0.32], [0.25333333], std: [0.11075498], [0.16812694], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010176788683262808 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007965726266653898 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 2.6604387044906614 minutes
+means: [0.7], [0.66], std: [0.20493902], [0.22], timestamps: [39], [39]
+means: [0.63], [0.46666667], std: [0.20840665], [0.35590261], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007644067616395963 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008490214449799775 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+Runtime: 2.7038175662358603 minutes
+means: [0.76], [0.82], std: [0.12], [0.06], timestamps: [39], [39]
+means: [0.72333333], [0.76666667], std: [0.12653502], [0.1], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008213162817022142 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008223943883300914 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 2.7558463136355082 minutes
+means: [0.46], [0.58], std: [0.18], [0.1077033], timestamps: [39], [39]
+means: [0.44333333], [0.44666667], std: [0.09551033], [0.16411378], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007557715966443842 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007930904449798012 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 2.805384699503581 minutes
+means: [0.76], [0.6], std: [0.08], [0.12649111], timestamps: [39], [39]
+means: [0.63333333], [0.51333333], std: [0.06666667], [0.08589399], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007257559083033508 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007767168099720342 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 2.855822018782298 minutes
+means: [0.72], [0.72], std: [0.09797959], [0.16], timestamps: [39], [39]
+means: [0.74666667], [0.75714286], std: [0.06531973], [0.1127878], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008657935100200121 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008683540817097915 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 2.907761224110921 minutes
+means: [0.6], [0.62], std: [0.12649111], [0.16613248], timestamps: [39], [39]
+means: [0.51333333], [0.49666667], std: [0.08589399], [0.19519221], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010731912749664237 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009975151766654259 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.6000
+Runtime: 2.9612840255101522 minutes
+means: [0.52], [0.42], std: [0.09797959], [0.14], timestamps: [39], [39]
+means: [0.46], [0.37666667], std: [0.04898979], [0.13908431], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009219737900032972 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008223921083360135 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 3.0118394613265993 minutes
+means: [0.64], [0.62], std: [0.08], [0.16613248], timestamps: [39], [39]
+means: [0.53333333], [0.53666667], std: [0.06666667], [0.11298968], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007290453000071769 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011274843266680061 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 3.059630767504374 minutes
+means: [0.76], [0.64], std: [0.17435596], [0.1496663], timestamps: [39], [39]
+means: [0.77714286], [0.55714286], std: [0.13429585], [0.2226617], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008662389333282287 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010758528666337952 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 3.1072367866834005 minutes
+means: [0.54], [0.58], std: [0.15620499], [0.1077033], timestamps: [39], [39]
+means: [0.66547619], [0.68333333], std: [0.11173366], [0.08095238], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009411044999918279 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007124213083200933 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 1.0000
+Runtime: 3.1568261901537578 minutes
+means: [0.4], [0.52], std: [0.], [0.25612497], timestamps: [39], [39]
+means: [0.4], [0.52333333], std: [0.], [0.24131584], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00827622161693095 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009460148333164397 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 3.2118213415145873 minutes
+means: [0.52], [0.56], std: [0.13266499], [0.08], timestamps: [39], [39]
+means: [0.58], [0.61333333], std: [0.1334999], [0.10666667], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009546085866653205 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006707743266694403 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 3.25760604540507 minutes
+means: [0.6], [0.64], std: [1.11022302e-16], [0.08], timestamps: [39], [39]
+means: [0.75], [0.77142857], std: [0.], [0.04285714], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008761065349972341 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007295007633122926 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.6000
+Runtime: 3.308213249842326 minutes
+means: [0.38], [0.46], std: [0.16613248], [0.12806248], timestamps: [39], [39]
+means: [0.40333333], [0.43333333], std: [0.06904105], [0.05773503], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009934873866829246 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006884322916448582 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 3.3505773742993674 minutes
+means: [0.44], [0.52], std: [0.1496663], [0.16], timestamps: [39], [39]
+means: [0.42666667], [0.43], std: [0.06463573], [0.1662996], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008273361616496307 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00877969713328639 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 3.393115731080373 minutes
+means: [0.5], [0.56], std: [0.13416408], [0.08], timestamps: [39], [39]
+means: [0.58857143], [0.63047619], std: [0.11631531], [0.08190476], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01048904486669926 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007578517833220152 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.2000
+Runtime: 3.4399191459019978 minutes
+means: [0.4], [0.62], std: [0.08944272], [0.26], timestamps: [39], [39]
+means: [0.40333333], [0.54666667], std: [0.03785939], [0.28836705], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009628588600025977 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009121659133234062 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 3.490413232644399 minutes
+means: [0.46], [0.48], std: [0.12806248], [0.09797959], timestamps: [39], [39]
+means: [0.49428571], [0.60952381], std: [0.20463784], [0.04665695], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00959380703328255 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008808622366632334 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 3.5347580472628275 minutes
+means: [0.78], [0.76], std: [0.14], [0.1496663], timestamps: [39], [39]
+means: [0.81142857], [0.75333333], std: [0.11771059], [0.16546232], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011000096933275926 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008774248133219469 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 3.595403834184011 minutes
+means: [0.56], [0.58], std: [0.1496663], [0.1077033], timestamps: [39], [39]
+means: [0.60380952], [0.66095238], std: [0.1478002], [0.05965889], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008358444750289589 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008764816033362877 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 3.635849706331889 minutes
+means: [0.48], [0.42], std: [0.18330303], [0.16613248], timestamps: [39], [39]
+means: [0.45333333], [0.42333333], std: [0.09568467], [0.09195409], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006883487083541695 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009415196283468201 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 3.6853549202283222 minutes
+means: [0.54], [0.58], std: [0.18], [0.06], timestamps: [39], [39]
+means: [0.48666667], [0.49], std: [0.10561986], [0.03], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00942305904997435 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009644741833229394 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 3.742686426639557 minutes
+means: [0.76], [0.68], std: [0.12], [0.13266499], timestamps: [39], [39]
+means: [0.77714286], [0.72380952], std: [0.06857143], [0.0808122], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009194859349615095 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00820931861671852 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 3.8004730025927227 minutes
+means: [0.42], [0.4], std: [0.14], [0.15491933], timestamps: [39], [39]
+means: [0.43333333], [0.44380952], std: [0.0942809], [0.10706982], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006968013966494861 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009025108433464386 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 3.8408498485883076 minutes
+means: [0.58], [0.66], std: [0.14], [0.12806248], timestamps: [39], [39]
+means: [0.72103175], [0.76071429], std: [0.10864685], [0.09678066], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008222285099812628 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007492362949900174 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 3.8998751719792684 minutes
+means: [0.6], [0.6], std: [1.11022302e-16], [1.11022302e-16], timestamps: [39], [39]
+means: [0.5], [0.5], std: [0.], [0.], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009452041750288723 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009944010700079768 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 3.953643278280894 minutes
+means: [0.64], [0.62], std: [0.12], [0.14], timestamps: [39], [39]
+means: [0.54], [0.53], std: [0.08793937], [0.09712535], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00926318934992499 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010055254833423533 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.4000
+Runtime: 4.0175270875295 minutes
+means: [0.22], [0.28], std: [0.06], [0.09797959], timestamps: [39], [39]
+means: [0.34], [0.36], std: [0.02], [0.03265986], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010295622516423464 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010299904316586133 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 4.07287388642629 minutes
+means: [0.42], [0.56], std: [0.14], [0.1496663], timestamps: [39], [39]
+means: [0.38333333], [0.45333333], std: [0.13844373], [0.17713774], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008091327416574737 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009351223066429763 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 4.115780838330587 minutes
+means: [0.46], [0.54], std: [0.09165151], [0.18], timestamps: [39], [39]
+means: [0.43], [0.49], std: [0.04582576], [0.11930353], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008812194433509528 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 1.0000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009659938916835623 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 4.189325388272604 minutes
+means: [0.82], [0.62], std: [0.20880613], [0.16613248], timestamps: [39], [39]
+means: [0.80333333], [0.61714286], std: [0.22032804], [0.23900019], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008127153867098969 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.2000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008678287266714808 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 4.230210856596629 minutes
+means: [0.54], [0.54], std: [0.26907248], [0.18], timestamps: [39], [39]
+means: [0.58714286], [0.63142857], std: [0.23670116], [0.12706704], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008256691349864316 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008216051466782422 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 4.2788843512535095 minutes
+means: [0.56], [0.62], std: [0.08], [0.18867962], timestamps: [39], [39]
+means: [0.44], [0.37333333], std: [0.1496663], [0.33986926], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007811686383017029 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008788504649904402 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 4.321050957838694 minutes
+means: [0.64], [0.62], std: [0.08], [0.06], timestamps: [39], [39]
+means: [0.64333333], [0.68], std: [0.1065103], [0.04], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006020410716882907 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008372668367034446 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 4.353716377417246 minutes
+means: [0.52], [0.62], std: [0.20396078], [0.14], timestamps: [39], [39]
+means: [0.54333333], [0.50666667], std: [0.19553346], [0.28237091], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007625335933213743 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011474334483015507 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 4.3943598628044125 minutes
+means: [0.78], [0.68], std: [0.18867962], [0.13266499], timestamps: [39], [39]
+means: [0.59], [0.58333333], std: [0.35529331], [0.15365907], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008484815550036728 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00976712998332611 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 4.43396565914154 minutes
+means: [0.76], [0.72], std: [0.17435596], [0.13266499], timestamps: [39], [39]
+means: [0.58333333], [0.55666667], std: [0.32702361], [0.2055075], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008647077216301114 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00933852935025546 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 4.487232299645742 minutes
+means: [0.76], [0.82], std: [0.08], [0.1077033], timestamps: [39], [39]
+means: [0.63333333], [0.71666667], std: [0.06666667], [0.15], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007063199383264873 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009366672816395295 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 4.535761117935181 minutes
+means: [0.66], [0.66], std: [0.12806248], [0.09165151], timestamps: [39], [39]
+means: [0.54333333], [0.56333333], std: [0.21605041], [0.10268615], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009353316049964634 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0078029245162421525 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 4.585828542709351 minutes
+means: [0.6], [0.56], std: [0.15491933], [0.12], timestamps: [39], [39]
+means: [0.52], [0.48666667], std: [0.10456258], [0.07483315], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008790523883362766 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008688464866524252 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.8000
+Runtime: 4.6475547273953755 minutes
+means: [0.64], [0.64], std: [0.1496663], [0.12], timestamps: [39], [39]
+means: [0.72380952], [0.72261905], std: [0.11428571], [0.09672207], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008125175883469638 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008023039449957045 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 4.686323269208272 minutes
+means: [0.46], [0.6], std: [0.15620499], [0.2], timestamps: [39], [39]
+means: [0.43666667], [0.54], std: [0.06741249], [0.17307673], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01073755738325417 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008934730733259736 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 4.73042189280192 minutes
+means: [0.52], [0.6], std: [0.18330303], [0.17888544], timestamps: [39], [39]
+means: [0.36333333], [0.58380952], std: [0.26350206], [0.16206155], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008072494100391243 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009339861749807218 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 4.772545222441355 minutes
+means: [0.62], [0.68], std: [0.1077033], [0.09797959], timestamps: [39], [39]
+means: [0.66714286], [0.72], std: [0.08508899], [0.06531973], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008255194600011843 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010576047133266304 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 4.822617975870768 minutes
+means: [0.68], [0.7], std: [0.16], [0.13416408], timestamps: [39], [39]
+means: [0.72190476], [0.78809524], std: [0.1763217], [0.09653874], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008618045816547237 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008152415900258347 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 4.865507519245147 minutes
+means: [0.68], [0.52], std: [0.20396078], [0.09797959], timestamps: [39], [39]
+means: [0.49666667], [0.46], std: [0.32367679], [0.04898979], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00744472168298671 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010499322199999975 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 1.0000
+Runtime: 4.906712524096171 minutes
+means: [0.66], [0.8], std: [0.15620499], [0.15491933], timestamps: [39], [39]
+means: [0.65714286], [0.74666667], std: [0.10715873], [0.16812694], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008596232549947066 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007842964233714157 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 4.962090071042379 minutes
+means: [0.76], [0.72], std: [0.1496663], [0.09797959], timestamps: [39], [39]
+means: [0.65666667], [0.6], std: [0.14456832], [0.08164966], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008805710849992465 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008072823833208531 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 4.999371508757274 minutes
+means: [0.68], [0.52], std: [0.13266499], [0.16], timestamps: [39], [39]
+means: [0.57333333], [0.47], std: [0.09752493], [0.08749603], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008761874566456147 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008424425300230116 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 5.041979722181956 minutes
+means: [0.5], [0.6], std: [0.13416408], [0.12649111], timestamps: [39], [39]
+means: [0.45666667], [0.51333333], std: [0.08306624], [0.08589399], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006942823366262019 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007848919683601708 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 5.083293410142263 minutes
+means: [0.8], [0.8], std: [0.], [0.], timestamps: [39], [39]
+means: [0.85714286], [0.85714286], std: [0.], [0.], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00750557856663363 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010142593433556613 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 5.131918406486511 minutes
+means: [0.5], [0.46], std: [0.24083189], [0.09165151], timestamps: [39], [39]
+means: [0.42666667], [0.43], std: [0.2764055], [0.04582576], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006264696066500619 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00967922723357333 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.2000
+Runtime: 5.1800963401794435 minutes
+means: [0.64], [0.46], std: [0.1496663], [0.18], timestamps: [39], [39]
+means: [0.60714286], [0.44333333], std: [0.12792164], [0.09551033], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007552563699816043 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007802061150141526 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 5.226388096809387 minutes
+means: [0.58], [0.5], std: [0.14], [0.18439089], timestamps: [39], [39]
+means: [0.63095238], [0.5952381], std: [0.11824971], [0.1424916], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008239327749955313 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008356411083271571 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 5.280306593577067 minutes
+means: [0.5], [0.66], std: [0.13416408], [0.09165151], timestamps: [39], [39]
+means: [0.45333333], [0.55], std: [0.06], [0.07637626], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009639371383430746 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010722127100355769 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.2000
+Runtime: 5.333942377567292 minutes
+means: [0.4], [0.36], std: [0.], [0.08], timestamps: [39], [39]
+means: [0.4], [0.32], std: [0.], [0.16], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011109625983711643 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009568233183138848 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+Runtime: 5.380277538299561 minutes
+means: [0.6], [0.7], std: [0.15491933], [0.27202941], timestamps: [39], [39]
+means: [0.67809524], [0.72380952], std: [0.08901578], [0.22967985], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011069840299993909 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00835280061631541 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.2000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 5.445215384165446 minutes
+means: [0.4], [0.38], std: [0.], [0.1077033], timestamps: [39], [39]
+means: [0.4], [0.29], std: [0.], [0.19209373], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00945760954976625 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008520847799566885 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+Runtime: 5.483472228050232 minutes
+means: [0.7], [0.8], std: [0.2236068], [0.12649111], timestamps: [39], [39]
+means: [0.42], [0.78333333], std: [0.45122057], [0.14240006], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.011588872249800868 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009178276100040723 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 5.534774883588155 minutes
+means: [0.58], [0.52], std: [0.06], [0.13266499], timestamps: [39], [39]
+means: [0.73214286], [0.67142857], std: [0.05357143], [0.10449099], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006176148450079685 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0069540205498924475 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 5.573905022939046 minutes
+means: [0.68], [0.7], std: [0.16], [0.13416408], timestamps: [39], [39]
+means: [0.54], [0.59], std: [0.20264912], [0.09780934], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009075996582881392 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008813477800382922 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 5.609914124011993 minutes
+means: [0.64], [0.7], std: [0.1496663], [0.18439089], timestamps: [39], [39]
+means: [0.39], [0.61333333], std: [0.2687626], [0.16746476], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008189083616889548 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007416051116403348 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 5.65876665910085 minutes
+means: [0.58], [0.56], std: [0.1077033], [0.08], timestamps: [39], [39]
+means: [0.725], [0.71428571], std: [0.08306931], [0.07142857], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008662440483264314 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00827571071664958 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+Runtime: 5.706098262468974 minutes
+means: [0.56], [0.6], std: [0.19595918], [0.17888544], timestamps: [39], [39]
+means: [0.50333333], [0.55666667], std: [0.11874342], [0.14456832], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007304060466897984 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007309822583435258 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 5.744563337167104 minutes
+means: [0.52], [0.58], std: [0.18330303], [0.14], timestamps: [39], [39]
+means: [0.51761905], [0.63047619], std: [0.24344513], [0.13181448], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007044657000127093 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008628206167001433 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 5.793512427806855 minutes
+means: [0.66], [0.56], std: [0.18], [0.12], timestamps: [39], [39]
+means: [0.51333333], [0.48333333], std: [0.23953659], [0.05], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010387086883323111 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008440486316976603 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 5.852426441510518 minutes
+means: [0.6], [0.74], std: [0.2], [0.12806248], timestamps: [39], [39]
+means: [0.53], [0.63333333], std: [0.12242912], [0.14529663], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008040776400108977 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007049809450109024 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 5.891835141181946 minutes
+means: [0.72], [0.66], std: [0.18330303], [0.09165151], timestamps: [39], [39]
+means: [0.76095238], [0.69], std: [0.12125197], [0.08698659], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0108910005830694 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 1.0000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008832402650053457 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 1.0000
+Runtime: 5.941760726769766 minutes
+means: [0.74], [0.76], std: [0.15620499], [0.12], timestamps: [39], [39]
+means: [0.66333333], [0.64], std: [0.19462214], [0.25638513], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008156348899744141 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008241627700044774 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.2000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 5.986653391520182 minutes
+means: [0.54], [0.44], std: [0.15620499], [0.12], timestamps: [39], [39]
+means: [0.49666667], [0.42333333], std: [0.12948616], [0.05385165], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006509134150110185 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.0000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.2000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008044686283392366 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.0000
+Run 2 Accuracy: 0.0000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.0000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.2000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+Runtime: 6.0222456137339275 minutes
+means: [0.38], [0.22], std: [0.22715633], [0.16613248], timestamps: [39], [39]
+means: [0.5], [0.32857143], std: [0.25276251], [0.23661444], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009501170933557053 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0067159787499501055 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.2000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 6.06837309996287 minutes
+means: [0.58], [0.56], std: [0.18867962], [0.19595918], timestamps: [39], [39]
+means: [0.51666667], [0.2], std: [0.12583057], [0.33166248], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007220149216300343 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009425653916453787 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 6.117713546752929 minutes
+means: [0.58], [0.54], std: [0.06], [0.15620499], timestamps: [39], [39]
+means: [0.72380952], [0.66666667], std: [0.05654449], [0.1390362], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.00943172513313281 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.2000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006964445249953617 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.2000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+Runtime: 6.157155426343282 minutes
+means: [0.56], [0.56], std: [0.17435596], [0.21540659], timestamps: [39], [39]
+means: [0.57333333], [0.49333333], std: [0.16041613], [0.29242283], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008971655066610159 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009102305183478165 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 6.192489159107208 minutes
+means: [0.58], [0.62], std: [0.1077033], [0.16613248], timestamps: [39], [39]
+means: [0.70833333], [0.68833333], std: [0.08472478], [0.17281992], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0064364357002583954 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.4000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0063609474998277925 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.4000
+Run 4 Accuracy: 0.4000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.4000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 6.240210076173146 minutes
+means: [0.46], [0.42], std: [0.09165151], [0.06], timestamps: [39], [39]
+means: [0.625], [0.58928571], std: [0.08183171], [0.05357143], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.009498444800071108 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.4000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.2000
+Run 9 Accuracy: 0.2000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006704310049826745 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.6000
+Runtime: 6.2743523716926575 minutes
+means: [0.54], [0.62], std: [0.20099751], [0.06], timestamps: [39], [39]
+means: [0.34], [0.46666667], std: [0.24801434], [0.16329932], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010396570333008033 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.0093080941165681 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.6000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 6.324066158135732 minutes
+means: [0.64], [0.66], std: [0.08], [0.09165151], timestamps: [39], [39]
+means: [0.69333333], [0.70666667], std: [0.05333333], [0.06110101], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010717327466894251 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.006559697133585966 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.6000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.8000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+Runtime: 6.376823087533315 minutes
+means: [0.78], [0.78], std: [0.1077033], [0.06], timestamps: [39], [39]
+means: [0.86904762], [0.8718254], std: [0.06927985], [0.04169689], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010802398716623429 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.4000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.4000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008504582299792673 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.4000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.4000
+Run 9 Accuracy: 0.4000
+Runtime: 6.427542221546173 minutes
+means: [0.54], [0.62], std: [0.09165151], [0.16613248], timestamps: [39], [39]
+means: [0.47], [0.40666667], std: [0.04582576], [0.28], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.008108945566831002 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.6000
+Run 5 Accuracy: 0.6000
+Run 6 Accuracy: 0.8000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.010699733799750295 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.6000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.6000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 0.6000
+Run 7 Accuracy: 0.8000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.6000
+Runtime: 6.483315149943034 minutes
+means: [0.72], [0.7], std: [0.09797959], [0.1], timestamps: [39], [39]
+means: [0.78095238], [0.76190476], std: [0.09331389], [0.0952381], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+Running measurements with params: format=fod,chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.007928691383373614 minutes
+Training run 1 of 1
+Run 0 Accuracy: 0.8000
+Run 1 Accuracy: 0.8000
+Run 2 Accuracy: 0.8000
+Run 3 Accuracy: 0.6000
+Run 4 Accuracy: 1.0000
+Run 5 Accuracy: 0.8000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.8000
+Run 9 Accuracy: 0.8000
+RUNNING CONSOLIDATION MEASURE
+Tuning run 1 of 1
+Optimization Time: 0.01028614453340803 minutes
+Training run 1 of 1
+Run 0 Accuracy: 1.0000
+Run 1 Accuracy: 1.0000
+Run 2 Accuracy: 1.0000
+Run 3 Accuracy: 1.0000
+Run 4 Accuracy: 0.8000
+Run 5 Accuracy: 1.0000
+Run 6 Accuracy: 1.0000
+Run 7 Accuracy: 1.0000
+Run 8 Accuracy: 0.6000
+Run 9 Accuracy: 0.8000
+Runtime: 6.528706248601278 minutes
+means: [0.84], [0.92], std: [0.12], [0.13266499], timestamps: [39], [39]
+means: [0.68333333], [0.88333333], std: [0.28333333], [0.18333333], timestamps: [39], [39]
+Finished measurements with params: format=['o', 'fod'],chunk_size=620, num_runs=10,             dataset_name=solar_weekly, model_name=random_forest
