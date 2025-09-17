@@ -1,7 +1,7 @@
 {
         "m4_daily_dataset":{
             "freq":"D",
-            "prediction_length":14,
-            "context_length":9,
+            "prediction_length":140,
+            "context_length":90,
         }
 }

@@ -91,3 +91,16 @@ frac diff notes:
 other fd implementation notes:
 - the function includes a skip step that calculates the cumulative percentage contribution of the weights and cuts off the rows below a threshold
 - the second version function takes this a bit further and uses a fixed window for calculating the weights instead of a full expanding window, (something like that), is faster at the cost of some info, and supposedly isnt reversible
+
+
+for the table on non stat
+- shows a starting point of candidate series, other conditions are long term memory and absence of high seasonality
+- but those tests dont cover all the cases of complex non stat series, examples m4 and london, where m4 fails a hurst exponent test but benefits from frac diff, and london where the high seasonality isnt programmatically measured easily (confirm again) and it doesnt benefit from frac diff
+- so beyond the starting point that shows a meaningful presence of non stat series outside of the typical domains, a more consistent, reliable, and low-compute means of estimating the effectiveness could be useful
+
+planned runs:
+- transformer reruns to save params (m4, double pred, fd in fdr)
+- transformer fin
+- ffn m4, m4 double pred, fin
+- wavenet m4 or double pred, fin
+- overtime 10 runs on fin for one of them?

@@ -79,11 +79,12 @@ class FractionalDifferentiation:
 
         # 2. Determine initial calculations to be skipped based on weight-loss threshold
         # added - ignoring skips to retain data
-        weights_ = np.cumsum(abs(weights))
-        weights_ /= weights_[-1]
-        skip = weights_[weights_ > thresh].shape[0]
-        # print(f'Skipping {skip} rows for this d')
-        # skip = 0
+        # weights_ = np.cumsum(abs(weights))
+        # weights_ /= weights_[-1]
+        # # skip = weights_[weights_ > thresh].shape[0]
+        # skip = (weights_.shape[0] - weights_[weights_ > thresh].shape[0]) # set skip to first index where weights_ > thresh, len(w) - len(w>thresh)
+        # print(f'Skipping {skip} rows for this d={diff_amt}')
+        skip = 0
 
         # 3. Apply weights to values
         output_df = {}
@@ -262,8 +263,8 @@ def frac_diff_bestd(df):
             print(f'{col} has only one unique value: {df[col].iloc[0]}')
             continue
         for d in d_tests:
-            thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25) # using this leads to significantly different results, but test with it more if the dropped rows becomes a problem again
-            frac_diff_test = frac_diff(df[[col]], d  , thresh)
+            # thresh = set_thresh(df[col], d, max_rows_removed_ratio=0.25) # using this leads to significantly different results, but test with it more if the dropped rows becomes a problem again
+            frac_diff_test = frac_diff(df[[col]], d  ) # , thresh
             # at the time of writing, series length 885k crashes the kernel
             # 885k rows is too much for adf with current memory limits, options: 1. use just the first 100k rows,
             # 2. changing the maxlag or autolag params, 3. using a rolling window agg of the data, 4. testing the whole dataset in chunks of 100k
@@ -292,12 +293,13 @@ def frac_diff_bestd(df):
                     num_stat = (num_stat[0]+1, num_stat[1])
             # if more than 50% of the p-values are above 0.05, then the data is not stationary
             stationary = num_stat[0] >= num_stat[1]/2
-            
+            print(f"{col} d={d} stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}")
+
             if stationary:
                 # stationary with this d value
                 df[col] = frac_diff_test[col]
                 # print(f'{col} stationary with d={d} p-value={adf_result[1]}')
-                print(f'{col} stationary with d={d} thresh={thresh} stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}')
+                print(f'{col} stationary with d={d} thresh=ignored stat windows ={num_stat[0]} out of {num_stat[1]} p-values = {p_values}')
 
                 if d != 0:
                     changed += 1

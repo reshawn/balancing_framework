@@ -19,8 +19,8 @@ def series_to_gluonts_dataset(X_train, X_test, params):
     X.drop(columns=[value_col], inplace=True)
     X_train.drop(columns=[value_col], inplace=True)
     if len(X.columns) == 0:
-        fdr = []
-        fdr_train = []
+        fdr = [[]]
+        fdr_train = [[]]
     else:
         fdr = np.array(X.T)
         fdr_train = np.array(X_train.T)
