@@ -32,7 +32,7 @@ def load_model(model_name, params):
               dropout_rate= params['dropout_rate'],
               scaling=True, # True by default False
               trainer=Trainer(ctx=params['ctx'],epochs=params['trainer:epochs'], learning_rate=params['trainer:learning_rate'],
-                              num_batches_per_epoch=100, callbacks=[history]),
+                              num_batches_per_epoch=100, callbacks=[history]), #
           )
     return model, history
 

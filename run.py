@@ -38,7 +38,7 @@ if __name__ == "__main__":
     with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_ta_fracdiff.pkl', 'rb') as f:
         df_fd_ta = pickle.load(f)
         df_fd_ta['label'] = df_original['tp_0.004'][df_ta.index]
-    # PZ algorithm has some look ahead so remove the episode labels, will be uesd only for some kind of analysis afterwards
+    # PZ algorithm has some look ahead so remove the episode labels if those are there, will be uesd only for some kind of analysis afterwards
     # df = df_original.drop(columns=['episode']) 
     df = df_original[["volume", "vwap", "open", "close", "high", "low", "transactions", "tp_0.004"]].rename(columns={"tp_0.004": "label"}) # 0.01 0.001
     # df
@@ -48,30 +48,28 @@ if __name__ == "__main__":
     X = pd.DataFrame()
     y = df['label']
 
-    for data_form in data_forms:
-        if data_form == 'frac_diff':
-            X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
-            del df_fd
-        elif data_form == 'original':
-            X = X.join(df.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
-            del df
-        elif data_form == 'first_order_diff':
-            # if wanted to omit cols from diff
-            # diff = df.drop(['volume', 'transactions', 'label'], axis=1).diff()
-            # diff = diff.join(df[['volume', 'transactions']])
-            diff = df.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
-            X = X.join(diff, how='outer')
-            del df
-        elif data_form == 'ta_original':
-            X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
-            # del df_ta
-        elif data_form == 'ta_fod':
-            diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
-            X = X.join(diff, how='outer')
-            del df_ta
-        elif data_form == 'ta_frac_diff':
-            X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
-            del df_fd_ta
+
+    if 'frac_diff' in data_forms:
+        X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+    del df_fd
+    if 'original' in data_forms:
+        X = X.join(df.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+    if 'first_order_diff' in data_forms:
+        # if wanted to omit cols from diff
+        # diff = df.drop(['volume', 'transactions', 'label'], axis=1).diff()
+        # diff = diff.join(df[['volume', 'transactions']])
+        diff = df.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+        X = X.join(diff, how='outer')
+    del df
+    if 'ta_original' in data_forms:
+        X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+    if 'ta_fod' in data_forms:
+        diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+        X = X.join(diff, how='outer')
+    del df_ta
+    if 'ta_frac_diff' in data_forms:
+        X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+    del df_fd_ta
     
             
             

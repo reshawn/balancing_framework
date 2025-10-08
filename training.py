@@ -26,13 +26,16 @@ RANDOM_STATE = 777
 num_kernels = 10_000
 
 from models import load_model, load_model_params
+from fracdiff import invert_fd, invert_ffd
 
 class Trainer:
-    def __init__(self, model_name, dataset_name, num_runs=10):
+    def __init__(self, model_name, dataset_name, num_runs=10, d=None, thresh=None):
         self.model_name = model_name
         self.tuned_params = None
         self.dataset_name = dataset_name
         self.num_runs = num_runs
+        self.d = d
+        self.thresh = thresh
         self.ctx = 'gpu(0)'
         self.gluonts_metric_type = 'mean_wQuantileLoss'
 
@@ -81,6 +84,29 @@ class Trainer:
                 )
                 forecasts = list(forecast_it)
                 tss = list(ts_it)
+                if self.d:
+                    new_fd_series = X_train['target'].copy()
+                    original_series = X_train['target_o'].copy()
+                    X = pd.concat([X_train, X_val], axis=0)
+                    actual = X['target_o'].values
+
+                    # iteratively invert the predicted fd target values, and prepare to repack the forecasts as expected by gluonts evaluator
+                    unfd_samples = []
+                    for predsampleset in forecasts[0].samples:
+                        unfd_sampleset = []
+                        fd = new_fd_series.copy()
+                        o = original_series.copy()
+                        for pred in predsampleset:
+                            fd = np.append(fd, pred)
+                            if self.thresh: ufd = invert_ffd(pd.Series(fd), o, self.d, self.thresh)
+                            else: ufd = invert_fd(pd.Series(fd), o, self.d)
+                            unfd_pred = ufd.iloc[-1]
+                            unfd_sampleset.append(unfd_pred)
+                            o = pd.Series(np.append(o, unfd_pred))
+                        unfd_samples.append([unfd_sampleset])
+                    forecasts[0].samples = np.array(unfd_samples).squeeze()
+                    tss[0][0] = actual
+
                 evaluator = Evaluator(quantiles=[0.1, 0.5, 0.9])
                 agg_metrics, item_metrics = evaluator(tss, forecasts)
                 print(agg_metrics)
@@ -171,6 +197,30 @@ class Trainer:
                 )
                 forecasts = list(forecast_it)
                 tss = list(ts_it)
+                if self.d:
+                    new_fd_series = X_train['target'].copy()
+                    original_series = X_train['target_o'].copy()
+                    X = pd.concat([X_train, X_test], axis=0)
+                    actual = X['target_o'].values
+                    print(len(actual), len(tss[0]))
+
+                    # iteratively invert the predicted fd target values, and prepare to repack the forecasts as expected by gluonts evaluator
+                    unfd_samples = []
+                    for predsampleset in forecasts[0].samples:
+                        unfd_sampleset = []
+                        fd = new_fd_series.copy()
+                        o = original_series.copy()
+                        for pred in predsampleset:
+                            fd = np.append(fd, pred)
+                            if self.thresh: ufd = invert_ffd(pd.Series(fd), o, self.d, self.thresh)
+                            else: ufd = invert_fd(pd.Series(fd), o, self.d)
+                            unfd_pred = ufd.iloc[-1]
+                            unfd_sampleset.append(unfd_pred)
+                            o = pd.Series(np.append(o, unfd_pred))
+                        unfd_samples.append([unfd_sampleset])
+                    forecasts[0].samples = np.array(unfd_samples).squeeze()
+                    tss[0][0] = actual
+
                 evaluator = Evaluator(quantiles=[0.1, 0.5, 0.9])
                 agg_metrics, item_metrics = evaluator(tss, forecasts)
                 mapes.append(agg_metrics['MAPE'])

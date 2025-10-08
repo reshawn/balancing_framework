@@ -1,0 +1,665 @@
+Running measurements with params: format=['auto'], dataset_name=m4_daily_dataset
+Data forms: ['o', 'fd', 'fod']
+values
+values d=0.0 stat windows =0 out of 1 p-values = [0.4052000370165259]
+values d=0.05 stat windows =0 out of 1 p-values = [0.4020097444324437]
+values d=0.1 stat windows =0 out of 1 p-values = [0.39966250249555746]
+values d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.3977253454689868]
+values d=0.2 stat windows =0 out of 1 p-values = [0.39805145656726315]
+values d=0.25 stat windows =0 out of 1 p-values = [0.3989604475372714]
+values d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3984245438779619]
+values d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.39568569838131973]
+values d=0.4 stat windows =0 out of 1 p-values = [0.3934692166220406]
+values d=0.45 stat windows =0 out of 1 p-values = [0.3831051551126132]
+values d=0.5 stat windows =0 out of 1 p-values = [0.377352365284185]
+values d=0.55 stat windows =0 out of 1 p-values = [0.3722689745244639]
+values d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.33835588377370635]
+values d=0.65 stat windows =0 out of 1 p-values = [0.32375518248895974]
+values d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.307558045733483]
+values d=0.75 stat windows =0 out of 1 p-values = [0.21984040348781636]
+values d=0.8 stat windows =0 out of 1 p-values = [0.17886347066041858]
+values d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.12882948615129697]
+values d=0.9 stat windows =0 out of 1 p-values = [0.0668048461467473]
+values d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.0068523734338035245]
+values stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.0068523734338035245]
+rolling_mean_2
+rolling_mean_2 d=0.0 stat windows =0 out of 1 p-values = [0.4040876870943325]
+rolling_mean_2 d=0.05 stat windows =0 out of 1 p-values = [0.40399015938735694]
+rolling_mean_2 d=0.1 stat windows =0 out of 1 p-values = [0.40158852457160266]
+rolling_mean_2 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.40098243534877726]
+rolling_mean_2 d=0.2 stat windows =0 out of 1 p-values = [0.40036641732694966]
+rolling_mean_2 d=0.25 stat windows =0 out of 1 p-values = [0.40112670561604213]
+rolling_mean_2 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.40009549594208993]
+rolling_mean_2 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3973588762161022]
+rolling_mean_2 d=0.4 stat windows =0 out of 1 p-values = [0.3936827685661454]
+rolling_mean_2 d=0.45 stat windows =0 out of 1 p-values = [0.3848476684917719]
+rolling_mean_2 d=0.5 stat windows =0 out of 1 p-values = [0.37834348983870747]
+rolling_mean_2 d=0.55 stat windows =0 out of 1 p-values = [0.37077870461867435]
+rolling_mean_2 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3421852673259599]
+rolling_mean_2 d=0.65 stat windows =0 out of 1 p-values = [0.3263060301434638]
+rolling_mean_2 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3090611628773179]
+rolling_mean_2 d=0.75 stat windows =0 out of 1 p-values = [0.2317144683958291]
+rolling_mean_2 d=0.8 stat windows =0 out of 1 p-values = [0.19234415548057665]
+rolling_mean_2 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.14353960198911347]
+rolling_mean_2 d=0.9 stat windows =0 out of 1 p-values = [0.08015970691160584]
+rolling_mean_2 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.0105379764476718]
+rolling_mean_2 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.0105379764476718]
+rolling_sum_2
+rolling_sum_2 d=0.0 stat windows =0 out of 1 p-values = [0.40408768709437176]
+rolling_sum_2 d=0.05 stat windows =0 out of 1 p-values = [0.40399015938734023]
+rolling_sum_2 d=0.1 stat windows =0 out of 1 p-values = [0.4015885245716236]
+rolling_sum_2 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4009824353487455]
+rolling_sum_2 d=0.2 stat windows =0 out of 1 p-values = [0.40036641732701245]
+rolling_sum_2 d=0.25 stat windows =0 out of 1 p-values = [0.40112670561606517]
+rolling_sum_2 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.40009549594210037]
+rolling_sum_2 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3973588762160918]
+rolling_sum_2 d=0.4 stat windows =0 out of 1 p-values = [0.39368276856614726]
+rolling_sum_2 d=0.45 stat windows =0 out of 1 p-values = [0.38484766849176216]
+rolling_sum_2 d=0.5 stat windows =0 out of 1 p-values = [0.3783434898386916]
+rolling_sum_2 d=0.55 stat windows =0 out of 1 p-values = [0.370778704618697]
+rolling_sum_2 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3421852673259612]
+rolling_sum_2 d=0.65 stat windows =0 out of 1 p-values = [0.3263060301434624]
+rolling_sum_2 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3090611628772979]
+rolling_sum_2 d=0.75 stat windows =0 out of 1 p-values = [0.2317144683958241]
+rolling_sum_2 d=0.8 stat windows =0 out of 1 p-values = [0.19234415548056638]
+rolling_sum_2 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.14353960198911497]
+rolling_sum_2 d=0.9 stat windows =0 out of 1 p-values = [0.08015970691160024]
+rolling_sum_2 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010537976447672372]
+rolling_sum_2 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.010537976447672372]
+rolling_min_2
+rolling_min_2 d=0.0 stat windows =0 out of 1 p-values = [0.4326959160763942]
+rolling_min_2 d=0.05 stat windows =0 out of 1 p-values = [0.4311974839477116]
+rolling_min_2 d=0.1 stat windows =0 out of 1 p-values = [0.4264631734347746]
+rolling_min_2 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4259461350216077]
+rolling_min_2 d=0.2 stat windows =0 out of 1 p-values = [0.42528219228897596]
+rolling_min_2 d=0.25 stat windows =0 out of 1 p-values = [0.42580218148658455]
+rolling_min_2 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4247413460065277]
+rolling_min_2 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.42210037423842073]
+rolling_min_2 d=0.4 stat windows =0 out of 1 p-values = [0.418653477691731]
+rolling_min_2 d=0.45 stat windows =0 out of 1 p-values = [0.4099950173916713]
+rolling_min_2 d=0.5 stat windows =0 out of 1 p-values = [0.38855386310344986]
+rolling_min_2 d=0.55 stat windows =0 out of 1 p-values = [0.3821493480016656]
+rolling_min_2 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.35368209894897606]
+rolling_min_2 d=0.65 stat windows =0 out of 1 p-values = [0.3394643213874363]
+rolling_min_2 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.32474486992351437]
+rolling_min_2 d=0.75 stat windows =0 out of 1 p-values = [0.24432295113808522]
+rolling_min_2 d=0.8 stat windows =0 out of 1 p-values = [0.20483927110374528]
+rolling_min_2 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.16477879602371098]
+rolling_min_2 d=0.9 stat windows =0 out of 1 p-values = [0.0936275895787459]
+rolling_min_2 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.012929731023298686]
+rolling_min_2 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.012929731023298686]
+rolling_max_2
+rolling_max_2 d=0.0 stat windows =0 out of 1 p-values = [0.3921557935548146]
+rolling_max_2 d=0.05 stat windows =0 out of 1 p-values = [0.41710774372352216]
+rolling_max_2 d=0.1 stat windows =0 out of 1 p-values = [0.4156559086599564]
+rolling_max_2 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4159499460502478]
+rolling_max_2 d=0.2 stat windows =0 out of 1 p-values = [0.41559921051568405]
+rolling_max_2 d=0.25 stat windows =0 out of 1 p-values = [0.41574494660232897]
+rolling_max_2 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4146026330875503]
+rolling_max_2 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4114128121223574]
+rolling_max_2 d=0.4 stat windows =0 out of 1 p-values = [0.40821873915781487]
+rolling_max_2 d=0.45 stat windows =0 out of 1 p-values = [0.3982105351123002]
+rolling_max_2 d=0.5 stat windows =0 out of 1 p-values = [0.3914328717532802]
+rolling_max_2 d=0.55 stat windows =0 out of 1 p-values = [0.3836591347727446]
+rolling_max_2 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3525716289037488]
+rolling_max_2 d=0.65 stat windows =0 out of 1 p-values = [0.3358043555171687]
+rolling_max_2 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3183270635099074]
+rolling_max_2 d=0.75 stat windows =0 out of 1 p-values = [0.23655312970028242]
+rolling_max_2 d=0.8 stat windows =0 out of 1 p-values = [0.19540840263251202]
+rolling_max_2 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.14477626000761346]
+rolling_max_2 d=0.9 stat windows =0 out of 1 p-values = [0.07957826503998428]
+rolling_max_2 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010044112105059967]
+rolling_max_2 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.010044112105059967]
+rolling_std_2
+rolling_std_2 d=0.0 stat windows =1 out of 1 p-values = [1.5807056219774352e-14]
+rolling_std_2 stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [1.5807056219774352e-14]
+rolling_mean_3
+rolling_mean_3 d=0.0 stat windows =0 out of 1 p-values = [0.405067641128349]
+rolling_mean_3 d=0.05 stat windows =0 out of 1 p-values = [0.4060980441284154]
+rolling_mean_3 d=0.1 stat windows =0 out of 1 p-values = [0.4053135634258985]
+rolling_mean_3 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4050407970126848]
+rolling_mean_3 d=0.2 stat windows =0 out of 1 p-values = [0.40597671680069647]
+rolling_mean_3 d=0.25 stat windows =0 out of 1 p-values = [0.4074679467093685]
+rolling_mean_3 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4077323956487491]
+rolling_mean_3 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4065209752975675]
+rolling_mean_3 d=0.4 stat windows =0 out of 1 p-values = [0.40464205452914503]
+rolling_mean_3 d=0.45 stat windows =0 out of 1 p-values = [0.397839939503159]
+rolling_mean_3 d=0.5 stat windows =0 out of 1 p-values = [0.39246967402898203]
+rolling_mean_3 d=0.55 stat windows =0 out of 1 p-values = [0.3867486600057749]
+rolling_mean_3 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.36123365465592777]
+rolling_mean_3 d=0.65 stat windows =0 out of 1 p-values = [0.347691680257182]
+rolling_mean_3 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3458454174207505]
+rolling_mean_3 d=0.75 stat windows =0 out of 1 p-values = [0.2659566354326609]
+rolling_mean_3 d=0.8 stat windows =0 out of 1 p-values = [0.22399765847275666]
+rolling_mean_3 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.17124490120612196]
+rolling_mean_3 d=0.9 stat windows =0 out of 1 p-values = [0.10020018386599727]
+rolling_mean_3 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015424778335262566]
+rolling_mean_3 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.015424778335262566]
+rolling_sum_3
+rolling_sum_3 d=0.0 stat windows =0 out of 1 p-values = [0.40506764112832466]
+rolling_sum_3 d=0.05 stat windows =0 out of 1 p-values = [0.4060980441283981]
+rolling_sum_3 d=0.1 stat windows =0 out of 1 p-values = [0.4053135634258751]
+rolling_sum_3 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4050407970126608]
+rolling_sum_3 d=0.2 stat windows =0 out of 1 p-values = [0.40597671680070196]
+rolling_sum_3 d=0.25 stat windows =0 out of 1 p-values = [0.4074679467094117]
+rolling_sum_3 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4077323956487517]
+rolling_sum_3 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4065209752975702]
+rolling_sum_3 d=0.4 stat windows =0 out of 1 p-values = [0.40464205452912216]
+rolling_sum_3 d=0.45 stat windows =0 out of 1 p-values = [0.39783993950313173]
+rolling_sum_3 d=0.5 stat windows =0 out of 1 p-values = [0.3924696740289959]
+rolling_sum_3 d=0.55 stat windows =0 out of 1 p-values = [0.38674866000576125]
+rolling_sum_3 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.36123365465593194]
+rolling_sum_3 d=0.65 stat windows =0 out of 1 p-values = [0.3476916802571742]
+rolling_sum_3 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3458454174207662]
+rolling_sum_3 d=0.75 stat windows =0 out of 1 p-values = [0.2659566354326783]
+rolling_sum_3 d=0.8 stat windows =0 out of 1 p-values = [0.22399765847275716]
+rolling_sum_3 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.17124490120614438]
+rolling_sum_3 d=0.9 stat windows =0 out of 1 p-values = [0.10020018386600882]
+rolling_sum_3 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.015424778335261811]
+rolling_sum_3 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.015424778335261811]
+rolling_min_3
+rolling_min_3 d=0.0 stat windows =0 out of 1 p-values = [0.436400418989274]
+rolling_min_3 d=0.05 stat windows =0 out of 1 p-values = [0.43418680870269233]
+rolling_min_3 d=0.1 stat windows =0 out of 1 p-values = [0.4298586338998828]
+rolling_min_3 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4303783290483256]
+rolling_min_3 d=0.2 stat windows =0 out of 1 p-values = [0.4321578718341103]
+rolling_min_3 d=0.25 stat windows =0 out of 1 p-values = [0.4344246751425406]
+rolling_min_3 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.43494241423005453]
+rolling_min_3 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4339424315050998]
+rolling_min_3 d=0.4 stat windows =0 out of 1 p-values = [0.43193321336040086]
+rolling_min_3 d=0.45 stat windows =0 out of 1 p-values = [0.4249032608172373]
+rolling_min_3 d=0.5 stat windows =0 out of 1 p-values = [0.41895079099534194]
+rolling_min_3 d=0.55 stat windows =0 out of 1 p-values = [0.41240292754083624]
+rolling_min_3 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.38518676397270535]
+rolling_min_3 d=0.65 stat windows =0 out of 1 p-values = [0.37043693963010493]
+rolling_min_3 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3551440815889918]
+rolling_min_3 d=0.75 stat windows =0 out of 1 p-values = [0.27472296972594124]
+rolling_min_3 d=0.8 stat windows =0 out of 1 p-values = [0.23341344359435046]
+rolling_min_3 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.17989271415906127]
+rolling_min_3 d=0.9 stat windows =0 out of 1 p-values = [0.10642306672871821]
+rolling_min_3 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01688512264670408]
+rolling_min_3 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.01688512264670408]
+rolling_max_3
+rolling_max_3 d=0.0 stat windows =0 out of 1 p-values = [0.3703801001035033]
+rolling_max_3 d=0.05 stat windows =0 out of 1 p-values = [0.3721517656806373]
+rolling_max_3 d=0.1 stat windows =0 out of 1 p-values = [0.3728668385334254]
+rolling_max_3 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.37657642282342385]
+rolling_max_3 d=0.2 stat windows =0 out of 1 p-values = [0.3808526784537858]
+rolling_max_3 d=0.25 stat windows =0 out of 1 p-values = [0.3830952718045254]
+rolling_max_3 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.38227676275937444]
+rolling_max_3 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3766894239750208]
+rolling_max_3 d=0.4 stat windows =0 out of 1 p-values = [0.3731742712637186]
+rolling_max_3 d=0.45 stat windows =0 out of 1 p-values = [0.35521023182619016]
+rolling_max_3 d=0.5 stat windows =0 out of 1 p-values = [0.3450048525984229]
+rolling_max_3 d=0.55 stat windows =0 out of 1 p-values = [0.33368086588451507]
+rolling_max_3 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.2862136096592655]
+rolling_max_3 d=0.65 stat windows =0 out of 1 p-values = [0.2646062277556517]
+rolling_max_3 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.24198775301856879]
+rolling_max_3 d=0.75 stat windows =0 out of 1 p-values = [0.20889664124936352]
+rolling_max_3 d=0.8 stat windows =0 out of 1 p-values = [0.19428664403256352]
+rolling_max_3 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.14475277490930882]
+rolling_max_3 d=0.9 stat windows =0 out of 1 p-values = [0.08028023409902135]
+rolling_max_3 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.010344256263347161]
+rolling_max_3 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.010344256263347161]
+rolling_std_3
+rolling_std_3 d=0.0 stat windows =1 out of 1 p-values = [2.2253774208910817e-16]
+rolling_std_3 stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [2.2253774208910817e-16]
+rolling_mean_4
+rolling_mean_4 d=0.0 stat windows =0 out of 1 p-values = [0.3924290686412291]
+rolling_mean_4 d=0.05 stat windows =0 out of 1 p-values = [0.3944807351468763]
+rolling_mean_4 d=0.1 stat windows =0 out of 1 p-values = [0.39479624405216873]
+rolling_mean_4 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.39625937841421416]
+rolling_mean_4 d=0.2 stat windows =0 out of 1 p-values = [0.39722769994613766]
+rolling_mean_4 d=0.25 stat windows =0 out of 1 p-values = [0.3987740446274901]
+rolling_mean_4 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3994060582031564]
+rolling_mean_4 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.39855701627843493]
+rolling_mean_4 d=0.4 stat windows =0 out of 1 p-values = [0.3968610262145111]
+rolling_mean_4 d=0.45 stat windows =0 out of 1 p-values = [0.390409490234718]
+rolling_mean_4 d=0.5 stat windows =0 out of 1 p-values = [0.3854126361370904]
+rolling_mean_4 d=0.55 stat windows =0 out of 1 p-values = [0.378605326215016]
+rolling_mean_4 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3539137777569232]
+rolling_mean_4 d=0.65 stat windows =0 out of 1 p-values = [0.33965741152547135]
+rolling_mean_4 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3244299403037011]
+rolling_mean_4 d=0.75 stat windows =0 out of 1 p-values = [0.2518441841979028]
+rolling_mean_4 d=0.8 stat windows =0 out of 1 p-values = [0.21341309049000473]
+rolling_mean_4 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.164138350828974]
+rolling_mean_4 d=0.9 stat windows =0 out of 1 p-values = [0.09751091560531289]
+rolling_mean_4 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01585231159976697]
+rolling_mean_4 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.01585231159976697]
+rolling_sum_4
+rolling_sum_4 d=0.0 stat windows =0 out of 1 p-values = [0.3924290686412243]
+rolling_sum_4 d=0.05 stat windows =0 out of 1 p-values = [0.3944807351468681]
+rolling_sum_4 d=0.1 stat windows =0 out of 1 p-values = [0.3947962440521451]
+rolling_sum_4 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.39625937841423486]
+rolling_sum_4 d=0.2 stat windows =0 out of 1 p-values = [0.3972276999461471]
+rolling_sum_4 d=0.25 stat windows =0 out of 1 p-values = [0.39877404462750626]
+rolling_sum_4 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3994060582031722]
+rolling_sum_4 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3985570162784209]
+rolling_sum_4 d=0.4 stat windows =0 out of 1 p-values = [0.39686102621451536]
+rolling_sum_4 d=0.45 stat windows =0 out of 1 p-values = [0.390409490234712]
+rolling_sum_4 d=0.5 stat windows =0 out of 1 p-values = [0.3854126361370804]
+rolling_sum_4 d=0.55 stat windows =0 out of 1 p-values = [0.3786053262150304]
+rolling_sum_4 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.35391377775690547]
+rolling_sum_4 d=0.65 stat windows =0 out of 1 p-values = [0.3396574115254867]
+rolling_sum_4 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.324429940303661]
+rolling_sum_4 d=0.75 stat windows =0 out of 1 p-values = [0.25184418419790516]
+rolling_sum_4 d=0.8 stat windows =0 out of 1 p-values = [0.2134130904899974]
+rolling_sum_4 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1641383508289716]
+rolling_sum_4 d=0.9 stat windows =0 out of 1 p-values = [0.09751091560530029]
+rolling_sum_4 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01585231159976722]
+rolling_sum_4 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.01585231159976722]
+rolling_min_4
+rolling_min_4 d=0.0 stat windows =0 out of 1 p-values = [0.41496913406818847]
+rolling_min_4 d=0.05 stat windows =0 out of 1 p-values = [0.4151409660652991]
+rolling_min_4 d=0.1 stat windows =0 out of 1 p-values = [0.4136871131899149]
+rolling_min_4 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4157673282464052]
+rolling_min_4 d=0.2 stat windows =0 out of 1 p-values = [0.4197208103032512]
+rolling_min_4 d=0.25 stat windows =0 out of 1 p-values = [0.4250423048078359]
+rolling_min_4 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4283184225926177]
+rolling_min_4 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4300049781136424]
+rolling_min_4 d=0.4 stat windows =0 out of 1 p-values = [0.43045547797317996]
+rolling_min_4 d=0.45 stat windows =0 out of 1 p-values = [0.4258174453529412]
+rolling_min_4 d=0.5 stat windows =0 out of 1 p-values = [0.42287931033213483]
+rolling_min_4 d=0.55 stat windows =0 out of 1 p-values = [0.4190019024122035]
+rolling_min_4 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3932778613943265]
+rolling_min_4 d=0.65 stat windows =0 out of 1 p-values = [0.3811662566783027]
+rolling_min_4 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.36677103632356894]
+rolling_min_4 d=0.75 stat windows =0 out of 1 p-values = [0.2963711850278897]
+rolling_min_4 d=0.8 stat windows =0 out of 1 p-values = [0.2526661983955315]
+rolling_min_4 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1953946353825583]
+rolling_min_4 d=0.9 stat windows =0 out of 1 p-values = [0.11606311800176305]
+rolling_min_4 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.01858375565513414]
+rolling_min_4 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.01858375565513414]
+rolling_max_4
+rolling_max_4 d=0.0 stat windows =0 out of 1 p-values = [0.39265629396181345]
+rolling_max_4 d=0.05 stat windows =0 out of 1 p-values = [0.39370596403794506]
+rolling_max_4 d=0.1 stat windows =0 out of 1 p-values = [0.39338029499904226]
+rolling_max_4 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.39355015814104727]
+rolling_max_4 d=0.2 stat windows =0 out of 1 p-values = [0.3937277503564469]
+rolling_max_4 d=0.25 stat windows =0 out of 1 p-values = [0.39333132905275076]
+rolling_max_4 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.39220715646981996]
+rolling_max_4 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3889635657292013]
+rolling_max_4 d=0.4 stat windows =0 out of 1 p-values = [0.3867602012069734]
+rolling_max_4 d=0.45 stat windows =0 out of 1 p-values = [0.3766505144552334]
+rolling_max_4 d=0.5 stat windows =0 out of 1 p-values = [0.3705379574069039]
+rolling_max_4 d=0.55 stat windows =0 out of 1 p-values = [0.3635781775334498]
+rolling_max_4 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3325493619339399]
+rolling_max_4 d=0.65 stat windows =0 out of 1 p-values = [0.31716193538127047]
+rolling_max_4 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3007044828854095]
+rolling_max_4 d=0.75 stat windows =0 out of 1 p-values = [0.22023064029772282]
+rolling_max_4 d=0.8 stat windows =0 out of 1 p-values = [0.18120705555509486]
+rolling_max_4 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1331535553659644]
+rolling_max_4 d=0.9 stat windows =0 out of 1 p-values = [0.0719366183341661]
+rolling_max_4 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.00852229555478187]
+rolling_max_4 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.00852229555478187]
+rolling_std_4
+rolling_std_4 d=0.0 stat windows =1 out of 1 p-values = [3.808411653643231e-16]
+rolling_std_4 stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [3.808411653643231e-16]
+rolling_mean_5
+rolling_mean_5 d=0.0 stat windows =0 out of 1 p-values = [0.41534539098503065]
+rolling_mean_5 d=0.05 stat windows =0 out of 1 p-values = [0.4138675066414391]
+rolling_mean_5 d=0.1 stat windows =0 out of 1 p-values = [0.40994947690062483]
+rolling_mean_5 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4065846889442264]
+rolling_mean_5 d=0.2 stat windows =0 out of 1 p-values = [0.4035953317490223]
+rolling_mean_5 d=0.25 stat windows =0 out of 1 p-values = [0.40130979196012934]
+rolling_mean_5 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3985602210195219]
+rolling_mean_5 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3946808260774769]
+rolling_mean_5 d=0.4 stat windows =0 out of 1 p-values = [0.37679971826723263]
+rolling_mean_5 d=0.45 stat windows =0 out of 1 p-values = [0.37351947820789766]
+rolling_mean_5 d=0.5 stat windows =0 out of 1 p-values = [0.37121728852128444]
+rolling_mean_5 d=0.55 stat windows =0 out of 1 p-values = [0.36856646758747147]
+rolling_mean_5 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3470848501557874]
+rolling_mean_5 d=0.65 stat windows =0 out of 1 p-values = [0.3366135454361969]
+rolling_mean_5 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.30761782804259796]
+rolling_mean_5 d=0.75 stat windows =0 out of 1 p-values = [0.23695767492486136]
+rolling_mean_5 d=0.8 stat windows =0 out of 1 p-values = [0.19901781960224202]
+rolling_mean_5 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1510113055437068]
+rolling_mean_5 d=0.9 stat windows =0 out of 1 p-values = [0.08815659687978084]
+rolling_mean_5 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013703518845412321]
+rolling_mean_5 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.013703518845412321]
+rolling_sum_5
+rolling_sum_5 d=0.0 stat windows =0 out of 1 p-values = [0.41534539098501233]
+rolling_sum_5 d=0.05 stat windows =0 out of 1 p-values = [0.4138675066414438]
+rolling_sum_5 d=0.1 stat windows =0 out of 1 p-values = [0.40994947690063016]
+rolling_sum_5 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.4065846889442231]
+rolling_sum_5 d=0.2 stat windows =0 out of 1 p-values = [0.40359533174903384]
+rolling_sum_5 d=0.25 stat windows =0 out of 1 p-values = [0.40130979196016486]
+rolling_sum_5 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.39856022101950817]
+rolling_sum_5 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3946808260774983]
+rolling_sum_5 d=0.4 stat windows =0 out of 1 p-values = [0.37679971826727887]
+rolling_sum_5 d=0.45 stat windows =0 out of 1 p-values = [0.3735194782079003]
+rolling_sum_5 d=0.5 stat windows =0 out of 1 p-values = [0.37121728852129987]
+rolling_sum_5 d=0.55 stat windows =0 out of 1 p-values = [0.36856646758747313]
+rolling_sum_5 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3470848501557921]
+rolling_sum_5 d=0.65 stat windows =0 out of 1 p-values = [0.3366135454361663]
+rolling_sum_5 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3076178280425923]
+rolling_sum_5 d=0.75 stat windows =0 out of 1 p-values = [0.2369576749248719]
+rolling_sum_5 d=0.8 stat windows =0 out of 1 p-values = [0.19901781960224452]
+rolling_sum_5 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.15101130554370168]
+rolling_sum_5 d=0.9 stat windows =0 out of 1 p-values = [0.08815659687978444]
+rolling_sum_5 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.013703518845412422]
+rolling_sum_5 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.013703518845412422]
+rolling_min_5
+rolling_min_5 d=0.0 stat windows =0 out of 1 p-values = [0.44878897184325095]
+rolling_min_5 d=0.05 stat windows =0 out of 1 p-values = [0.4461373020284859]
+rolling_min_5 d=0.1 stat windows =0 out of 1 p-values = [0.4426581098896035]
+rolling_min_5 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.439713016048349]
+rolling_min_5 d=0.2 stat windows =0 out of 1 p-values = [0.4391659998353561]
+rolling_min_5 d=0.25 stat windows =0 out of 1 p-values = [0.44088473320725013]
+rolling_min_5 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.4406310942817862]
+rolling_min_5 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.4393921648434901]
+rolling_min_5 d=0.4 stat windows =0 out of 1 p-values = [0.43589162403230297]
+rolling_min_5 d=0.45 stat windows =0 out of 1 p-values = [0.4297444999240459]
+rolling_min_5 d=0.5 stat windows =0 out of 1 p-values = [0.4233345210861409]
+rolling_min_5 d=0.55 stat windows =0 out of 1 p-values = [0.4044995129493991]
+rolling_min_5 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3821213175571414]
+rolling_min_5 d=0.65 stat windows =0 out of 1 p-values = [0.37037578449275277]
+rolling_min_5 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3575388715696727]
+rolling_min_5 d=0.75 stat windows =0 out of 1 p-values = [0.28316073258082475]
+rolling_min_5 d=0.8 stat windows =0 out of 1 p-values = [0.24503350258004408]
+rolling_min_5 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1939752827767196]
+rolling_min_5 d=0.9 stat windows =0 out of 1 p-values = [0.1205088355078121]
+rolling_min_5 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.02204767161834648]
+rolling_min_5 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.02204767161834648]
+rolling_max_5
+rolling_max_5 d=0.0 stat windows =0 out of 1 p-values = [0.3788142654418318]
+rolling_max_5 d=0.05 stat windows =0 out of 1 p-values = [0.379212326637092]
+rolling_max_5 d=0.1 stat windows =0 out of 1 p-values = [0.3782387762668442]
+rolling_max_5 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.37822366462962576]
+rolling_max_5 d=0.2 stat windows =0 out of 1 p-values = [0.3774532158462795]
+rolling_max_5 d=0.25 stat windows =0 out of 1 p-values = [0.3622824416934717]
+rolling_max_5 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3626306790367312]
+rolling_max_5 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3605693012849576]
+rolling_max_5 d=0.4 stat windows =0 out of 1 p-values = [0.3597512430469595]
+rolling_max_5 d=0.45 stat windows =0 out of 1 p-values = [0.3501585561225619]
+rolling_max_5 d=0.5 stat windows =0 out of 1 p-values = [0.3450536773889865]
+rolling_max_5 d=0.55 stat windows =0 out of 1 p-values = [0.33937639310986445]
+rolling_max_5 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.30779742869408483]
+rolling_max_5 d=0.65 stat windows =0 out of 1 p-values = [0.293550982235976]
+rolling_max_5 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.27790928958456584]
+rolling_max_5 d=0.75 stat windows =0 out of 1 p-values = [0.1974640844223865]
+rolling_max_5 d=0.8 stat windows =0 out of 1 p-values = [0.15980724028911647]
+rolling_max_5 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.11421307715516338]
+rolling_max_5 d=0.9 stat windows =0 out of 1 p-values = [0.058353293954385016]
+rolling_max_5 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006593716619176268]
+rolling_max_5 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.006593716619176268]
+rolling_std_5
+rolling_std_5 d=0.0 stat windows =1 out of 1 p-values = [1.87376779053502e-14]
+rolling_std_5 stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [1.87376779053502e-14]
+lag_1
+lag_1 d=0.0 stat windows =0 out of 1 p-values = [0.4040964734500716]
+lag_1 d=0.05 stat windows =0 out of 1 p-values = [0.4009288818838904]
+lag_1 d=0.1 stat windows =0 out of 1 p-values = [0.39903582505606544]
+lag_1 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.3977208905811367]
+lag_1 d=0.2 stat windows =0 out of 1 p-values = [0.3968631120334611]
+lag_1 d=0.25 stat windows =0 out of 1 p-values = [0.39792580224600316]
+lag_1 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.39739511208841277]
+lag_1 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3946646525595981]
+lag_1 d=0.4 stat windows =0 out of 1 p-values = [0.3923148593869269]
+lag_1 d=0.45 stat windows =0 out of 1 p-values = [0.3819768684766573]
+lag_1 d=0.5 stat windows =0 out of 1 p-values = [0.3771327913430037]
+lag_1 d=0.55 stat windows =0 out of 1 p-values = [0.37131885568417344]
+lag_1 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3374590423159748]
+lag_1 d=0.65 stat windows =0 out of 1 p-values = [0.32311453981547894]
+lag_1 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.30648842054183945]
+lag_1 d=0.75 stat windows =0 out of 1 p-values = [0.2190159583370589]
+lag_1 d=0.8 stat windows =0 out of 1 p-values = [0.17822654882980343]
+lag_1 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1283804397143572]
+lag_1 d=0.9 stat windows =0 out of 1 p-values = [0.06654624535958112]
+lag_1 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006817158592285758]
+lag_1 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.006817158592285758]
+lag_2
+lag_2 d=0.0 stat windows =0 out of 1 p-values = [0.4033749341731811]
+lag_2 d=0.05 stat windows =0 out of 1 p-values = [0.39996428305940307]
+lag_2 d=0.1 stat windows =0 out of 1 p-values = [0.3977452969078939]
+lag_2 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.39673676568619115]
+lag_2 d=0.2 stat windows =0 out of 1 p-values = [0.39685775693556763]
+lag_2 d=0.25 stat windows =0 out of 1 p-values = [0.39676590297754466]
+lag_2 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.39624499485850573]
+lag_2 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3935282877088817]
+lag_2 d=0.4 stat windows =0 out of 1 p-values = [0.3921976564764139]
+lag_2 d=0.45 stat windows =0 out of 1 p-values = [0.3818139653759657]
+lag_2 d=0.5 stat windows =0 out of 1 p-values = [0.3762000207747736]
+lag_2 d=0.55 stat windows =0 out of 1 p-values = [0.37068605264269333]
+lag_2 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3368401748849438]
+lag_2 d=0.65 stat windows =0 out of 1 p-values = [0.32203875825996653]
+lag_2 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.30555489555646287]
+lag_2 d=0.75 stat windows =0 out of 1 p-values = [0.21829302256516298]
+lag_2 d=0.8 stat windows =0 out of 1 p-values = [0.17766859641476823]
+lag_2 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.1279597641627389]
+lag_2 d=0.9 stat windows =0 out of 1 p-values = [0.06631328398275445]
+lag_2 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006778460273331641]
+lag_2 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.006778460273331641]
+lag_3
+lag_3 d=0.0 stat windows =0 out of 1 p-values = [0.40487525842824856]
+lag_3 d=0.05 stat windows =0 out of 1 p-values = [0.4012594689260075]
+lag_3 d=0.1 stat windows =0 out of 1 p-values = [0.39856148065014707]
+lag_3 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.39812891813229445]
+lag_3 d=0.2 stat windows =0 out of 1 p-values = [0.397883337456824]
+lag_3 d=0.25 stat windows =0 out of 1 p-values = [0.39874711113412736]
+lag_3 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3982056388921681]
+lag_3 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3954582268020316]
+lag_3 d=0.4 stat windows =0 out of 1 p-values = [0.3932704163920308]
+lag_3 d=0.45 stat windows =0 out of 1 p-values = [0.38289141270110116]
+lag_3 d=0.5 stat windows =0 out of 1 p-values = [0.3775906289560517]
+lag_3 d=0.55 stat windows =0 out of 1 p-values = [0.37151733710608714]
+lag_3 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.337674664773477]
+lag_3 d=0.65 stat windows =0 out of 1 p-values = [0.32298770283075656]
+lag_3 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3066011998548033]
+lag_3 d=0.75 stat windows =0 out of 1 p-values = [0.21918559290653566]
+lag_3 d=0.8 stat windows =0 out of 1 p-values = [0.1784832887180915]
+lag_3 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.12865558963826773]
+lag_3 d=0.9 stat windows =0 out of 1 p-values = [0.06665382692033041]
+lag_3 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006827150655177555]
+lag_3 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.006827150655177555]
+lag_4
+lag_4 d=0.0 stat windows =0 out of 1 p-values = [0.4046229217042438]
+lag_4 d=0.05 stat windows =0 out of 1 p-values = [0.4006706422020553]
+lag_4 d=0.1 stat windows =0 out of 1 p-values = [0.39809717232240893]
+lag_4 d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.3974340602139388]
+lag_4 d=0.2 stat windows =0 out of 1 p-values = [0.3978603747961804]
+lag_4 d=0.25 stat windows =0 out of 1 p-values = [0.3983576695611143]
+lag_4 d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.3978219502376912]
+lag_4 d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.3950816403502259]
+lag_4 d=0.4 stat windows =0 out of 1 p-values = [0.3932365341202657]
+lag_4 d=0.45 stat windows =0 out of 1 p-values = [0.3828483695491416]
+lag_4 d=0.5 stat windows =0 out of 1 p-values = [0.3769755692263504]
+lag_4 d=0.55 stat windows =0 out of 1 p-values = [0.37103879512055904]
+lag_4 d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.3372353383791003]
+lag_4 d=0.65 stat windows =0 out of 1 p-values = [0.32267064603105816]
+lag_4 d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.3063458585230333]
+lag_4 d=0.75 stat windows =0 out of 1 p-values = [0.21898019036861016]
+lag_4 d=0.8 stat windows =0 out of 1 p-values = [0.1783712730690074]
+lag_4 d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.12840992277499125]
+lag_4 d=0.9 stat windows =0 out of 1 p-values = [0.06652108656939774]
+lag_4 d=0.9500000000000001 stat windows =1 out of 1 p-values = [0.006817688967355159]
+lag_4 stationary with d=0.9500000000000001 thresh=0.01 stat windows =1 out of 1 p-values = [0.006817688967355159]
+difference
+difference d=0.0 stat windows =1 out of 1 p-values = [4.213736785006675e-27]
+difference stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [4.213736785006675e-27]
+percentage_change
+percentage_change d=0.0 stat windows =1 out of 1 p-values = [1.9539983791168526e-26]
+percentage_change stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [1.9539983791168526e-26]
+cumulative_sum
+cumulative_sum d=0.0 stat windows =0 out of 1 p-values = [0.9990635597227756]
+cumulative_sum d=0.05 stat windows =0 out of 1 p-values = [0.9990726699726622]
+cumulative_sum d=0.1 stat windows =0 out of 1 p-values = [0.9990781436190646]
+cumulative_sum d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.9990752942043175]
+cumulative_sum d=0.2 stat windows =0 out of 1 p-values = [0.9990767458632808]
+cumulative_sum d=0.25 stat windows =0 out of 1 p-values = [0.9990745644987508]
+cumulative_sum d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.9990742515508585]
+cumulative_sum d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.9990749069555103]
+cumulative_sum d=0.4 stat windows =0 out of 1 p-values = [0.9990766950853945]
+cumulative_sum d=0.45 stat windows =0 out of 1 p-values = [0.9990801686752151]
+cumulative_sum d=0.5 stat windows =0 out of 1 p-values = [0.999080268613761]
+cumulative_sum d=0.55 stat windows =0 out of 1 p-values = [0.9990796965466309]
+cumulative_sum d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.999087402378826]
+cumulative_sum d=0.65 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.7000000000000001 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.75 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.8 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.8500000000000001 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.9 stat windows =0 out of 1 p-values = [1.0]
+cumulative_sum d=0.9500000000000001 stat windows =0 out of 1 p-values = [1.0]
+cumulative_mean
+cumulative_mean d=0.0 stat windows =0 out of 1 p-values = [0.8019731559150806]
+cumulative_mean d=0.05 stat windows =0 out of 1 p-values = [0.8380451234853847]
+cumulative_mean d=0.1 stat windows =0 out of 1 p-values = [0.8407967797122522]
+cumulative_mean d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.8886409783318323]
+cumulative_mean d=0.2 stat windows =0 out of 1 p-values = [0.9062479917329717]
+cumulative_mean d=0.25 stat windows =0 out of 1 p-values = [0.896938016304047]
+cumulative_mean d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.898888733927664]
+cumulative_mean d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.9106514275535034]
+cumulative_mean d=0.4 stat windows =0 out of 1 p-values = [0.8946022806571031]
+cumulative_mean d=0.45 stat windows =0 out of 1 p-values = [0.907904802153999]
+cumulative_mean d=0.5 stat windows =0 out of 1 p-values = [0.8922448199895551]
+cumulative_mean d=0.55 stat windows =0 out of 1 p-values = [0.86073236744274]
+cumulative_mean d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.8619549131385588]
+cumulative_mean d=0.65 stat windows =0 out of 1 p-values = [0.8541607244457012]
+cumulative_mean d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.8869530057441404]
+cumulative_mean d=0.75 stat windows =0 out of 1 p-values = [0.8942434691541028]
+cumulative_mean d=0.8 stat windows =0 out of 1 p-values = [0.8046951440599615]
+cumulative_mean d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.8180156727325111]
+cumulative_mean d=0.9 stat windows =0 out of 1 p-values = [0.8056525978364866]
+cumulative_mean d=0.9500000000000001 stat windows =0 out of 1 p-values = [0.7761371549369145]
+cumulative_max
+cumulative_max d=0.0 stat windows =0 out of 1 p-values = [0.6491331362907091]
+cumulative_max d=0.05 stat windows =0 out of 1 p-values = [0.668834524903396]
+cumulative_max d=0.1 stat windows =0 out of 1 p-values = [0.662951116973882]
+cumulative_max d=0.15000000000000002 stat windows =0 out of 1 p-values = [0.662147253412409]
+cumulative_max d=0.2 stat windows =0 out of 1 p-values = [0.6599102356667195]
+cumulative_max d=0.25 stat windows =0 out of 1 p-values = [0.6546048462468887]
+cumulative_max d=0.30000000000000004 stat windows =0 out of 1 p-values = [0.6546222433609175]
+cumulative_max d=0.35000000000000003 stat windows =0 out of 1 p-values = [0.6541742150493917]
+cumulative_max d=0.4 stat windows =0 out of 1 p-values = [0.6593234626471228]
+cumulative_max d=0.45 stat windows =0 out of 1 p-values = [0.6571635066724153]
+cumulative_max d=0.5 stat windows =0 out of 1 p-values = [0.6582639024172219]
+cumulative_max d=0.55 stat windows =0 out of 1 p-values = [0.6602211374241554]
+cumulative_max d=0.6000000000000001 stat windows =0 out of 1 p-values = [0.6517562285038077]
+cumulative_max d=0.65 stat windows =0 out of 1 p-values = [0.6450954056278635]
+cumulative_max d=0.7000000000000001 stat windows =0 out of 1 p-values = [0.6389503908652387]
+cumulative_max d=0.75 stat windows =0 out of 1 p-values = [0.6080962756279922]
+cumulative_max d=0.8 stat windows =0 out of 1 p-values = [0.5947422745956843]
+cumulative_max d=0.8500000000000001 stat windows =0 out of 1 p-values = [0.5844822560267208]
+cumulative_max d=0.9 stat windows =0 out of 1 p-values = [0.5145595789142373]
+cumulative_max d=0.9500000000000001 stat windows =0 out of 1 p-values = [0.3268003644829205]
+cumulative_min
+cumulative_min d=0.0 stat windows =1 out of 1 p-values = [2.7155254256569624e-09]
+cumulative_min stationary with d=0.0 thresh=0.01 stat windows =1 out of 1 p-values = [2.7155254256569624e-09]
+changed 21 out of 31 columns; 67.74193548387096%
+frac diff params: {'col': (0.0, 0.01)}, change_pct: 67.74193548387096
+Running measurements with params: format=fod,chunk_size=937, num_runs=10,                 dataset_name=m4_daily_dataset, model_name=random_forest
+RUNNING ADAPTATION MEASURE
+Tuning run 1 of 9 chunks
+Optimization Time: 0.02349640743341297 minutes
+Training run 1 of 9 chunks
+Running with tuned params: {'n_estimators': 41, 'max_depth': 20}
+Run 0 Accuracy: 0.8936
+Run 1 Accuracy: 0.9149
+Run 2 Accuracy: 0.9149
+Run 3 Accuracy: 0.9043
+Run 4 Accuracy: 0.9255
+Run 5 Accuracy: 0.9362
+Run 6 Accuracy: 0.9362
+Run 7 Accuracy: 0.9255
+Run 8 Accuracy: 0.9362
+Run 9 Accuracy: 0.9255
+Tuning run 2 of 9 chunks
+Optimization Time: 0.05253017316669381 minutes
+Training run 2 of 9 chunks
+Running with tuned params: {'n_estimators': 27, 'max_depth': 16}
+Run 0 Accuracy: 0.9894
+Run 1 Accuracy: 0.9574
+Run 2 Accuracy: 0.9574
+Run 3 Accuracy: 0.9787
+Run 4 Accuracy: 0.9787
+Run 5 Accuracy: 0.9787
+Run 6 Accuracy: 0.9681
+Run 7 Accuracy: 0.9894
+Run 8 Accuracy: 0.9787
+Run 9 Accuracy: 0.9681
+Tuning run 3 of 9 chunks
+Optimization Time: 0.08129532141659486 minutes
+Training run 3 of 9 chunks
+Running with tuned params: {'n_estimators': 40, 'max_depth': 29}
+Run 0 Accuracy: 0.9787
+Run 1 Accuracy: 0.9787
+Run 2 Accuracy: 0.9787
+Run 3 Accuracy: 0.9894
+Run 4 Accuracy: 0.9681
+Run 5 Accuracy: 0.9787
+Run 6 Accuracy: 0.9894
+Run 7 Accuracy: 0.9681
+Run 8 Accuracy: 0.9787
+Run 9 Accuracy: 0.9681
+Tuning run 4 of 9 chunks
+Optimization Time: 0.06926290323317516 minutes
+Training run 4 of 9 chunks
+Running with tuned params: {'n_estimators': 17, 'max_depth': 23}
+Run 0 Accuracy: 0.9574
+Run 1 Accuracy: 0.9149
+Run 2 Accuracy: 0.9468
+Run 3 Accuracy: 0.9362
+Run 4 Accuracy: 0.9468
+Run 5 Accuracy: 0.9362
+Run 6 Accuracy: 0.9149
+Run 7 Accuracy: 0.9362
+Run 8 Accuracy: 0.9149
+Run 9 Accuracy: 0.9043
+Tuning run 5 of 9 chunks
+Optimization Time: 0.09148930255008357 minutes
+Training run 5 of 9 chunks
+Running with tuned params: {'n_estimators': 43, 'max_depth': 24}
+Run 0 Accuracy: 0.9681
+Run 1 Accuracy: 0.9468
+Run 2 Accuracy: 0.9787
+Run 3 Accuracy: 0.9574
+Run 4 Accuracy: 0.9362
+Run 5 Accuracy: 0.9787
+Run 6 Accuracy: 0.9681
+Run 7 Accuracy: 0.9681
+Run 8 Accuracy: 0.9362
+Run 9 Accuracy: 0.9894
+Tuning run 6 of 9 chunks
+Optimization Time: 0.08712722531660498 minutes
+Training run 6 of 9 chunks
+Running with tuned params: {'n_estimators': 16, 'max_depth': 20}
+Run 0 Accuracy: 0.9574
+Run 1 Accuracy: 0.9468
+Run 2 Accuracy: 0.9043
+Run 3 Accuracy: 0.9468
+Run 4 Accuracy: 0.9362
+Run 5 Accuracy: 0.9255
+Run 6 Accuracy: 0.9149
+Run 7 Accuracy: 0.9681
+Run 8 Accuracy: 0.9468
+Run 9 Accuracy: 0.9681
+Tuning run 7 of 9 chunks
+Optimization Time: 0.13583485634978085 minutes
+Training run 7 of 9 chunks
+Running with tuned params: {'n_estimators': 26, 'max_depth': 11}
+Run 0 Accuracy: 0.9255
+Run 1 Accuracy: 0.9043
+Run 2 Accuracy: 0.9149
+Run 3 Accuracy: 0.9149
+Run 4 Accuracy: 0.9255
+Run 5 Accuracy: 0.9468
+Run 6 Accuracy: 0.9043
+Run 7 Accuracy: 0.9255
+Run 8 Accuracy: 0.9468
+Run 9 Accuracy: 0.9255
+Tuning run 8 of 9 chunks
+Optimization Time: 0.17585086011677048 minutes
+Training run 8 of 9 chunks
+Running with tuned params: {'n_estimators': 50, 'max_depth': 24}
+Run 0 Accuracy: 0.9362
+Run 1 Accuracy: 0.9255
+Run 2 Accuracy: 0.9149
+Run 3 Accuracy: 0.9468
+Run 4 Accuracy: 0.9255
+Run 5 Accuracy: 0.9362
+Run 6 Accuracy: 0.9574
+Run 7 Accuracy: 0.9149
+Run 8 Accuracy: 0.9362
+Run 9 Accuracy: 0.9255
+Tuning run 9 of 9 chunks

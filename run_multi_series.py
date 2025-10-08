@@ -13,6 +13,7 @@ from framework import run_measurements, viz
 from fracdiff import frac_diff_bestd
 from monash_data_utils import convert_tsf_to_dataframe, monash_df_to_gluonts_train_datasets
 import os
+from gluonts_utils import series_to_gluonts_dataset
 
 # Don't forget to point the output to a log file
 
@@ -47,7 +48,8 @@ if __name__ == "__main__":
 
     if os.path.exists(f"{monash_dir}/{dataset_name}.tsf"):
         loaded_data, frequency, forecast_horizon, contain_missing_values, contain_equal_length = convert_tsf_to_dataframe(f"{monash_dir}/{dataset_name}.tsf")
-        if forecast_horizon is None: forecast_horizon = 24
+        if forecast_horizon is None: 
+            forecast_horizon = 24
         dataset = monash_df_to_gluonts_train_datasets(loaded_data, frequency, forecast_horizon)
 
     if dataset is None:
@@ -57,17 +59,24 @@ if __name__ == "__main__":
             raise ValueError(f"Dataset {dataset_name} not found in gluonts availables or local monash files.")
         
 
+    df = pd.read_csv('dv2.txt', sep='\t')
+    df.dropna(inplace=True)
+    df = df['70916_00065_00003'] # Mean Gage height, feet
+    df = df.reset_index()
+    df = df.rename(columns={'70916_00065_00003': 'target'})
+    dataset = series_to_gluonts_dataset(df.iloc[:-100], df, params={'freq':'D', 'prediction_length':100})
+
     series_num = -1
-    series_to_focus_on = 4090
+    series_to_focus_on = 1165
     
 
     for entry in tqdm(dataset.test):
-        series_num += 1
-        # for using a single pre-picked series
-        if series_num > series_to_focus_on:
-            break
-        if series_num != series_to_focus_on:
-            continue
+        # series_num += 1
+        # # for using a single pre-picked series
+        # if series_num > series_to_focus_on:
+        #     break
+        # if series_num != series_to_focus_on:
+        #     continue
 
         ####################################### Prep Feats & Labels  ####################################################################################
 
@@ -116,8 +125,8 @@ if __name__ == "__main__":
             df['lag_2'] = df['values'].shift(2)  # Value two steps back
             df['lag_3'] = df['values'].shift(3)  # Value three steps back
             df['lag_4'] = df['values'].shift(4)  # Value four steps back
-            df['difference'] = df['values'].diff()  # Difference from the previous value
-            df['percentage_change'] = df['values'].pct_change()  # Percentage change from the previous value
+            # df['difference'] = df['values'].diff()  # Difference from the previous value
+            # df['percentage_change'] = df['values'].pct_change()  # Percentage change from the previous value
             df['cumulative_sum'] = df['values'].cumsum()  # Cumulative sum
             df['cumulative_mean'] = df['values'].expanding().mean()  # Cumulative mean
             df['cumulative_max'] = df['values'].cummax()  # Cumulative maximum
@@ -152,7 +161,8 @@ if __name__ == "__main__":
 
             for data_form in data_forms:
                 if data_form == 'fd':
-                    df_fd, fd_change_pct = frac_diff_bestd(df.drop(columns=['label']) )
+                    df_fd, fd_change_pct, fd_params = frac_diff_bestd(df.drop(columns=['label']), type='ffd' )
+                    print(f'frac diff params: {fd_params}, change_pct: {fd_change_pct}')
                     df_fd.dropna(inplace=True)
                     df_fd.reset_index(drop=True, inplace=True)
                     X = X.join(df_fd.add_suffix(f'_{data_form}'), how='outer')
@@ -193,16 +203,22 @@ if __name__ == "__main__":
             model_name = 'random_forest'
             # lower bounds to chunk size
             # min to run, chunk_size > X.shape(1) * 10
-            # min for 10 splits, chunk_size > X.shape(0) /10 ;;; can adjust this min, unsure atm how many series fails condition
+            # min for 3 splits, chunk_size > X.shape(0) /3 ;;; can adjust this min, unsure atm how many series fails condition
             # upper bound to chunk size
-            # max num of splits, 100, 100 > (X.shape(0) / chunk_size) therefore default to 1% chunk size, using the lower bound
-            chunk_size = int(X.shape[0] * 0.1)
-            min_splits = 3
-            if chunk_size < (X.shape[1] * 10):
-                chunk_size = X.shape[1] * 10
-            if chunk_size > (X.shape[0] / min_splits):
-                print(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting count of splits > min_splits={min_splits}.')
-                pass
+            # max num of splits, 10, 10 > (X.shape(0) / chunk_size) therefore default to 10% chunk size, using the lower bound
+            curr_split_pct = 0.1
+            chunk_size = int(X.shape[0] * curr_split_pct)
+            model_min_chunk_size = X.shape[1] * 10
+            min_split_pct = 0.33
+            curr_splits = X.shape[0] / chunk_size
+            while chunk_size < model_min_chunk_size:
+                curr_split_pct += 0.01
+                if curr_split_pct > min_split_pct:
+                    print(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > min_splits_pct={min_splits_pct*100}%.')
+                    # raise Exception(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > min_splits_pct={min_splits_pct*100}%.')
+                    break
+                chunk_size = int(X.shape[0] * curr_split_pct)
+
             # cold_start_size = 10_000
             num_runs = 10
 

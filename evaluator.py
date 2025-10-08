@@ -17,17 +17,20 @@ num_kernels = 10_000
 
 
 class Evaluator:
-    def __init__(self, dataset_name, model_name, X, y, num_runs=10, chunk_size=50000, test_size=None):
+    def __init__(self, dataset_name, model_name, X, y, num_runs=10, chunk_size=50000, test_size=None, d=None, thresh=None):
         self.model_name = model_name
         self.dataset_name = dataset_name
         self.num_runs = num_runs
         self.test_size = test_size
+        self.d = d
+        self.thresh = thresh
         self.results = pd.DataFrame()
         self.best_params = None
 
         self.split_at_ends = False
         self.data_params = None
         self.model_params = None
+        self.skip_tuning = False
 
         
         gluonts_models = ['transformer']
@@ -121,13 +124,14 @@ class Evaluator:
 
         all_results = []
         X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
-        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs)
+        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
 
         for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
+            print(f'Running adaptation measure {i} of {len(self.chunks)}, {len(all_results)} scores stored')
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
             
-            if self.model_params is None:
+            if not self.skip_tuning:
                 X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
                 print(f'Tuning run {i+1} of {self.num_chunks} chunks')
                 trainer.tune(X_train, y_train, X_val, y_val)
@@ -170,13 +174,14 @@ class Evaluator:
 
         all_results = []
         X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
-        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs)
+        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
 
         for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
+            print(f'Running consolidation measure {i} of {len(self.chunks)}, {len(all_results)} scores stored')
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
             
-            if self.model_params is None:
+            if not self.skip_tuning:
                 X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
                 print(f'Tuning run {i+1} of {self.num_chunks} chunks')
                 trainer.tune(X_train, y_train, X_val, y_val)

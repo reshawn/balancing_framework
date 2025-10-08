@@ -6,7 +6,7 @@ from gluonts.dataset.field_names import FieldName
 
 def series_to_gluonts_dataset(X_train, X_test, params):
     X = pd.concat([X_train, X_test], axis=0)
-    value_col = 'values_o'
+    value_col = 'target'
     # prep feat dynamic real i.e. other feats aside from target, see https://ts.gluon.ai/stable/tutorials/forecasting/extended_tutorial.html#Use-your-time-series-and-features
 
     # for gluonts, this first removes values_o as the targe, to separate it from the fields in the gluonts dataset

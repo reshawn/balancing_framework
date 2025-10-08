@@ -41,7 +41,7 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
 
 
 
-def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False):
+def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False, d=None, thresh=None):
     """
     Evaluate a model's performance on a dataset in terms of adaptation and consolidation measures.
 
@@ -65,7 +65,10 @@ def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, fr
         Whether to use fractional differencing as a preprocessing step
     rocket : bool
         Whether to use rocket as a preprocessing step
-
+    d : float
+        fractional differencing parameter, if frac_diff was done and needs to be inverted latre
+    thresh : float
+        fractional differencing threshold, if frac_diff was done and needs to be inverted later
     Returns
     -------
     adaptation_results : pandas.DataFrame
@@ -111,7 +114,7 @@ def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, fr
 
     # EVALUATION -------------------------------------------------------------------------------------------------
 
-    eval = Evaluator(dataset_name, model_name, X, y, num_runs=num_runs, chunk_size=chunk_size, test_size=None)
+    eval = Evaluator(dataset_name, model_name, X, y, num_runs=num_runs, chunk_size=chunk_size, test_size=None, d=d, thresh=thresh)
 
     # ADAPTATION MEASURE LOOP 
 

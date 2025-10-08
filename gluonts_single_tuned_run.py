@@ -34,24 +34,38 @@ from gluonts.evaluation import Evaluator
 from gluonts.evaluation import make_evaluation_predictions
 
 from gluonts_utils import series_to_gluonts_dataset, load_params
+from fracdiff import invert_fd, invert_ffd
 
 class Objective:
-    def __init__( self, model, dataset_name, X):
+    def __init__( self, model, dataset_name, X, d=None, thresh=None):
+        '''
+        model: str
+        dataset_name: str
+        X: pd.DataFrame. Expects this df to have a target column called 'target', 
+        and if using a frac diffed target to be inverted, also expects the original version to be named 'values_o'
+        d: float. Differencing amount used if the target in X was frac diffed, None if none used.
+        thresh: float. Threshold used if the target in X was frac diffed using the ffd method, None if none used or fd used.
+        '''
         self.model = model
         self.dataset_name = dataset_name
         self.data_params = load_params('gluonts_params.txt', dataset_name)
         print(self.data_params)
+
         self.ctx = 'gpu(0)'
+        self.original_value_col = 'target_o' # gets used in the inversion of fd if needed, 
 
         self.prediction_length = self.data_params['prediction_length']
         self.context_length = self.data_params['context_length']
         self.freq = self.data_params['freq']
         
-        X_train_val, X_test = X[:-self.prediction_length], X[-self.prediction_length:]
-        X_train, X_val = X_train_val[:-self.prediction_length], X_train_val[-self.prediction_length:]
+        self.d = d
+        self.thresh = thresh
+        self.X = X
+        X_train, X_test = X[:-self.prediction_length], X[-self.prediction_length:]
+        X_train_val, X_val = X_train[:-self.prediction_length], X_train[-self.prediction_length:]
         
-        self.tuning_dataset = series_to_gluonts_dataset(X_train, X_val,  self.data_params)
-        self.eval_dataset =  series_to_gluonts_dataset(X_train_val, X_test,  self.data_params)
+        self.tuning_dataset = series_to_gluonts_dataset(X_train_val, X_val,  self.data_params)
+        self.eval_dataset =  series_to_gluonts_dataset(X_train, X_test,  self.data_params)
         
 
     def get_params(self, trial) -> dict:
@@ -146,7 +160,7 @@ class Objective:
                 embedding_dimension= params['embedding_dimension'],
                 num_heads= params['num_heads'],
                 dropout_rate= params['dropout_rate'],
-                #scaling=False, # True by default False
+                # scaling=False, # True by default False
                 trainer=Trainer(ctx=self.ctx,epochs=params['trainer:epochs'], learning_rate=params['trainer:learning_rate'],
                                 num_batches_per_epoch=100, callbacks=[history]),
             )
@@ -171,6 +185,32 @@ class Objective:
 
         forecasts = list(forecast_it)
         tss = list(ts_it)
+        # invert here if fd
+        if self.d:
+            if tuning:
+                new_fd_series = self.tuning_dataset.train[0]['target'].copy()
+                original_series = self.X[self.original_value_col][:-(2*self.prediction_length)].copy()
+                actual = self.X[self.original_value_col][:-self.prediction_length].copy().values
+            else:
+                new_fd_series = self.eval_dataset.train[0]['target'].copy()
+                original_series = self.X[self.original_value_col][:-self.prediction_length].copy()
+                actual = self.X[self.original_value_col].copy().values
+
+            unfd_samples = []
+            for predsampleset in forecasts[0].samples:
+                unfd_sampleset = []
+                fd = new_fd_series.copy()
+                o = original_series.copy()
+                for pred in predsampleset:
+                    fd = np.append(fd, pred)
+                    if self.thresh: ufd = invert_ffd(pd.Series(fd), o, self.d, self.thresh)
+                    else: ufd = invert_fd(pd.Series(fd), o, self.d)
+                    unfd_pred = ufd.iloc[-1]
+                    unfd_sampleset.append(unfd_pred)
+                    o = pd.Series(np.append(o, unfd_pred))
+                unfd_samples.append([unfd_sampleset])
+            forecasts[0].samples = np.array(unfd_samples).squeeze()
+            tss[0][0] = actual
         evaluator = Evaluator(quantiles=[0.1, 0.5, 0.9])
         agg_metrics, item_metrics = evaluator(tss, forecasts)
         
@@ -186,8 +226,7 @@ class Objective:
 
         return agg_metrics['RMSE']
 
-
-def run(X, model, dataset_name, save_label, n_trials, n_repeats):
+def run(X, model, dataset_name, save_label, n_trials, n_repeats, d=None, thresh=None):
     start_time = time.perf_counter()
 
     # run tuning
@@ -195,7 +234,9 @@ def run(X, model, dataset_name, save_label, n_trials, n_repeats):
     obj = Objective(
         model=model,
         dataset_name=dataset_name,
-        X=X
+        X=X,
+        d=d,
+        thresh=thresh
         )
     study.optimize(
         obj,
@@ -278,6 +319,7 @@ def run(X, model, dataset_name, save_label, n_trials, n_repeats):
     with open(file_path, "a") as file:
         file.write(
             f'''\n\n\n\n {model} {n_trials} tuning trials {n_repeats} repeat test evals on {dataset_name} {save_label} data form, Runtime: {runtime} minutes 
+            \n Prediction length: {obj.prediction_length}, Context length: {obj.context_length}
             \n Params: {trial.params}
             \n MASE MEAN: {mase_mean} MASE STD: {mase_std}
             \n sMAPE MEAN: {smape_mean} sMAPE STD: {smape_std}
@@ -286,11 +328,71 @@ def run(X, model, dataset_name, save_label, n_trials, n_repeats):
         )
 
 if __name__ == '__main__':
-    X = pd.read_csv('m4_1165_fd.csv') # original fd, default thresh, no skips
-    X_withoutfd = X.drop(columns=['values_fd'])
-    X_fdtarget = X.drop(columns=['values_o']).rename(columns={"values_fd": "values_o"})
+
+    ######################### m4 series ##########################################
+    # X = pd.read_csv('m4_1165_fd.csv') # original fd, default thresh, no skips, d=0.1
+    X = pd.read_csv('m4_1165_ffd.csv') # fixed width fd, 0.01 thresh, d=0.95
+    d=0.95
+    thresh = 0.01
+    X_withoutfd = X.drop(columns=['values_fd']).rename(columns={"values_o":"target"})
+    X_fdtarget = X.rename(columns={"values_fd": "target"}) 
+    # this X_fdtarget leaves o in fdr, fd_fdr is still the opposite to compare the impact of fd as target, 
+    # and so far most tests have shown o+fd being more effective than fd alone
+    X_otarget_fdinfdr = X.rename(columns={"values_o": "target"})
     save_labels = ['original_values', 'fd_target_values', 'fd_in_fdr']
-    #
-    run(X_withoutfd, 'transformer', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    # run(X_fdtarget, 'transformer', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5)
-    run(X, 'transformer', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+
+    # run(X_withoutfd, 'transformer', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'transformer', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'transformer', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    
+    # run(X_withoutfd, 'feedforward', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'feedforward', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'feedforward', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    
+    # run(X_withoutfd, 'wavenet', 'm4_daily_dataset', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'wavenet', 'm4_daily_dataset', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'wavenet', 'm4_daily_dataset', save_label=save_labels[2], n_trials=15, n_repeats=5)
+
+
+    ########################## S&P 500 series ##########################################
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp_labelled.pkl', 'rb') as f:
+        df_original = pickle.load(f) # ohlv + transactions + labels + bintp labels
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
+        df_fd = pickle.load(f) # fracdiffed ohlcv + transactions + labels
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_labelled_episodes_ta.pkl', 'rb') as f:
+        df_ta = pickle.load(f) # ohlcv + ~120 TA features + labels
+    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_ta_fracdiff.pkl', 'rb') as f:
+        df_fd_ta = pickle.load(f) # fracdiffed ohlcv + transactions + ~120 TA features + labels
+
+    # original series target with rest of ohlcv
+    df = df_ta[["volume", "vwap", "open", "close", "high", "low", "transactions"]] # 0.01 0.001
+    X_withoutfd= df[:20_000].copy()
+    X_withoutfd['target'] = X_withoutfd['close'].shift(-1)
+    X_withoutfd.dropna(inplace=True)
+    # fd all series, retaining all originals, fd target
+    df = df_fd_ta[["volume", "vwap", "open", "close", "high", "low", "transactions"]]
+    X_fdtarget = df[:20_000].copy()
+    X_fdtarget = X_fdtarget.join(X_withoutfd.add_suffix(f'_o'), how='outer')
+    X_fdtarget['target'] = X_fdtarget['close'].shift(-1)
+    X_fdtarget.dropna(inplace=True)
+    # same as above but with original target
+    X_otarget_fdinfdr = X_fdtarget.copy()
+    X_otarget_fdinfdr.rename(columns={"target": "target_fd", "target_o": "target"}, inplace=True)
+
+    del df, df_fd, df_ta, df_fd_ta
+    d = 0.2
+    thresh = 1e-5
+    save_labels = ['original_values', 'fd_target_values', 'fd_in_fdr']
+
+
+    run(X_withoutfd, 'transformer', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'transformer', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'transformer', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    
+    # run(X_withoutfd, 'feedforward', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'feedforward', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'feedforward', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    
+    # run(X_withoutfd, 'wavenet', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_fdtarget, 'wavenet', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    # run(X_otarget_fdinfdr, 'wavenet', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)

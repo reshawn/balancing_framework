@@ -106,7 +106,7 @@ if __name__ == "__main__":
         df['label'] = 0
         df.rename(columns={0: 'values'}, inplace=True)
 
-        df = derive_feats(df)
+        # df = derive_feats(df)
         df = df.replace([np.inf, -np.inf], np.nan).dropna()
 
 
@@ -122,7 +122,9 @@ if __name__ == "__main__":
 
             for data_form in data_forms:
                 if data_form == 'fd':
-                    df_fd, fd_change_pct = frac_diff_bestd(df.drop(columns=['label']) )
+                    df_fd, fd_change_pct, fd_params = frac_diff_bestd(df.drop(columns=['label']), type='ffd')
+                    # pull the params used for the target column's transform
+                    d, thresh = fd_params['values']
                     df_fd.dropna(inplace=True)
                     df_fd.reset_index(drop=True, inplace=True)
                     X = X.join(df_fd.add_suffix(f'_{data_form}'), how='outer')
@@ -179,6 +181,7 @@ if __name__ == "__main__":
             print(f'Running measurements with params: format={data_form},chunk_size={chunk_size}, num_runs={num_runs}, \
                 dataset_name={dataset_name}, model_name={model_name}')
             print(X.columns)
+            
             a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=num_runs, frac_diff=False)
 
             ####################################### Save Results and Visualizations ###############################################################################

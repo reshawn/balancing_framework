@@ -72,10 +72,20 @@ on gluonts model runs:
 - in either case, would be relying on the previous runs to make the point of the benefit to over time stability
 
 new to do:
-- rapids frac diff?
-- run on m4 picked series with tuned transformer code
-- inversion of fd function to use in place of original target
-- programmatic tests for the other 2 conditions of using fd, verify with london and m4, then apply to rest on table for new pcts
+0 rapids frac diff? - will mention, but i dont need it right now
+x run on m4 picked series with tuned transformer code
+x inversion of fd function to use in place of original target
+x F: programmatic tests for the other 2 conditions of using fd, verify with london and m4, then apply to rest on table for new pcts
+x measure stability of the over time metrics, then run on ideally all results including the first runs on fin - still to run
+x another attempt at finding a good and fitting nature dataset to run the full over time version on with a bigger model - see note below
+- over time run on transformer after choosing pred len, fdtarget vs otarget forms, 5 or 10 steps of 10k rows to 20k rows
+- run PZ and plot under run3
+- compare a to c again for run3 and shorter runs like the transformer ones
+x diagram of eval
+
+on stab:
+- adapt generally shows less stability than the consol values, and there the transformed version regularly shows improved stability
+- in consol, the values tend to be similar with or without for sp, worsened in 1 test there with the perf boost, while for the m4 where there's more shorter term value in historical values, stability there in improved, by a notable amount though half as much as the adaptation counterpart
 
 frac diff notes:
 - effective models need stationarity 
@@ -90,13 +100,56 @@ frac diff notes:
 
 other fd implementation notes:
 - the function includes a skip step that calculates the cumulative percentage contribution of the weights and cuts off the rows below a threshold
-- the second version function takes this a bit further and uses a fixed window for calculating the weights instead of a full expanding window, (something like that), is faster at the cost of some info, and supposedly isnt reversible
+- the second version function takes this a bit further and uses a fixed window for calculating the weights instead of a full expanding window, (something like that), is faster at the cost of some info
+- rapids is another option for speed up, the adf part of the tuning doesnt benefit from it as much because thats a large number of much smaller calculations, so the added up cost of copying to and from the gpu outweighs the speed up itself
+- for inverting the fd:
+    - frac diff iteratively appies the most recent n weights to the n values of the series so far to produce the transformed series
+    - so to reverse it, we cant reverse the entire dot product operation of the final series, but can iteratively solve for one unknown, the newest unfracdiffed value
+    - for that, we subtract the dot product of the previous values from the current frac diff value, and divide by the current weight
+    - i.e. if a = weights where len(weights) = n+1 and n is the length of the known original series
+    - b = original_series of length n
+    - c = frac diff series of length n+1 including the new to be inverted value
+    - then the new value to be added to b = (c - np.dot(a[:-1], b[:-1])) / a[-1] 
+    - or (the current frac diff value - the 1 less than complete frac diff calculation for this current value) / the current weight
+    - and the current weight will always be 1 as the first in that series
+    - NOTE: this is needed for a better comparison in the case of regression where the frac diffed series is the target being predicted, but because of how the inverted predicted values must be used in the inversion of later values within the same batch of predictions, inaccuracies would carry forward. Using the actual values for a better inversion could be possible, but for the sake of maintaining a fair forecast horizon without it, its left out.
+
+new note on fd:
+- ffd with a small window performs much better than the full series fd or fd with the skips calculated with a threshold to the pct contribution of the weights
+- the former hits the high result seen before while the latter two are closer to the original value results
+- start with verifying ffd again then adjusting the window from both sides, looking at the changes to the series and to performance
+- other thing to fix: in the main script, the drop rows on one form doesnt reflect in the ones that dont, how does that affect the comparison? where does the drop follow through to? if an issue, reflect the biggest drop across all forms, else just align the indices better
+reminder: i checked and verified that the ffd code works as intended by setting the parameters such that it gave the same result as the original function (no skips, final value)
+
+another note but mostly for me or maybe future work sec if theres not enough there already:
+- originally, the plan was to check if frac diff could allow for finding a better balance between adaptation and consolidation of models
+- the assumption there being that the data shifts would lead to a choice between one and the other
+- the first sets of results dont show exactly that, but there seems to be some of that holding on another glance. not the trade off in a direct way because the accuracy of fod is lowest in both adap and consol (the cost of memory-loss in this particular instance) but the stability there is better despite the lower values
+- also adapt in general is higher than consol, regardless of the data form, maybe more to do with the model and data type in that case if the form is playing that much less of a role than expected
+- and similarly, frac diff does find the in between of that and original, a check on a measure of the stability could show the actual trade off
+- then this is a finance case in those early results, long term memory is more critical, that would play a role 
+- so all in all, the reln there does matter especially with respect to the nature of the nonstat present, and theres room for more here i think
+- again looking at the other forms of nonstat could lead to more room for exploring this
+- so as usual the biggest room for future work would be a solid benchmark dataset for timeseries, ideally with tags on the types or properties they have to save that initial time on looking into it, because thats the main hurdle i have right now in finding datasets from other domains, i have to keep checking for these properties that should be there or might be there but is often not so simple
+
+for the connection to climate work:
+- supports lighter models
+- supports new models in an interpretable manner
+- niche cases across other domains can still fit the criteria
+- an altered version that fits highly seasonal and mean reverting tasks instead? but with those cases, there seems to be some split differences too, like the ones with anomalous shifts versus the ones that might vary to some underlying trend that could be more fitting. in either case a step in that direction would need some more initial checks to better define the cases that fit, and considering that, a shorter step to using this for that kind of work could be in finding the specific fin use cases tied to those types of env assets and cases, which isnt in my current experience or familiarity, but some of giulia's papers seem to fit that description and could be a starting point for looking.
+- datasets tried towards this:
+    - all in monash of reasonable length for bigger models (some smaller non stat ones here that could be looked at for a single run small model, but wouldnt be enough to make a meaningful point that could change the current state)
+    - all nature in uci
+    - a few temp ones
+    - river discharge and gage height - https://waterdata.usgs.gov/nwis/dv?referred_module=sw&site_no=04159130
+    - fisheries and ocean canada sea level daily means - https://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/data-donnees-eng.asp?user=isdm-gdsi&region=CA&tst=1&no=11860
 
 
 for the table on non stat
 - shows a starting point of candidate series, other conditions are long term memory and absence of high seasonality
 - but those tests dont cover all the cases of complex non stat series, examples m4 and london, where m4 fails a hurst exponent test but benefits from frac diff, and london where the high seasonality isnt programmatically measured easily (confirm again) and it doesnt benefit from frac diff
 - so beyond the starting point that shows a meaningful presence of non stat series outside of the typical domains, a more consistent, reliable, and low-compute means of estimating the effectiveness could be useful
+- further to last point, aside from stat type tests, psi/csi for measuring distribution shift in relation to a light model could also be one to check, although at a glance it seems like a proxy for checking shifts that should be detectable without considering prediction
 
 planned runs:
 - transformer reruns to save params (m4, double pred, fd in fdr)
@@ -104,3 +157,6 @@ planned runs:
 - ffn m4, m4 double pred, fin
 - wavenet m4 or double pred, fin
 - overtime 10 runs on fin for one of them?
+- default pred len, longer context len?
+- fd inversion without carrying forward the error? - should have a better result, but impractical and would be a more useful check towards better defining the situations where the method is helpful, which isnt the highest priority at this point
+
