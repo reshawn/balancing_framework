@@ -190,8 +190,8 @@ class Evaluator:
                 trainer.tuned_params = self.model_params
 
             print(f'Training run {i+1} of {self.num_chunks}')
-            X_test = pd.concat([ temp[0] for temp in self.test_sets[:i+1] ])
-            y_test = pd.concat([ temp[1] for temp in self.test_sets[:i+1] ])
+            X_test = pd.concat([ temp[0] for temp in self.test_sets[:i] ]) # i+1
+            y_test = pd.concat([ temp[1] for temp in self.test_sets[:i] ])
 
             result = trainer.train_eval(X_train, y_train, X_test, y_test)
             result['last_ts'] = X_seen.index[-1]

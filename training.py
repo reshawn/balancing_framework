@@ -37,7 +37,7 @@ class Trainer:
         self.d = d
         self.thresh = thresh
         self.ctx = 'gpu(0)'
-        self.gluonts_metric_type = 'mean_wQuantileLoss'
+        self.gluonts_metric_type = 'RMSE'
 
         sklearn_models = ['ridge_classifier', 'random_forest', 'logistic_regression']
         gluonts_models = ['transformer']

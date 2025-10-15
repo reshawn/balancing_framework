@@ -385,7 +385,7 @@ if __name__ == '__main__':
     save_labels = ['original_values', 'fd_target_values', 'fd_in_fdr']
 
 
-    run(X_withoutfd, 'transformer', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    # run(X_withoutfd, 'transformer', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
     # run(X_fdtarget, 'transformer', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
     # run(X_otarget_fdinfdr, 'transformer', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
     
@@ -393,6 +393,6 @@ if __name__ == '__main__':
     # run(X_fdtarget, 'feedforward', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
     # run(X_otarget_fdinfdr, 'feedforward', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
     
-    # run(X_withoutfd, 'wavenet', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
-    # run(X_fdtarget, 'wavenet', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
-    # run(X_otarget_fdinfdr, 'wavenet', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)
+    run(X_withoutfd, 'wavenet', 'sp500', save_label=save_labels[0], n_trials=15, n_repeats=5)
+    run(X_fdtarget, 'wavenet', 'sp500', save_label=save_labels[1], n_trials=15, n_repeats=5, d=d, thresh=thresh)
+    run(X_otarget_fdinfdr, 'wavenet', 'sp500', save_label=save_labels[2], n_trials=15, n_repeats=5)

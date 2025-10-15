@@ -78,10 +78,21 @@ x inversion of fd function to use in place of original target
 x F: programmatic tests for the other 2 conditions of using fd, verify with london and m4, then apply to rest on table for new pcts
 x measure stability of the over time metrics, then run on ideally all results including the first runs on fin - still to run
 x another attempt at finding a good and fitting nature dataset to run the full over time version on with a bigger model - see note below
-- over time run on transformer after choosing pred len, fdtarget vs otarget forms, 5 or 10 steps of 10k rows to 20k rows
-- run PZ and plot under run3
-- compare a to c again for run3 and shorter runs like the transformer ones
+x run PZ and plot under run3
+x compare a to c again for run3 and shorter runs like the transformer ones - old transformer one has more at odds, run3 and other rf runs show both more in line, 
 x diagram of eval
+
+- run over consol evals and update accordingly
+- update method flow figure for consol
+- run remaining single dl runs
+- plot over d comparison table with correct tick sizes
+x new section in discussion on model choices and caveats
+- new section in dicussion on run 3 a vs c with PZ overlay
+x conclusion and future work
+- get acknowledgement statements
+- edit, repeating key points for emphasis, like the DL boost despite new error carried
+- pick journal and format
+- over time transformer runs (after submission), 10 steps to 10k rows
 
 on stab:
 - adapt generally shows less stability than the consol values, and there the transformed version regularly shows improved stability
