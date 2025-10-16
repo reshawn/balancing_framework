@@ -28,14 +28,14 @@ if __name__ == "__main__":
 
     ####################################### Load Data ##############################################################################################
 
-    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp_labelled.pkl', 'rb') as f:
+    with open('spy5m_bintp_labelled.pkl', 'rb') as f:
         df_original = pickle.load(f)
-    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
+    with open('spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
         df_fd = pickle.load(f)
-    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_labelled_episodes_ta.pkl', 'rb') as f:
+    with open('spy5m_labelled_episodes_ta.pkl', 'rb') as f:
         df_ta = pickle.load(f)
         df_ta['label'] = df_original['tp_0.004'][df_ta.index]
-    with open('/mnt/c/Users/resha/Documents/Github/balancing_framework/spy5m_ta_fracdiff.pkl', 'rb') as f:
+    with open('spy5m_ta_fracdiff.pkl', 'rb') as f:
         df_fd_ta = pickle.load(f)
         df_fd_ta['label'] = df_original['tp_0.004'][df_ta.index]
     # PZ algorithm has some look ahead so remove the episode labels if those are there, will be uesd only for some kind of analysis afterwards
