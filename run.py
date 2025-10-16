@@ -50,25 +50,25 @@ if __name__ == "__main__":
 
 
     if 'frac_diff' in data_forms:
-        X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+        X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_fd'), how='outer')
     del df_fd
     if 'original' in data_forms:
-        X = X.join(df.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+        X = X.join(df.drop(columns=['label']).add_suffix(f'_o'), how='outer')
     if 'first_order_diff' in data_forms:
         # if wanted to omit cols from diff
         # diff = df.drop(['volume', 'transactions', 'label'], axis=1).diff()
         # diff = diff.join(df[['volume', 'transactions']])
-        diff = df.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+        diff = df.drop(['label'], axis=1).diff().add_suffix(f'_fod')
         X = X.join(diff, how='outer')
     del df
     if 'ta_original' in data_forms:
-        X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+        X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_tao'), how='outer')
     if 'ta_fod' in data_forms:
-        diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_{data_form}')
+        diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_tafod')
         X = X.join(diff, how='outer')
     del df_ta
     if 'ta_frac_diff' in data_forms:
-        X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_{data_form}'), how='outer')
+        X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_tafd'), how='outer')
     del df_fd_ta
     
             

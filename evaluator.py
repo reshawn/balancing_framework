@@ -177,6 +177,7 @@ class Evaluator:
         trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
 
         for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
+            if i==0: continue # no test sets besides that of the current chunk
             print(f'Running consolidation measure {i} of {len(self.chunks)}, {len(all_results)} scores stored')
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
