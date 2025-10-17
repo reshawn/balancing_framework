@@ -41,7 +41,7 @@ def train_test_split_by_indices(X,y,test_indices, num_dropped=0):
 
 
 
-def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, frac_diff=False, rocket=False, d=None, thresh=None):
+def run_measurements(X, y, chunk_size, dataset_name, model_name, start_chunk=0, end_chunk=-1, num_runs=10, frac_diff=False, rocket=False, d=None, thresh=None):
     """
     Evaluate a model's performance on a dataset in terms of adaptation and consolidation measures.
 
@@ -59,6 +59,8 @@ def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, fr
         The name of the dataset
     model_name : str
         The name of the model, from supported list in models.py, e.g: ['ridge_classifier', 'random_forest', 'logistic_regression']
+    start_chunk, end_chunk : int
+        Pair of index integers, defaults to full range of chunks, but allows for segmented runs with easier checkpointing
     num_runs : int
         The number of runs to perform the evaluation
     frac_diff : bool
@@ -114,18 +116,24 @@ def run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=10, fr
 
     # EVALUATION -------------------------------------------------------------------------------------------------
 
-    eval = Evaluator(dataset_name, model_name, X, y, num_runs=num_runs, chunk_size=chunk_size, test_size=None, d=d, thresh=thresh)
+    eval = Evaluator(dataset_name, 
+        model_name, 
+        X, 
+        y, 
+        num_runs=num_runs, 
+        start_chunk=start_chunk, 
+        end_chunk=end_chunk, 
+        chunk_size=chunk_size, 
+        test_size=None, 
+        d=d, 
+        thresh=thresh
+    )
 
-    # ADAPTATION MEASURE LOOP 
 
     # in the case of frac diff or any rolling window method, remember to subtract the dropped rows from the cold start size
-    print("RUNNING ADAPTATION MEASURE")
-    adaptation_results = eval.adaptation_measure()
+    print("RUNNING MEASUREMENTS")
+    adaptation_results, consolidation_results = eval.run_measurements()
 
-
-    # CONSOLIDATION MEASURE LOOP 
-    print("RUNNING CONSOLIDATION MEASURE")
-    consolidation_results = eval.consolidation_measure()
 
     # PRINT VISUALIZATIONS -------------------------------------------------------------------------------------------------
     

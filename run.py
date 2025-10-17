@@ -5,7 +5,7 @@ import json
 import time
 import argparse
 
-from framework import run_measurements, viz
+from wrappers import run_measurements, viz
 
 
 # Don't forget to point the output to a log file
@@ -13,10 +13,14 @@ from framework import run_measurements, viz
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--forms', type=str, nargs='+', help="Data forms, one or more of: ['frac_diff' , 'first_order_diff', 'original']")
+    parser.add_argument('-f', '--forms', type=str, nargs='+', help="Data forms, one or more of: ['fd' , 'fod', 'o']")
+    parser.add_argument('-s', '--start_chunk', type=int, help="Start Chunk", default=0)
+    parser.add_argument('-e', '--end_chunk', type=int, help="End Chunk", default=-1)
     args = parser.parse_args()
 
     data_forms = [ f.lower() for f in args.forms ]
+    start_chunk = args.start_chunk
+    end_chunk = args.end_chunk
 
     valid_forms = ['fd' , 'fod', 'o', 'tao', 'tafod', 'tafd']
     for data_form in data_forms:
@@ -88,16 +92,47 @@ if __name__ == "__main__":
     print(f'Running measurements with params: format={data_forms},chunk_size={chunk_size}, num_runs={num_runs}, \
         dataset_name={dataset_name}, model_name={model_name}')
 
-    a,c,p = run_measurements(X, y, chunk_size, dataset_name, model_name, num_runs=num_runs, frac_diff=False)
-
-
-    ####################################### Save Results and Visualizations ###############################################################################
+    # Check for any existing results
     import os
     base_dir = 'results/'
     subfolder = f"chunk_size={chunk_size} num_runs={num_runs} {dataset_name} {model_name}"
     save_dir = os.path.join(base_dir, subfolder)
     if not os.path.exists(save_dir):
         os.mkdir(save_dir)
+    potential_ar_res_file = f'{save_dir}/adaptation_results_{data_forms}.pkl'
+    potential_cr_res_file = f'{save_dir}/consolidation_results_{data_forms}.pkl'
+    ar_sofar = None
+    cr_sofar = None
+    if os.path.exists(potential_ar_res_file):
+        with open(f'{save_dir}/adaptation_results_{data_forms}.pkl', 'rb') as f:
+            ar_sofar = pickle.load(f)
+            if start_chunk <= len(ar_sofar)-1:
+                start_chunk = len(ar_sofar)
+                print(f'Entered start index was already ran, using new start index {start_chunk}')
+    if os.path.exists(potential_cr_res_file):
+        with open(f'{save_dir}/consolidation_results_{data_forms}.pkl', 'rb') as f:
+            cr_sofar = pickle.load(f)
+
+
+    a,c,p = run_measurements(X,
+                            y,
+                            chunk_size,
+                            dataset_name,
+                            model_name,
+                            start_chunk=start_chunk,
+                            end_chunk=end_chunk,
+                            num_runs=num_runs,
+                            frac_diff=False)
+    
+    if ar_sofar:
+        a = ar_sofar + a
+    if cr_sofar:
+        c = cr_sofar + c
+
+
+    ####################################### Save Results and Visualizations ###############################################################################
+
+    
     with open(f'{save_dir}/adaptation_results_{data_forms}.pkl', 'wb') as f:
         pickle.dump(a, f)
     with open(f'{save_dir}/consolidation_results_{data_forms}.pkl', 'wb') as f:

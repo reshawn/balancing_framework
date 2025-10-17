@@ -17,13 +17,15 @@ num_kernels = 10_000
 
 
 class Evaluator:
-    def __init__(self, dataset_name, model_name, X, y, num_runs=10, chunk_size=50000, test_size=None, d=None, thresh=None):
+    def __init__(self, dataset_name, model_name, X, y, start_chunk=0, end_chunk=-1, num_runs=10, chunk_size=50000, test_size=None, d=None, thresh=None):
         self.model_name = model_name
         self.dataset_name = dataset_name
         self.num_runs = num_runs
         self.test_size = test_size
         self.d = d
         self.thresh = thresh
+        self.start_chunk = start_chunk
+        self.end_chunk = end_chunk
         self.results = pd.DataFrame()
         self.best_params = None
 
@@ -68,41 +70,18 @@ class Evaluator:
 
 
 
-    def data_split(self, X, y, test=True):
-        if not self.split_at_ends:
-            if test:
-                if self.test_size is not None:
-                    X_test, y_test = (X[-self.test_size:], y[-self.test_size:])
-                    X, y = (X[:-self.test_size], y[:-self.test_size])
-                    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-                else:
-                    X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-                    X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, test_size=0.2, random_state=RANDOM_STATE)
-                return X_train, X_val, y_train, y_val, X_test, y_test
-            else:
-                X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
-                return X_train, X_val, y_train, y_val
+    def validation_set_split(self, X, y):
+        if self.split_at_ends:
+            X_train, X_val, y_train, y_val = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
+            return X_train, X_val, y_train, y_val
         else:
-            
-            if test:
-                if self.test_size is not None:
-                    X_test, y_test = (X[-self.test_size:], y[-self.test_size:])
-                    X, y = (X[:-self.test_size], y[:-self.test_size])
-                    X_train, X_val, y_train, y_val = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
-                else:
-                    X_temp, X_test, y_temp, y_test = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
-                    X_train, X_val, y_train, y_val = X_temp[:-self.prediction_length], X_temp[-self.prediction_length:], y_temp[:-self.prediction_length], y_temp[-self.prediction_length:]
-                return X_train, X_val, y_train, y_val, X_test, y_test
-            else:
-                X_train, X_val, y_train, y_val = X[:-self.prediction_length], X[-self.prediction_length:], y[:-self.prediction_length], y[-self.prediction_length:]
-                return X_train, X_val, y_train, y_val
+            X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=RANDOM_STATE)
+            return X_train, X_val, y_train, y_val
         
-    def preprocessing(self):
-        pass
 
     
     
-    def adaptation_measure(
+    def run_measurements(
             self,
             ):
         """
@@ -122,81 +101,39 @@ class Evaluator:
         and the results are returned as a list.
         """
 
-        all_results = []
+        ar_results = []
+        cr_results = []
         X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
         trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
 
-        for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
-            print(f'Running adaptation measure {i} of {len(self.chunks)}, {len(all_results)} scores stored')
+        if (self.end_chunk == -1) or (self.end_chunk > len(self.chunks)-1): self.end_chunk=len(self.chunks)-1
+        for i in tqdm(range(self.start_chunk, self.end_chunk+1), total=self.end_chunk - self.start_chunk + 1):
+            chunk = self.chunks[i]
+            print(f'Running measurement pair {i} of {len(self.chunks)}, {len(ar_results)} scores stored')
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
             
-            if not self.skip_tuning:
-                X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
-                print(f'Tuning run {i+1} of {self.num_chunks} chunks')
-                trainer.tune(X_train, y_train, X_val, y_val)
-            else:
-                X_train, y_train = X_seen, y_seen
-                trainer.tuned_params = self.model_params
+            X_train, X_val, y_train, y_val = self.validation_set_split(X_seen, y_seen)
+            print(f'Tuning run {i+1} of {self.num_chunks} chunks')
+            trainer.tune(X_train, y_train, X_val, y_val)
 
-            print(f'Training run {i+1} of {self.num_chunks} chunks')
+            print(f'AR Training run {i+1} of {self.num_chunks} chunks')
             X_chunk_test = self.test_sets[i][0]
             y_chunk_test = self.test_sets[i][1]
-            result = trainer.train_eval(X_train, y_train, X_chunk_test, y_chunk_test)
+            result = trainer.train_eval(X_seen, y_seen, X_chunk_test, y_chunk_test)
             result['last_ts'] = X_seen.index[-1]
-            all_results.append(result)
-        
-        return all_results
+            ar_results.append(result)
 
-
-
-    
-
-    def consolidation_measure(
-            self,
-            ):
-        """
-        Evaluate a model's consolidation performance on a dataset in an online setup.
-
-        Parameters
-        ----------s
-
-        Returns
-        -------
-        list
-            A list of dictionaries containing the evaluation results for each chunk.
-
-        The consolidation measure simulates an online learning scenario where the dataset
-        is processed in chunks. For each chunk, the model is tuned and trained using
-        seen data, and evaluated on a test set. The process is repeated for all chunks,
-        and the results are returned as a list.
-        """
-
-        all_results = []
-        X_seen, y_seen = pd.DataFrame(), pd.DataFrame()
-        trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
-
-        for i, chunk in enumerate(tqdm(self.chunks, total=self.num_chunks)):
-            if i==0: continue # no test sets besides that of the current chunk
-            print(f'Running consolidation measure {i} of {len(self.chunks)}, {len(all_results)} scores stored')
-            X_chunk, y_chunk = chunk
-            X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
-            
-            if not self.skip_tuning:
-                X_train, X_val, y_train, y_val = self.data_split(X_seen, y_seen, test=False)
-                print(f'Tuning run {i+1} of {self.num_chunks} chunks')
-                trainer.tune(X_train, y_train, X_val, y_val)
-            else:
-                X_train, y_train = X_seen, y_seen
-                trainer.tuned_params = self.model_params
-
-            print(f'Training run {i+1} of {self.num_chunks}')
+            if i == 0:
+                continue # no test sets besides that of the current chunk, so skip consolidation for first chunk
+            print(f'CR Training run {i+1} of {self.num_chunks}')
             X_test = pd.concat([ temp[0] for temp in self.test_sets[:i] ]) # i+1
             y_test = pd.concat([ temp[1] for temp in self.test_sets[:i] ])
 
-            result = trainer.train_eval(X_train, y_train, X_test, y_test)
+            result = trainer.train_eval(X_seen, y_seen, X_test, y_test)
             result['last_ts'] = X_seen.index[-1]
-            all_results.append(result)
-        
-        return all_results
+            cr_results.append(result)
+
+        return ar_results, cr_results
+
 

@@ -77,7 +77,7 @@ class Trainer:
                     params[key] =  self.data_params[key]
                 params['ctx'] = self.ctx
                 model, _ = load_model(self.model_name, params)
-                predictor = model.train(gluonts_dataset.train, gluonts_dataset.test)
+                predictor = model.train(gluonts_dataset.train, gluonts_dataset.test) # test in this case is the val set
                 forecast_it, ts_it = make_evaluation_predictions(
                     dataset=gluonts_dataset.test,
                     predictor=predictor,
@@ -165,12 +165,10 @@ class Trainer:
                 pass
             elif self.model_name in gluonts_models:
                 gluonts_dataset = series_to_gluonts_dataset(X_train, X_test,  self.data_params)
-                model = model.train(gluonts_dataset.train, gluonts_dataset.test)
+                model = model.train(gluonts_dataset.train)
                 os.makedirs(f'results/gluonts_training_history/{self.dataset_name}', exist_ok=True)
-                with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_loss_history_{i}.json', "w") as f:
+                with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_repeatrun_loss_history_{i}.json', "w") as f:
                     json.dump(history.loss_history, f)
-                with open(f'results/gluonts_training_history/{self.dataset_name}/{self.model_name}_val_loss_history_{i}.json', "w") as f:
-                    json.dump(history.validation_loss_history, f)
             else:
                 raise ValueError(f"Model {self.model_name} not supported")
             time_b = time.perf_counter()
@@ -250,6 +248,7 @@ class Trainer:
         return result
 
 
+# below functions are old, not in use, kept just in case
     def run(self, X, y, mode='normal', results=pd.DataFrame(), test_size=None):
         # Split the data
         # Because we are trying methods that drop rows, we need to make sure the test set is the same

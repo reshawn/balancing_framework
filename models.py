@@ -1,4 +1,7 @@
 
+# import cuml.accel
+# cuml.accel.install()
+
 from sklearn.linear_model import RidgeClassifier, RidgeClassifierCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
