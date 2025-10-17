@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     data_forms = [ f.lower() for f in args.forms ]
 
-    valid_forms = ['frac_diff' , 'first_order_diff', 'original', 'ta_original', 'ta_fod', 'ta_frac_diff']
+    valid_forms = ['fd' , 'fod', 'o', 'tao', 'tafod', 'tafd']
     for data_form in data_forms:
         if data_form not in valid_forms:
             raise ValueError(f'The data_form arg must be one of: {valid_forms}')
@@ -49,25 +49,25 @@ if __name__ == "__main__":
     y = df['label']
 
 
-    if 'frac_diff' in data_forms:
+    if 'fd' in data_forms:
         X = X.join(df_fd.drop(columns=['label']).add_suffix(f'_fd'), how='outer')
     del df_fd
-    if 'original' in data_forms:
+    if 'o' in data_forms:
         X = X.join(df.drop(columns=['label']).add_suffix(f'_o'), how='outer')
-    if 'first_order_diff' in data_forms:
+    if 'fod' in data_forms:
         # if wanted to omit cols from diff
         # diff = df.drop(['volume', 'transactions', 'label'], axis=1).diff()
         # diff = diff.join(df[['volume', 'transactions']])
         diff = df.drop(['label'], axis=1).diff().add_suffix(f'_fod')
         X = X.join(diff, how='outer')
     del df
-    if 'ta_original' in data_forms:
+    if 'tao' in data_forms:
         X = X.join(df_ta.drop(columns=['label']).add_suffix(f'_tao'), how='outer')
-    if 'ta_fod' in data_forms:
+    if 'tafod' in data_forms:
         diff = df_ta.drop(['label'], axis=1).diff().add_suffix(f'_tafod')
         X = X.join(diff, how='outer')
     del df_ta
-    if 'ta_frac_diff' in data_forms:
+    if 'tafd' in data_forms:
         X = X.join(df_fd_ta.drop(columns=['label']).add_suffix(f'_tafd'), how='outer')
     del df_fd_ta
     
@@ -93,7 +93,7 @@ if __name__ == "__main__":
 
     ####################################### Save Results and Visualizations ###############################################################################
     import os
-    base_dir = '/mnt/c/Users/resha/Documents/Github/balancing_framework/results/'
+    base_dir = 'results/'
     subfolder = f"chunk_size={chunk_size} num_runs={num_runs} {dataset_name} {model_name}"
     save_dir = os.path.join(base_dir, subfolder)
     if not os.path.exists(save_dir):
