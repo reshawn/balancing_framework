@@ -188,7 +188,7 @@ def _viz(means1, means2, std_dev1, std_dev2, timestamps1, timestamps2, metric, t
     x1 = timestamps1 #np.arange(len(means1))
     x2 = timestamps2 #np.arange(len(means2))
     # Generate coherence values
-    f, coherence_values = coherence(means1, means2, fs=1)
+    # f, coherence_values = coherence(means1, means2, fs=1)
     
     plt.figure(figsize=(6, 4))  
     # Plot the sets using seaborn

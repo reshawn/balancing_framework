@@ -120,7 +120,7 @@ if __name__ == "__main__":
                             dataset_name,
                             model_name,
                             start_chunk=start_chunk,
-                            end_chunk=end_chunk,
+                            end_chunk=end_chunk, # end inclusive
                             num_runs=num_runs,
                             frac_diff=False)
     

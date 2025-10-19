@@ -107,17 +107,20 @@ class Evaluator:
         trainer = Trainer(self.model_name, self.dataset_name, num_runs=self.num_runs, d=self.d, thresh=self.thresh)
 
         if (self.end_chunk == -1) or (self.end_chunk > len(self.chunks)-1): self.end_chunk=len(self.chunks)-1
+        
+        print(f'Running measurements from chunk {self.start_chunk} to {self.end_chunk} of {len(self.chunks)}')
         for i in tqdm(range(self.start_chunk, self.end_chunk+1), total=self.end_chunk - self.start_chunk + 1):
             chunk = self.chunks[i]
             print(f'Running measurement pair {i} of {len(self.chunks)}, {len(ar_results)} scores stored')
             X_chunk, y_chunk = chunk
             X_seen, y_seen = pd.concat([X_seen, X_chunk]), pd.concat([y_seen, y_chunk])
+            y_seen = y_seen.squeeze()
             
             X_train, X_val, y_train, y_val = self.validation_set_split(X_seen, y_seen)
-            print(f'Tuning run {i+1} of {self.num_chunks} chunks')
+            print(f'Tuning run {i} of {self.num_chunks-1} chunks')
             trainer.tune(X_train, y_train, X_val, y_val)
 
-            print(f'AR Training run {i+1} of {self.num_chunks} chunks')
+            print(f'AR Training run {i} of {self.num_chunks-1} chunks')
             X_chunk_test = self.test_sets[i][0]
             y_chunk_test = self.test_sets[i][1]
             result = trainer.train_eval(X_seen, y_seen, X_chunk_test, y_chunk_test)
@@ -126,7 +129,7 @@ class Evaluator:
 
             if i == 0:
                 continue # no test sets besides that of the current chunk, so skip consolidation for first chunk
-            print(f'CR Training run {i+1} of {self.num_chunks}')
+            print(f'CR Training run {i} of {self.num_chunks-1}')
             X_test = pd.concat([ temp[0] for temp in self.test_sets[:i] ]) # i+1
             y_test = pd.concat([ temp[1] for temp in self.test_sets[:i] ])
 

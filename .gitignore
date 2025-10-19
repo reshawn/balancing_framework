@@ -166,3 +166,4 @@ spy5m_labelled_episodes_ta.pkl
 spy5m_ta_fracdiff.pkl
 spy5m_*
 *.tsf
+fd_comparison_results.pkl
