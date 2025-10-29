@@ -153,7 +153,7 @@ def viz(a_results, c_results, metric='f1', title='Original', dir=None):
     timestamps1 = np.array([ x['last_ts'] for x in a_results ])
     timestamps2 = np.array([ x['last_ts'] for x in c_results ])
     
-    print(f'means: {means1}, {means2}, std: {std1}, {std2}, timestamps: {timestamps1}, {timestamps2}')
+    # print(f'means: {means1}, {means2}, std: {std1}, {std2}, timestamps: {timestamps1}, {timestamps2}')
 
     _viz(means1, means2, std1, std2, timestamps1, timestamps2, metric, title, dir)
 

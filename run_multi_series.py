@@ -58,14 +58,6 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"Dataset {dataset_name} not found in gluonts availables or local monash files.")
         
-
-    df = pd.read_csv('dv2.txt', sep='\t')
-    df.dropna(inplace=True)
-    df = df['70916_00065_00003'] # Mean Gage height, feet
-    df = df.reset_index()
-    df = df.rename(columns={'70916_00065_00003': 'target'})
-    dataset = series_to_gluonts_dataset(df.iloc[:-100], df, params={'freq':'D', 'prediction_length':100})
-
     series_num = -1
     series_to_focus_on = 1165
     
@@ -209,13 +201,13 @@ if __name__ == "__main__":
             curr_split_pct = 0.1
             chunk_size = int(X.shape[0] * curr_split_pct)
             model_min_chunk_size = X.shape[1] * 10
-            min_split_pct = 0.33
+            max_split_pct = 0.33
             curr_splits = X.shape[0] / chunk_size
             while chunk_size < model_min_chunk_size:
                 curr_split_pct += 0.01
-                if curr_split_pct > min_split_pct:
-                    print(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > min_splits_pct={min_splits_pct*100}%.')
-                    # raise Exception(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > min_splits_pct={min_splits_pct*100}%.')
+                if curr_split_pct > max_split_pct:
+                    print(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > max_split_pct={max_split_pct*100}%.')
+                    # raise Exception(f'series length {X.shape[0]} with {X.shape[1]} feats does not meet criteria of >=10*n_features and a resulting split % > max_split_pct={max_split_pct*100}%.')
                     break
                 chunk_size = int(X.shape[0] * curr_split_pct)
 
@@ -230,7 +222,7 @@ if __name__ == "__main__":
             ####################################### Save Results and Visualizations ###############################################################################
 
             import os
-            base_dir = '/mnt/c/Users/resha/Documents/Github/balancing_framework/results/monash_runs'
+            base_dir = 'results/monash_runs'
             dir_ext = f'{dataset_name}_{series_num}_{data_forms}_chunk_size={chunk_size}_num_runs={num_runs}_{model_name}'
             save_dir = os.path.join(base_dir, dir_ext)
             if not os.path.exists(save_dir):
