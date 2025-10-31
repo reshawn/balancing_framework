@@ -36,10 +36,10 @@ if __name__ == "__main__":
         df_original = pickle.load(f)
     with open('spy5m_bintp004_episodes_fracdiff.pkl', 'rb') as f:
         df_fd = pickle.load(f)
-    with open('spy5m_labelled_episodes_ta.pkl', 'rb') as f:
+    with open('spy5m_smallta.pkl', 'rb') as f:
         df_ta = pickle.load(f)
         df_ta['label'] = df_original['tp_0.004'][df_ta.index]
-    with open('spy5m_ta_fracdiff.pkl', 'rb') as f:
+    with open('spy5m_smallta_fracdiff.pkl', 'rb') as f:
         df_fd_ta = pickle.load(f)
         df_fd_ta['label'] = df_original['tp_0.004'][df_ta.index]
     # PZ algorithm has some look ahead so remove the episode labels if those are there, will be uesd only for some kind of analysis afterwards
@@ -95,22 +95,21 @@ if __name__ == "__main__":
     # Check for any existing results
     import os
     base_dir = 'results/'
-    subfolder = f"chunk_size={chunk_size} num_runs={num_runs} {dataset_name} {model_name}"
+    subfolder = f"chunk_size={chunk_size} num_runs={num_runs} {dataset_name} {model_name}/{data_forms}"
     save_dir = os.path.join(base_dir, subfolder)
-    if not os.path.exists(save_dir):
-        os.mkdir(save_dir)
-    potential_ar_res_file = f'{save_dir}/adaptation_results_{data_forms}.pkl'
-    potential_cr_res_file = f'{save_dir}/consolidation_results_{data_forms}.pkl'
+    os.makedirs(save_dir, exist_ok=True)
+    potential_ar_res_file = f'{save_dir}/adaptation_results.pkl'
+    potential_cr_res_file = f'{save_dir}/consolidation_results.pkl'
     ar_sofar = None
     cr_sofar = None
     if os.path.exists(potential_ar_res_file):
-        with open(f'{save_dir}/adaptation_results_{data_forms}.pkl', 'rb') as f:
+        with open(f'{save_dir}/adaptation_results.pkl', 'rb') as f:
             ar_sofar = pickle.load(f)
             if start_chunk <= len(ar_sofar)-1:
                 start_chunk = len(ar_sofar)
                 print(f'Entered start index was already ran, using new start index {start_chunk}')
     if os.path.exists(potential_cr_res_file):
-        with open(f'{save_dir}/consolidation_results_{data_forms}.pkl', 'rb') as f:
+        with open(f'{save_dir}/consolidation_results.pkl', 'rb') as f:
             cr_sofar = pickle.load(f)
 
 
@@ -133,14 +132,14 @@ if __name__ == "__main__":
     ####################################### Save Results and Visualizations ###############################################################################
 
     
-    with open(f'{save_dir}/adaptation_results_{data_forms}.pkl', 'wb') as f:
+    with open(f'{save_dir}/adaptation_results.pkl', 'wb') as f:
         pickle.dump(a, f)
-    with open(f'{save_dir}/consolidation_results_{data_forms}.pkl', 'wb') as f:
+    with open(f'{save_dir}/consolidation_results.pkl', 'wb') as f:
         pickle.dump(c, f)
 
     end = time.time()
     print(f"Runtime: {(end - start) / 60} minutes")
 
-    viz(a, c, metric='accuracy', title=data_form, dir=save_dir) 
-    viz(a, c, metric='f1', title=data_form, dir=save_dir) 
+    viz(a, c, metric='accuracy', title=data_forms, dir=save_dir) 
+    viz(a, c, metric='f1', title=data_forms, dir=save_dir) 
 
